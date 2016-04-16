@@ -1,0 +1,117 @@
+
+An unexpected exception has been detected in native code outside the VM.
+Unexpected Signal : EXCEPTION_ACCESS_VIOLATION occurred at PC=0x6D1C468E
+Function=[Unknown.]
+Library=C:\Programme\Java\j2re1.4.1_06\bin\fontmanager.dll
+
+NOTE: We are unable to locate the function name symbol for the error
+      just occurred. Please refer to release documentation for possible
+      reason and solutions.
+
+
+Current Java thread:
+	at sun.awt.font.NativeFontWrapper.registerFonts(Native Method)
+	- locked <0A9E3848> (a java.lang.Class)
+	at sun.java2d.SunGraphicsEnvironment.addPathFonts(SunGraphicsEnvironment.java:736)
+	at sun.java2d.SunGraphicsEnvironment.registerFonts(SunGraphicsEnvironment.java:587)
+	at sun.java2d.SunGraphicsEnvironment.access$100(SunGraphicsEnvironment.java:49)
+	at sun.java2d.SunGraphicsEnvironment$2.run(SunGraphicsEnvironment.java:209)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.java2d.SunGraphicsEnvironment.loadFonts(SunGraphicsEnvironment.java:203)
+	- locked <04FE3118> (a sun.awt.Win32GraphicsEnvironment)
+	at sun.java2d.SunGraphicsEnvironment.mapFontName(SunGraphicsEnvironment.java:451)
+	at java.awt.Font.initializeFont(Font.java:313)
+	at java.awt.Font.<init>(Font.java:345)
+	at CanvasDrawThread.drawTable(CanvasDrawThread.java:127)
+	at CanvasDrawThread.run(CanvasDrawThread.java:66)
+	at java.lang.Thread.run(Thread.java:536)
+
+Dynamic libraries:
+0x00400000 - 0x00A69000 	C:\PROGRA~1\MOZILL~1\FIREFOX.EXE
+0x7C910000 - 0x7C9C7000 	C:\WINDOWS\system32\ntdll.dll
+0x7C800000 - 0x7C906000 	C:\WINDOWS\system32\kernel32.dll
+0x10000000 - 0x10054000 	C:\PROGRA~1\MOZILL~1\js3250.dll
+0x30000000 - 0x30026000 	C:\PROGRA~1\MOZILL~1\nspr4.dll
+0x77DA0000 - 0x77E4A000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77E50000 - 0x77EE1000 	C:\WINDOWS\system32\RPCRT4.dll
+0x71A30000 - 0x71A3A000 	C:\WINDOWS\system32\WSOCK32.dll
+0x71A10000 - 0x71A27000 	C:\WINDOWS\system32\WS2_32.dll
+0x77BE0000 - 0x77C38000 	C:\WINDOWS\system32\msvcrt.dll
+0x71A00000 - 0x71A08000 	C:\WINDOWS\system32\WS2HELP.dll
+0x00270000 - 0x002D0000 	C:\PROGRA~1\MOZILL~1\xpcom.dll
+0x002D0000 - 0x002D7000 	C:\PROGRA~1\MOZILL~1\plc4.dll
+0x002E0000 - 0x002E6000 	C:\PROGRA~1\MOZILL~1\plds4.dll
+0x7C9D0000 - 0x7D1EF000 	C:\WINDOWS\system32\SHELL32.dll
+0x77EF0000 - 0x77F37000 	C:\WINDOWS\system32\GDI32.dll
+0x77D10000 - 0x77DA0000 	C:\WINDOWS\system32\USER32.dll
+0x77F40000 - 0x77FB6000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x774B0000 - 0x775ED000 	C:\WINDOWS\system32\ole32.dll
+0x002F0000 - 0x0030A000 	C:\PROGRA~1\MOZILL~1\smime3.dll
+0x00310000 - 0x00365000 	C:\PROGRA~1\MOZILL~1\nss3.dll
+0x00370000 - 0x003CA000 	C:\PROGRA~1\MOZILL~1\softokn3.dll
+0x003D0000 - 0x003EB000 	C:\PROGRA~1\MOZILL~1\ssl3.dll
+0x00A70000 - 0x00A84000 	C:\PROGRA~1\MOZILL~1\xpcom_compat.dll
+0x76350000 - 0x7639A000 	C:\WINDOWS\system32\comdlg32.dll
+0x773A0000 - 0x774A2000 	C:\WINDOWS\WinSxS\X86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2180_x-ww_a84f1ff9\COMCTL32.dll
+0x770F0000 - 0x7717C000 	C:\WINDOWS\system32\OLEAUT32.dll
+0x77BD0000 - 0x77BD8000 	C:\WINDOWS\system32\VERSION.dll
+0x72F70000 - 0x72F96000 	C:\WINDOWS\system32\WINSPOOL.DRV
+0x76330000 - 0x7634D000 	C:\WINDOWS\system32\IMM32.DLL
+0x62E10000 - 0x62E19000 	C:\WINDOWS\system32\LPK.DLL
+0x75790000 - 0x757FB000 	C:\WINDOWS\system32\USP10.dll
+0x00FB0000 - 0x00FCF000 	C:\PROGRA~1\Google\GOOGLE~2\GOEC62~1.DLL
+0x62000000 - 0x6208B000 	C:\PROGRA~1\Google\GOOGLE~2\GoogleDesktopResources_de.dll
+0x719B0000 - 0x719F0000 	C:\WINDOWS\system32\mswsock.dll
+0x5B0F0000 - 0x5B128000 	C:\WINDOWS\system32\uxtheme.dll
+0x63000000 - 0x63014000 	C:\WINDOWS\system32\SynTPFcs.dll
+0x75250000 - 0x7527E000 	C:\WINDOWS\system32\msctfime.ime
+0x778F0000 - 0x779E4000 	C:\WINDOWS\system32\SETUPAPI.dll
+0x76F90000 - 0x7700F000 	C:\WINDOWS\system32\CLBCATQ.DLL
+0x77010000 - 0x770E3000 	C:\WINDOWS\system32\COMRes.dll
+0x016B0000 - 0x016D2000 	C:\PROGRA~1\MOZILL~1\components\GoogleDesktopMozilla.dll
+0x60000000 - 0x60066000 	C:\Programme\Google\Google Desktop Search\GoogleDesktopAPI2.dll
+0x66710000 - 0x66769000 	C:\WINDOWS\system32\hnetcfg.dll
+0x719F0000 - 0x719F8000 	C:\WINDOWS\System32\wshtcpip.dll
+0x01750000 - 0x01756000 	C:\PROGRA~1\MOZILL~1\components\qfaservices.dll
+0x01760000 - 0x01785000 	C:\PROGRA~1\MOZILL~1\components\FULLSOFT.DLL
+0x74670000 - 0x7469A000 	C:\WINDOWS\System32\msimtf.dll
+0x746A0000 - 0x746EB000 	C:\WINDOWS\System32\MSCTF.dll
+0x6D840000 - 0x6D84F000 	C:\PROGRA~1\MOZILL~1\plugins\NPOJI610.dll
+0x6D7B0000 - 0x6D7C7000 	C:\Programme\Java\j2re1.4.1_06\bin\jpins32.dll
+0x6D7D0000 - 0x6D7E4000 	C:\Programme\Java\j2re1.4.1_06\bin\jpishare.dll
+0x017C0000 - 0x017CD000 	C:\PROGRA~1\MOZILL~1\components\jar50.dll
+0x20000000 - 0x202D9000 	C:\WINDOWS\system32\xpsp2res.dll
+0x76320000 - 0x76325000 	C:\WINDOWS\system32\msimg32.dll
+0x017D0000 - 0x017DD000 	C:\Programme\LION\hooks.dll
+0x6D340000 - 0x6D46C000 	C:\PROGRA~1\Java\J2RE14~1.1_0\bin\client\jvm.dll
+0x76AF0000 - 0x76B1E000 	C:\WINDOWS\system32\WINMM.dll
+0x6D1E0000 - 0x6D1E7000 	C:\PROGRA~1\Java\J2RE14~1.1_0\bin\hpi.dll
+0x6D310000 - 0x6D31E000 	C:\PROGRA~1\Java\J2RE14~1.1_0\bin\verify.dll
+0x6D220000 - 0x6D239000 	C:\PROGRA~1\Java\J2RE14~1.1_0\bin\java.dll
+0x6D330000 - 0x6D33D000 	C:\PROGRA~1\Java\J2RE14~1.1_0\bin\zip.dll
+0x6D000000 - 0x6D106000 	C:\Programme\Java\j2re1.4.1_06\bin\awt.dll
+0x6D190000 - 0x6D1E0000 	C:\Programme\Java\j2re1.4.1_06\bin\fontmanager.dll
+0x736D0000 - 0x73719000 	C:\WINDOWS\system32\ddraw.dll
+0x73B30000 - 0x73B36000 	C:\WINDOWS\system32\DCIMAN32.dll
+0x738B0000 - 0x73980000 	C:\WINDOWS\system32\D3DIM700.DLL
+0x45000000 - 0x4500C000 	C:\Programme\Google\Google Desktop Search\gzlib.dll
+0x6D2E0000 - 0x6D2EE000 	C:\Programme\Java\j2re1.4.1_06\bin\net.dll
+0x76EE0000 - 0x76F07000 	C:\WINDOWS\system32\DNSAPI.dll
+0x76D20000 - 0x76D39000 	C:\WINDOWS\system32\iphlpapi.dll
+0x76F70000 - 0x76F78000 	C:\WINDOWS\System32\winrnr.dll
+0x76F20000 - 0x76F4D000 	C:\WINDOWS\system32\WLDAP32.dll
+0x76F80000 - 0x76F86000 	C:\WINDOWS\system32\rasadhlp.dll
+0x73250000 - 0x73255000 	C:\WINDOWS\system32\RICHED32.DLL
+0x74DB0000 - 0x74E1C000 	C:\WINDOWS\system32\RICHED20.dll
+0x6D290000 - 0x6D2AE000 	C:\Programme\Java\j2re1.4.1_06\bin\jpeg.dll
+0x76C50000 - 0x76C78000 	C:\WINDOWS\system32\imagehlp.dll
+0x59DD0000 - 0x59E71000 	C:\WINDOWS\system32\DBGHELP.dll
+0x76BB0000 - 0x76BBB000 	C:\WINDOWS\system32\PSAPI.DLL
+
+Local Time = Thu Jun 15 20:08:19 2006
+Elapsed Time = 11
+#
+# The exception above was detected in native code outside the VM
+#
+# Java VM: Java HotSpot(TM) Client VM (1.4.1_06-b01 mixed mode)
+#

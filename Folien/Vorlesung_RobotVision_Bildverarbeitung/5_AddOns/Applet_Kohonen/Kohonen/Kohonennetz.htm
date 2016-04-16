@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0070)http://www.uni-muenster.de/Physik/AP/Purwins/agnn/applets/kohonen.html -->
+<HTML><HEAD><TITLE>Kohonennetz</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2733.1800" name=GENERATOR><LINK 
+href="Kohonennetz-Dateien/Purwins.css" type=text/css rel=stylesheet></HEAD>
+<BODY><B><FONT color=#000000><FONT size=+2>Kohonen-Applet</FONT></FONT></B> 
+<P>Dieses Applet simuliert ein- und zweisimensionale Kohonennetze auf einem 
+zwei-dimensionalen Grundgebiet. Nach einem Druck auf den Schalter 
+'Mustereingabe' können die zu lernenden Muster in dem blauen Bereich des Applets 
+gesetzt werden. Mit 'Startposition' wird das Netzwerk in einen Anfangszustand 
+versetzt, der entweder zufällig sein kann oder in dem die Neuronen auf einem 
+Gitter liegen. Die Einstellung der Art des Startzustandes wird in einem 
+Dialogfenster vorgenommen, das mit 'Netzparameter' geöffnet wird. Mit dem 
+Schalter 'Lernen' wird der Kohonen-Algorithmus gestartet. <BR>Diese 
+Implementierung des Kohonen-Algorithmus verwendet als Distanzfunktion auf dem 
+Neuronengitter die Gauß-Funktion: 
+<CENTER><IMG height=51 src="Kohonennetz-Dateien/Formel_gauss.gif" 
+width=185></CENTER>
+<P>Dabei ist d der euklidische Abstand eines Neurons zum Gewinnerneuron. Der 
+Parameter&nbsp;<IMG height=7 src="Kohonennetz-Dateien/sigma.gif" width=10> 
+bestimmt, mit welchem Anteil die zum Gewinnerneuron benachbarten Neuronen 
+mitlernen.&nbsp;<IMG height=7 src="Kohonennetz-Dateien/sigma.gif" width=10> kann 
+im Dialogfenster 'Netzwerkparameter' eingestellt werden. Dort kann ebenfalls der 
+maximale Abstand d eingestellt werden, bis zu dem Neuronen mitlernen sollen. 
+<BR>&nbsp; <BR>&nbsp; <BR>
+<CENTER>
+<P><APPLET height=500 width=600 code=KohonenApplet.class>
+Yourbrowser does not support Java!</APPLET> <BR>
+<HR width="100%">
+</CENTER><A href="http://www.uni-muenster.de/Physik/AP/Purwins/Welcome-d.html" 
+target=_top><FONT size=-1>Startseite</FONT></A> </BODY></HTML>

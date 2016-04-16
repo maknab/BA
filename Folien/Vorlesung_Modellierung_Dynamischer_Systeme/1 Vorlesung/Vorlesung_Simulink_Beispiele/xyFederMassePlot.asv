@@ -1,0 +1,58 @@
+function xyFederMassePlot(method, varargin)
+% FEDER_MASSE_PLOT  
+%   Andreas Meisel June 2009
+
+persistent fig u k l0;
+
+switch method
+case 'init'
+    % Init-Parameter
+    k  = cast(varargin{1}, 'int32'); % number of masses
+    l0 = varargin{2};                % distance between masses
+    % --------------------------------------------------------
+    
+    % Initialize 
+    x=zeros(k,2);    
+    for i=1:k
+        x(i,1)=i; % Positionen der Massen
+    end
+    
+    if isempty(fig) % nur neu anlegen, wenn die figure noch nicht existiert
+        fig = figure('Name','MyGui', 'DoubleBuffer', 'on'); 
+    end
+    
+    % Setze Achsen des Grafikobjektes
+    % gca = "Current Axis Handle"
+    %set (gca,'XLim', [0 k*l0] );
+    %set (gca,'YLim', [-0.1 0.2] );
+    %set (gca,'XLimMode', 'manual' );
+    %set (gca,'YLimMode', 'manual' );
+    
+    %axis([0 k*l0 -0.2 0.2]);
+    
+    plot(x(:,1)*l0, x(:,2),'--rs','LineWidth',2,...
+                'MarkerEdgeColor','k',...
+                'MarkerFaceColor','g',...
+                'MarkerSize',10);
+    drawnow;
+    
+case 'update'
+    x = varargin{1};  % vector of x-Positions
+    plot(x(:,1), x(:,2),'--rs','LineWidth',2,...
+                'MarkerEdgeColor','k',...
+                'MarkerFaceColor','g',...
+                'MarkerSize',10);
+            
+    %set (gca,'XLim', [0 k*l0] );
+    set (gca,'YLim', [-0.01 0.06] );
+    %set (gca,'XLimMode', 'manual' );
+    %set (gca,'YLimMode', 'manual' );
+    drawnow;
+        
+    
+case 'close'
+    % Close UI figure when simulation is stopped
+    if(~isempty(fig) && ishandle(fig))
+        close(fig);
+    end
+end

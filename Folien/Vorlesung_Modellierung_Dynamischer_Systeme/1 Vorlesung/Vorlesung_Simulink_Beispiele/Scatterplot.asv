@@ -1,0 +1,4 @@
+x=rand(1,80);
+y=rand(1,80);
+dotsize =8;
+scatter(x,y,dotsize);

@@ -1,0 +1,4 @@
+x = -pi:0.01:pi;    % Vektor von -Pi bis + Pi in 0.01-er Schritten
+y = sin(x);         % Vektor der Sinuswerte
+plot(x,y);          % Funktion Plotten
+
