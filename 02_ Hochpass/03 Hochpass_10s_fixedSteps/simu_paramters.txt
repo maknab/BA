@@ -1,4 +1,4 @@
-## Hochpass (10s vari)##
+## Hochpass (10s fix)##
 
 Funktion: 5/ (s+1)
 
@@ -7,8 +7,8 @@ Save format: Array
 Save 2-D signals as: 3-D array
 
 Simulation time: 10 secs
-Type: Variable-step
-Solver:auto
+Type: Fixed-step
+Solver: auto
 
 # Training #
 
@@ -30,6 +30,8 @@ Input: Chirp
 		Time (t): Use simulation time
 		Amplitude: 1
 		Period (secs): 2
+		Pulse Width (% of period): 5
+		Phase delay (secs): 0
 
 03: Input: Constant
 		Constant value: 1
