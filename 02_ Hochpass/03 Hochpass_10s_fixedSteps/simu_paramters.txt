@@ -1,0 +1,54 @@
+## Hochpass (10s vari)##
+
+Funktion: 5/ (s+1)
+
+input_ signal/output_signal:
+Save format: Array
+Save 2-D signals as: 3-D array
+
+Simulation time: 10 secs
+Type: Variable-step
+Solver:auto
+
+# Training #
+
+Input: Chirp
+	Initial frequency (Hz): 0.001
+	Target time (secs): 10
+	Frequency at target time (Hz): 1
+
+	
+# Testing #
+
+01:	Input: Chirp
+		Initial frequency (Hz): 1
+		Target time (secs): 10
+		Frequency at target time (Hz): 0.001
+
+02: Input: Pulse
+		Pulse type: Time based
+		Time (t): Use simulation time
+		Amplitude: 1
+		Period (secs): 2
+
+03: Input: Constant
+		Constant value: 1
+		Sample time: inf
+		
+04: Input: Ramp
+		Slope: 1
+		Start time: 0
+		Initial output: 0
+		
+05: Input: Repeating Sequence
+		Time values: [0 2]
+		Output values: [0 2]
+		
+06: Input: Sinus
+		Sine type: Time based
+		Time (t): Use simulation time
+		Amplitude: 1
+		Bias: 0
+		Frequency (rad/sec): 1
+		Phase (rad): 0
+		Sample time: 0

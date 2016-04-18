@@ -1,4 +1,4 @@
-## Hochpass ##
+## Hochpass (100s vari)##
 
 Funktion: 5/ (s+1)
 
@@ -6,13 +6,15 @@ input_ signal/output_signal:
 Save format: Array
 Save 2-D signals as: 3-D array
 
-Simulation time: 10 secs
+Simulation time: 100 secs
+Type: Variable-Step
+Solver: auto
 
 # Training #
 
 Input: Chirp
-	Initial frequency (Hz): 0.001
-	Target time (secs): 10
+	Initial frequency (Hz): 0.01
+	Target time (secs): 100
 	Frequency at target time (Hz): 1
 
 	
@@ -20,14 +22,16 @@ Input: Chirp
 
 01:	Input: Chirp
 		Initial frequency (Hz): 1
-		Target time (secs): 10
-		Frequency at target time (Hz): 0.001
+		Target time (secs): 100
+		Frequency at target time (Hz): 0.01
 
 02: Input: Pulse
 		Pulse type: Time based
 		Time (t): Use simulation time
 		Amplitude: 1
 		Period (secs): 2
+		Pulse Width (% of period): 5
+		Phase delay (secs): 0
 
 03: Input: Constant
 		Constant value: 1
