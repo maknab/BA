@@ -25,26 +25,28 @@ Input: Chirp
 		Target time (secs): 100
 		Frequency at target time (Hz): 0.01
 
-02: Input: Pulse (old data)
+02: Input: Pulse
 		Pulse type: Time based
 		Time (t): Use simulation time
 		Amplitude: 1
 		Period (secs): 2
+		Pulse Width (% of period): 5
+		Phase delay (secs): 0
 
-03: Input: Constant (old data)
+03: Input: Constant
 		Constant value: 1
 		Sample time: inf
 		
-04: Input: Ramp (old data)
+04: Input: Ramp
 		Slope: 1
 		Start time: 0
 		Initial output: 0
 		
-05: Input: Repeating Sequence (old data)
+05: Input: Repeating Sequence
 		Time values: [0 2]
 		Output values: [0 2]
 		
-06: Input: Sinus (old data)
+06: Input: Sinus
 		Sine type: Time based
 		Time (t): Use simulation time
 		Amplitude: 1
