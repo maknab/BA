@@ -3,16 +3,14 @@
 
 % ################ Prepare ################
 % view training signals
-fig = figure('Name','Train In/Out');
+fig = figure(1);
 subplot(2,1,1);
-plot(input_signal);
-% semilogx(input_signal);
-% loglog(input_signal);
+% plot(input_signal);
+semilogx(input_signal);
 title('Input signal fed to the net');
 subplot(2,1,2);
-plot(output_signal);
-% semilogx(output_signal);
-% loglog(output_signal);
+%plot(output_signal);
+semilogx(output_signal);
 title('Output signal fed to the net');
 % save figure
 saveas(fig, 'net_trainInput', 'fig');
@@ -41,19 +39,19 @@ plotperform(tr);
 saveas(fig, 'train_plotperform', 'fig');
 
 % training state
-fig = figure(3);
+fig = figure('visible','off');
 plottrainstate(tr);
 saveas(fig,'train_plottrainstate','fig');
 
 % error histogramm
 Y = lrn_net(Xs,Xi,Ai);
 e = cell2mat(Ts) - cell2mat(Y);
-fig = figure(4);
+fig = figure('visible','off');
 ploterrhist(e,'bins',20);
 saveas(fig,'train_ploterrhist','fig');
 
 % regression
-fig = figure(5);
+fig = figure('visible','off');
 plotregression(Ts, Y, 'Training');
 saveas(fig, 'train_plotregression', 'fig');
 
@@ -67,7 +65,7 @@ save TP_net.mat lrn_net;
 
 % view net output
 Y = lrn_net(Xs,Xi,Ai);
-fig = figure('Name','Net Train Output');
+fig = figure(7);
 plot(cell2mat(Y));
 title('Output signal from the net');
 % save figure
@@ -75,7 +73,7 @@ saveas(fig, 'net_trainOutput', 'fig');
 
 % ################ Testing ################
 % view and save testing input
-fig = figure('Name','Test Input');
+fig = figure(8);
 plot(input_chirp);
 title('Input signal fed to the net');
 % save figure
@@ -85,13 +83,11 @@ saveas(fig, 'net_testInput', 'fig');
 Yc = lrn_net(Xcs,Xci,Aci);
 
 % view test output signals
-fig = figure('Name','Test Output');
+fig = figure(9);
 subplot(2,1,1);
-% semilogx(output_chirp);
 plot(output_chirp);
 title('Original output signal');
 subplot(2,1,2);
-% semilogx(cell2mat(Yc));
 plot(cell2mat(Yc));
 title('Net output signal');
 % save figure
