@@ -1,0 +1,9 @@
+
+Frequenzbereich menschliche Stimme
+80 Hz bis 12000 Hz
+
+fg 80    fs 180
+fg 900   fs 1850
+fg 12000 fs 24050
+
+Beobachtungen:
