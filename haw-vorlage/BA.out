@@ -1,0 +1,16 @@
+\BOOKMARK [0][-]{chapter.1}{1 Einleitung \(unfinished\)}{}% 1
+\BOOKMARK [0][-]{chapter.2}{2 K\374nstliche neuronale Netze \(unfinished\)}{}% 2
+\BOOKMARK [1][-]{section.2.1}{2.1 Deep Neural Networks / Feedforward Networks \(unfinished\)}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{2.2 Recurrent Neuronal Networks \(RNN\) \(unfinished\)}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Backpropagation Through Time \(BPTT\)}{section.2.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Vanishing \(and Exploding\) Gradients}{section.2.2}% 6
+\BOOKMARK [1][-]{section.2.3}{2.3 Long Short-Term Memory \(LSTM\) \(unfinished\)}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.4}{2.4 Problemstellungen \(unfinished\)}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{3 Deeplearning4j \(unfinished\)}{}% 9
+\BOOKMARK [1][-]{section.3.1}{3.1 Vorraussetzungen und Empfehlungen \(unfinished\)}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.2}{3.2 Getting started \(unfinished\)}{chapter.3}% 11
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Installation \(unfinished\)}{section.3.2}% 12
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Ein Netz erstellen und trainieren \(unfinished\)}{section.3.2}% 13
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 LSTM code}{section.3.2}% 14
+\BOOKMARK [0][-]{chapter.4}{4 "Mein Beispiel"\(unfinished\)}{}% 15
+\BOOKMARK [0][-]{chapter.5}{5 Fazit \(unfinished\)}{}% 16
