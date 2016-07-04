@@ -1,0 +1,44 @@
+aStart.m
+
+1x1 struct result
+	- savepic
+	- linespec
+1x1 struct speed
+	- usegpu
+	- usecluster
+	- numcluster
+	- machine
+	- gradientchecking
+1x1 struct options
+	- maxIter
+	- display
+	- LS_init
+	- maxFunEvals
+	- Corr
+1x1 struct problem
+	- numsamples
+	- batchsize
+	- T
+	- Ttest
+	- numtest
+	- gate_size
+	- numMmcell
+	- continualPredict
+	- bias1
+	- bias2
+1x1 struct sgd
+	- alpha
+	- momentum
+
+calls Main(result,speed,options,problem,sgd)
+
+####################################
+Main.m
+
+signum = 3.5
+
+- batchsize = numsamples falls größer
+- gputype(speed.usegpu) - setzt Variablen
+
+
+

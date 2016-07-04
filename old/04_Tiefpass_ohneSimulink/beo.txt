@@ -1,0 +1,55 @@
+
+Frequenzbereich menschliche Stimme
+80 Hz bis 12000 Hz
+
+
+lin filter
+
+low:  fg 80    fs 180
+mid:  fg 900   fs 1850
+high: fg 12000 fs 24050
+
+Beobachtungen:
+1) purelin:
+	low, 2N: - 1O did not work
+			 - 2O - 9O need a few tries
+			 - more neurons doesn't seem to help
+			 - order of filter does not seem to matter
+			 
+2) satlins:
+	low, 2N: - works on first time
+			 - learns fast most of the time
+			 - order of filter does not seem to matter
+			 
+3) tansig:
+	low, 2N: - works on first time
+	
+4) purelin:
+	mid, 2N: - 1O, 9O did not work
+			 - 2O, 3O, 4O, 8O does not work always
+			 
+5) satlins:
+	mid, 2N: - learns fast
+			 - works on first time
+			 - 3O, 4O does not always work
+			 
+6) tansig:
+	mid, 2N: -
+
+	
+7) purelin:
+	high, 2N: - 1O not working
+			  - 1O up to 8 neurons don't work
+			  - 2O doesn't always works, stops early when it does
+			  - 3O does not always work
+			  - 4O did not work
+			  - 5O,6O sometimes works
+			  - 9O did not work
+			  
+8) satlins:
+	high, 2N: - 1O,2O,3O seem to always work
+			  - 4O starts, but not always gives good results
+			  - 9O starts, but gives no good results
+9) tansig:
+	high, 2N: - works, does not stop early
+			  - 3O not always good results
