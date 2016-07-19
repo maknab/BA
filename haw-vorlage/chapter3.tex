@@ -1,3 +1,30 @@
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,             % the size of the fonts that are used for the code
+  breakatwhitespace=false,            % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 	   % sets automatic line breaking
+  captionpos=b,                    	   % sets the caption-position to bottom
+  commentstyle=\color{dkgreen},   % comment style
+  deletekeywords={...},            	   % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},             % if you want to add LaTeX within your code
+  extendedchars=true,                    % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                        % adds a frame around the code
+  keepspaces=true,                         % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},          % keyword style
+  otherkeywords={*,...},                % if you want to add more keywords to the set
+  numbers=left,                               % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                           % how far the line-numbers are from the code
+  numberstyle=\tiny\color{gray},   % the style that is used for the line-numbers
+  rulecolor=\color{black},                % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                       % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,              % underline spaces within strings only
+  showtabs=false,                           % show tabs within strings adding particular underscores
+  stepnumber=1,                             % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mauve},          % string literal style
+  tabsize=2,	                                  % sets default tabsize to 2 spaces
+  title=\lstname                               % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
 \chapter{Deeplearning4j (unfinished)}
 {See also \cite{DL4J}\\
 von http://deeplearning4j.org/quickstart\\
@@ -7,6 +34,7 @@ How to:
 http://deeplearning4j.org/documentation
 ...
 
+%%%% SECTION %%%%
 \section{Getting started (unfinished)}
 von http://deeplearning4j.org/quickstart\\
 
@@ -16,7 +44,7 @@ von http://deeplearning4j.org/quickstart\\
 - IntelliJ IDEA oder Eclipse (An Integrated Development Environment (IDE) allows you to work with our API and configure neural networks in a few steps. We strongly recommend using IntelliJ, which communicates with Maven to handle dependencies.)\\
 - Git
 
-\subsection{Installation (unfinished)}
+Installation:
 http://deeplearning4j.org/gettingstarted
 Follow the ND4J Getting Started instructions to start a new project and include necessary POM dependencies.
 http://nd4j.org/getstarted.html
@@ -70,12 +98,8 @@ In addition to the core dependency, given below, you may also want to install de
 	   </dependency>
 \end{lstlisting}
 
-
-
-
-
-
-\section{Ein Netz erstellen und trainieren (unfinished)}
+%%%% SECTION %%%%
+\section{Feedforward Netze (unfinished)}
 http://deeplearning4j.org/quickstart.html
 Everything starts with a MultiLayerConfiguration, which organizes those layers and their hyperparameters.
 Hyperparameters are variables that determine how a neural network learns. They include how many times to update the weights of the model, how to initialize those weights, which activation function to attach to the nodes, which optimization algorithm to use, and how fast the model should learn. This is what one configuration would look like:
@@ -105,8 +129,6 @@ To run DL4J in your own projects, we highly recommend using Maven for Java users
    -  nd4j-native, the CPU version of the ND4J library that powers DL4J
     - canova-api - Canova is our library vectorizing and loading data
 
-
-
 http://deeplearning4j.org/gettingstarted.html
 Reproducible Results
 
@@ -116,9 +138,63 @@ Neural net weights are initialized randomly, which means the model begins learni
    Nd4j.getRandom().setSeed(123);
 \end{lstlisting}
 
-\subsection{RNN code (unfinished)}
+%%%% SECTION %%%%
+\section{Recurrent Neuronal Network (unfinished)}
+\subsection{Builder}
+http://deeplearning4j.org/doc/
+Parametereinstellungen:
+- iterations(int): Number of optimization iterations.
+- learningRate(double): Learning rate. Defaults to 1e-1
+- optimizationAlgo(OptimizationAlgorithm):  
+- seed(long): Random number generator seed. Used for reproducability between runs
+- biasInit(double): ??
+- miniBatch(boolean): Process input as minibatch vs full dataset. Default set to true.
+- updater(Updater): Gradient updater. 
+- weightInit(WeightInit): Weight initialization scheme.
 
-\subsection{LSTM code (unfinished)}
+check http://deeplearning4j.org/glossary.html for explanations
+
+- OptimizationAlgorithm: verf"ugbare Algorithmen %%CONJUGATE_GRADIENT, HESSIAN_FREE, LBFGS, LINE_GRADIENT_DESCENT, STOCHASTIC_GRADIENT_DESCENT
+- Updater: For example, Updater.SGD for standard stochastic gradient descent, Updater.NESTEROV for Nesterov momentum, Updater.RSMPROP for RMSProp, etc. (alle verf"ugbaren: ADADELTA, ADAGRAD, ADAM, CUSTOM, NESTEROVS, NONE, RMSPROP, SGD)
+- WeightInit:
+DISTRIBUTION Distribution: Sample weights from a distribution based on shape of input
+NORMALIZED Normalized: Normalize sample weights
+RELU Delving Deep into Rectifiers
+SIZE Size: Sample weights from bound uniform distribution using shape for min and max
+UNIFORM Uniform: Sample weights from bound uniform distribution (specify min and max)
+VI VI: Sample weights from variance normalized initialization (Glorot)
+XAVIER N(0,2/nIn): He et al. (2015)
+ZERO Zeros: Generate weights as zeros
+
+\lstinputlisting[language=JAVA, firstline=1, lastline=10,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Builder}]
+{code_snippets/rnn_auszug1.java}
+
+\subsection{ListBuilder}
+first difference, for rnns we need to use GravesLSTM.Builder
+we need to use RnnOutputLayer for our RNN
+
+    // softmax normalizes the output neurons, the sum of all outputs is 1
+    // this is required for our sampleFromDistribution-function
+
+\lstinputlisting[language=JAVA, firstline=12, lastline=31,  captionpos=b, caption={Beispiel zur RNN-Erstellung: ListBuilder}]
+{code_snippets/rnn_auszug1.java}
+
+\subsection{Netz erzeugen}
+\lstinputlisting[language=JAVA, firstline=33, lastline=37,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Netz erzeugen}]
+{code_snippets/rnn_auszug1.java}
+
+\subsection{Daten erstellen}
+// create input and output arrays: SAMPLE\_INDEX, INPUT\_NEURON,
+    // SEQUENCE\_POSITION
+\lstinputlisting[language=JAVA, firstline=41, lastline=55,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Daten erstellen}]
+{code_snippets/rnn_auszug1.java}
+
+\subsection{Netz trainieren}
+\lstinputlisting[language=JAVA, firstline=58, lastline=96,  captionpos=b, caption={Beispiel zur RNN-Erstellung:}]
+{code_snippets/rnn_auszug1.java}
+
+%%%% SECTION %%%%
+\section{LSTM Netze (unfinished)}
 A commented example of a Graves LSTM learning how to replicate Shakespearian drama, and implemented with Deeplearning4j
 \subsubsection{Hyperparameter Tuning}
 http://deeplearning4j.org/lstm.html

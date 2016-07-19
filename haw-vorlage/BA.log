@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.9)  4 JUL 2016 16:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.9)  19 JUL 2016 17:38
 entering extended mode
 **C:/Users/Wolfgang/Documents/Marina/Studium/BA/haw-vorlage/BA.tex
 (C:/Users/Wolfgang/Documents/Marina/Studium/BA/haw-vorlage/BA.tex
@@ -536,21 +536,18 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 \Gin@req@height=\dimen128
 \Gin@req@width=\dimen129
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 89.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 89.
-Package hyperref Info: Option `linktocpage' set `true' on input line 89.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 72.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 72.
+Package hyperref Info: Option `linktocpage' set `true' on input line 72.
 LaTeX Font Info:    Try loading font information for OT1+LinuxLibertineT-TLF on
- input line 103.
+ input line 86.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\libertine\ot1linuxlibertinet-tlf.fd"
 File: OT1LinuxLibertineT-TLF.fd 2012/11/26 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 103.
+(Font)              scaled to size 10.95pt on input line 86.
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 11
 (typearea)             BCOR = 28.45274pt
@@ -567,7 +564,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 103.
+(typearea)              on input line 86.
 \@indexfile=\write3
 
 Writing index file BA.idx
@@ -575,30 +572,29 @@ Writing index file BA.idx
 Writing nomenclature file BA.nlo
 (BA.aux (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux)
 (chapter5.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 108.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 91.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 \c@mv@tabular=\count116
 \c@mv@boldtabular=\count117
-LaTeX Info: Redefining \microtypecontext on input line 108.
+LaTeX Info: Redefining \microtypecontext on input line 91.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -614,7 +610,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 \c@lstlisting=\count118
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 108.
+Package hyperref Info: Link coloring ON on input line 91.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -624,9 +620,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 108.
-LaTeX Info: Redefining \pageref on input line 108.
-LaTeX Info: Redefining \nameref on input line 108.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
 
 (BA.out) (BA.out)
 \@outlinefile=\write5
@@ -645,39 +641,39 @@ LaTeX Info: Redefining \nameref on input line 108.
 \everyMPtoPDFconversion=\toks28
 ) ABD: EveryShipout initializing macros
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 104.
 LaTeX Font Info:    Try loading font information for OT1+LinuxBiolinumT-TLF on 
-input line 127.
+input line 110.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\libertine\ot1linuxbiolinumt-tlf.fd"
 File: OT1LinuxBiolinumT-TLF.fd 2012/11/26 (autoinst) Font definitions for OT1/L
 inuxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 127.
+(Font)              scaled to size 10.95pt on input line 110.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<./logo/HAW_logo.png, id=75, 768.8725pt x 231.86626pt>
+<./logo/HAW_logo.png, id=99, 768.8725pt x 231.86626pt>
 File: ./logo/HAW_logo.png Graphic file (type png)
 
 <use ./logo/HAW_logo.png>
-Package pdftex.def Info: ./logo/HAW_logo.png used on input line 127.
+Package pdftex.def Info: ./logo/HAW_logo.png used on input line 110.
 (pdftex.def)             Requested size: 284.52756pt x 85.80685pt.
 
-Overfull \hbox (227.62206pt too wide) in paragraph at lines 127--127
+Overfull \hbox (227.62206pt too wide) in paragraph at lines 110--110
 [][] 
  []
 
@@ -686,37 +682,37 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 127.
+(Font)              <10.95> on input line 110.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 127.
+(Font)              <8> on input line 110.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 127.
+(Font)              <6> on input line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/bx/n' in size <10.95> no
 t available
 (Font)              Font shape `OT1/LinuxBiolinumT-TLF/b/n' tried instead on in
-put line 127.
+put line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 127.
+(Font)              scaled to size 10.95pt on input line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/bx/n' in size <24.88> no
 t available
 (Font)              Font shape `OT1/LinuxBiolinumT-TLF/b/n' tried instead on in
-put line 127.
+put line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 127.
+(Font)              scaled to size 24.88pt on input line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/bx/n' in size <14.4> not
  available
 (Font)              Font shape `OT1/LinuxBiolinumT-TLF/b/n' tried instead on in
-put line 127.
+put line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 127.
+(Font)              scaled to size 14.4pt on input line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/bx/n' in size <12> not a
 vailable
 (Font)              Font shape `OT1/LinuxBiolinumT-TLF/b/n' tried instead on in
-put line 127.
+put line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 127.
+(Font)              scaled to size 12.0pt on input line 110.
 
-Overfull \hbox (318.98038pt too wide) in paragraph at lines 127--127
+Overfull \hbox (318.98038pt too wide) in paragraph at lines 110--110
 [][][][][][][] 
  []
 
@@ -724,20 +720,20 @@ Overfull \hbox (318.98038pt too wide) in paragraph at lines 127--127
 \haw@fw=\skip58
 \haw@tw=\skip59
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 127.
+(Font)              scaled to size 10.95pt on input line 110.
 
-Overfull \hbox (455.24419pt too wide) in paragraph at lines 127--127
+Overfull \hbox (455.24419pt too wide) in paragraph at lines 110--110
 []$[]$ 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 110.
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
@@ -745,77 +741,77 @@ Package babel Info: Redefining ngerman shorthand "~
 
  <./logo/HAW_logo.png>]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 127.
+(Font)              scaled to size 14.4pt on input line 110.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 127.
+(Font)              scaled to size 14.4pt on input line 110.
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
 
  []
 
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 127.
+ input line 110.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\libertine\ts1linuxlibertinet-tlf.fd"
 File: TS1LinuxLibertineT-TLF.fd 2012/11/26 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 127.
+(Font)              scaled to size 10.95pt on input line 110.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 110.
 
 [2]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 139.
+(Font)              scaled to size 10.95pt on input line 122.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 123.
  [3]
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/bx/n' in size <20.74> no
 t available
 (Font)              Font shape `OT1/LinuxBiolinumT-TLF/b/n' tried instead on in
-put line 144.
+put line 127.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 144.
-Package tocbasic Info: character protrusion at toc deactivated on input line 14
-4.
+(Font)              scaled to size 20.74pt on input line 127.
+Package tocbasic Info: character protrusion at toc deactivated on input line 12
+7.
  (BA.toc)
 \tf@toc=\write6
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/sl' in size <10.95> n
 ot available
 (Font)              Font shape `OT1/LinuxLibertineT-TLF/m/it' tried instead on 
-input line 145.
+input line 128.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 145.
+(Font)              scaled to size 10.95pt on input line 128.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 145.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 145.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 145.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 145.
+(babel)             in language  on input line 128.
  [4
 
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 14
-8.
+Package tocbasic Info: character protrusion at lof deactivated on input line 13
+1.
  (BA.lof)
 \tf@lof=\write7
 
@@ -830,30 +826,30 @@ Class scrbook Warning: \float@listhead detected!
 (scrbook)              Loading of package `scrhack' may help to
 (scrbook)              avoid this warning, if you are using a
 (scrbook)              a package that still implements the
-(scrbook)              deprecated \float@listhead interface  on input line 149.
+(scrbook)              deprecated \float@listhead interface  on input line 132.
 
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 132.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 132.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 132.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 132.
 [5
 
 
 ] (BA.lol)
 \tf@lol=\write8
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 152.
+(babel)             in language  on input line 135.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 152.
+(babel)             in language  on input line 135.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 152.
+(babel)             in language  on input line 135.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 152.
+(babel)             in language  on input line 135.
  [6
 
 
@@ -882,13 +878,13 @@ Class scrbook Warning: \float@addtolists detected!
 
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 161.
+(babel)             in language  on input line 144.
  [1
 
 
@@ -901,32 +897,27 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 3.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--9
-
- []
-
-<pictures/perceptron_node.png, id=156, 657.45625pt x 319.1925pt>
+(babel)             in language  on input line 10.
+<pictures/perceptron_node.png, id=226, 657.45625pt x 319.1925pt>
 File: pictures/perceptron_node.png Graphic file (type png)
 
 <use pictures/perceptron_node.png>
 Package pdftex.def Info: pictures/perceptron_node.png used on input line 15.
-(pdftex.def)             Requested size: 310.39375pt x 150.69748pt.
+(pdftex.def)             Requested size: 248.31752pt x 120.5541pt.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 16.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 19.
+(Font)              scaled to size 9.0pt on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 19.
+(Font)              <9> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 19.
+(Font)              <5> on input line 18.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 19.
+(Font)              scaled to size 6.0pt on input line 18.
 LaTeX Font Info:    Try loading font information for OT1+LinuxLibertineMonoT-TL
-F on input line 19.
+F on input line 18.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\libertine\ot1linuxlibertinemonot-tlf.fd
 "
@@ -934,7 +925,7 @@ File: OT1LinuxLibertineMonoT-TLF.fd 2012/12/06 (autoinst) Font definitions for
 OT1/LinuxLibertineMonoT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 19.
+(Font)              scaled to size 9.0pt on input line 18.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineMonoT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -942,243 +933,424 @@ Package microtype Info: Loading generic settings for font family
 Package microtype Info: Character `~' is missing
 (microtype)             in font `OT1/LinuxLibertineMonoT-TLF/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
- <pictures/mlp.png, id=160, 286.06876pt x 130.4875pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 20.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 20.
+ [2
+
+
+
+
+ <./pictures/perceptron_node.png>]
+<pictures/mlp.png, id=236, 286.06876pt x 130.4875pt>
 File: pictures/mlp.png Graphic file (type png)
  <use pictures/mlp.png>
 Package pdftex.def Info: pictures/mlp.png used on input line 26.
 (pdftex.def)             Requested size: 206.92917pt x 94.38895pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 31.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 31.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 31.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 31.
 
-[2
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
+ []
 
-
-
-]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
- [3 <./pictures/perceptron_node.png> <./pictures/mlp.png>]
+(babel)             in language  on input line 43.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 43.
+[3 <./pictures/mlp.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 57.
+(babel)             in language  on input line 55.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 62.
  [4]
-<pictures/feedforward_rumelhart.png, id=180, 504.88625pt x 557.08125pt>
-File: pictures/feedforward_rumelhart.png Graphic file (type png)
+<pictures/RNN-rolled.png, id=250, 165.4983pt x 256.91985pt>
+File: pictures/RNN-rolled.png Graphic file (type png)
 
-<use pictures/feedforward_rumelhart.png>
-Package pdftex.def Info: pictures/feedforward_rumelhart.png used on input line 
-69.
-(pdftex.def)             Requested size: 248.31752pt x 273.99225pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
- [5 <./pictures/feedforward_rumelhart.png>]
+<use pictures/RNN-rolled.png>
+Package pdftex.def Info: pictures/RNN-rolled.png used on input line 74.
+(pdftex.def)             Requested size: 124.15875pt x 192.7482pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 80.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 80.
+ [5 <./pictures/RNN-rolled.png>]
+<pictures/RNN-unrolled.png, id=260, 977.8131pt x 256.91985pt>
+File: pictures/RNN-unrolled.png Graphic file (type png)
+
+<use pictures/RNN-unrolled.png>
+Package pdftex.def Info: pictures/RNN-unrolled.png used on input line 86.
+(pdftex.def)             Requested size: 248.31752pt x 65.24515pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 105.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 92.
- [6]
+(babel)             in language  on input line 105.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 105.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 105.
+ [6 <./pictures/RNN-unrolled.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 126.
  [7]
-<pictures/sigmoid_vanishing_gradient.png, id=199, 554.07pt x 428.60126pt>
+<pictures/sigmoid_vanishing_gradient.png, id=275, 554.07pt x 428.60126pt>
 File: pictures/sigmoid_vanishing_gradient.png Graphic file (type png)
 
 <use pictures/sigmoid_vanishing_gradient.png>
 Package pdftex.def Info: pictures/sigmoid_vanishing_gradient.png used on input 
-line 121.
+line 133.
 (pdftex.def)             Requested size: 248.31752pt x 192.08398pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 139.
+
+<pictures/RNN-shorttermdepdencies.png, id=279, 670.30424pt x 308.95425pt>
+File: pictures/RNN-shorttermdepdencies.png Graphic file (type png)
+
+<use pictures/RNN-shorttermdepdencies.png>
+Package pdftex.def Info: pictures/RNN-shorttermdepdencies.png used on input lin
+e 147.
+(pdftex.def)             Requested size: 248.31752pt x 114.4527pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 153.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 153.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 135.
+(babel)             in language  on input line 153.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 135.
- [8 <./pictures/sigmoid_vanishing_gradient.png>] <pictures/gers_lstm.png, id=20
-9, 670.505pt x 497.86pt>
+(babel)             in language  on input line 153.
+ [8 <./pictures/sigmoid_vanishing_gradient.png>]
+<pictures/RNN-longtermdependencies.png, id=290, 911.68605pt x 314.01315pt>
+File: pictures/RNN-longtermdependencies.png Graphic file (type png)
+
+<use pictures/RNN-longtermdependencies.png>
+Package pdftex.def Info: pictures/RNN-longtermdependencies.png used on input li
+ne 159.
+(pdftex.def)             Requested size: 248.31752pt x 85.52734pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 169.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 169.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 173.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 173.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 173.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 173.
+ [9 <./pictures/RNN-shorttermdepdencies.png> <./pictures/RNN-longtermdependenci
+es.png>]
+<pictures/gers_lstm.png, id=301, 670.505pt x 497.86pt>
 File: pictures/gers_lstm.png Graphic file (type png)
 
 <use pictures/gers_lstm.png>
-Package pdftex.def Info: pictures/gers_lstm.png used on input line 144.
+Package pdftex.def Info: pictures/gers_lstm.png used on input line 185.
 (pdftex.def)             Requested size: 248.31752pt x 184.38004pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 154.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 154.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 154.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 154.
- [9 <./pictures/gers_lstm.png>]
-<pictures/greff_lstm_diagram.png, id=219, 850.17625pt x 424.58624pt>
+
+<pictures/greff_lstm_diagram.png, id=305, 850.17625pt x 424.58624pt>
 File: pictures/greff_lstm_diagram.png Graphic file (type png)
 
 <use pictures/greff_lstm_diagram.png>
-Package pdftex.def Info: pictures/greff_lstm_diagram.png used on input line 162
+Package pdftex.def Info: pictures/greff_lstm_diagram.png used on input line 203
 .
 (pdftex.def)             Requested size: 248.31752pt x 124.00795pt.
-
-<pictures/gates_lstm.png, id=223, 632.3625pt x 332.24126pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 206.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 206.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 206.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 206.
+ [10]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 213.
+ [11 <./pictures/gers_lstm.png> <./pictures/greff_lstm_diagram.png>]
+<pictures/gates_lstm.png, id=321, 632.3625pt x 332.24126pt>
 File: pictures/gates_lstm.png Graphic file (type png)
 
 <use pictures/gates_lstm.png>
-Package pdftex.def Info: pictures/gates_lstm.png used on input line 182.
+Package pdftex.def Info: pictures/gates_lstm.png used on input line 223.
 (pdftex.def)             Requested size: 248.31752pt x 130.46074pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 185.
+(babel)             in language  on input line 237.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 185.
+(babel)             in language  on input line 237.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 185.
+(babel)             in language  on input line 237.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 185.
- [10 <./pictures/greff_lstm_diagram.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 202.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 202.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 202.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 202.
- [11 <./pictures/gates_lstm.png>]
-Overfull \hbox (144.58049pt too wide) in paragraph at lines 202--209
+(babel)             in language  on input line 237.
+ [12 <./pictures/gates_lstm.png>]
+Overfull \hbox (144.58049pt too wide) in paragraph at lines 243--250
 []\OT1/LinuxLibertineT-TLF/m/n/10.95 (-20) Further links: (could be sources for
  pic-tu-res) http://people.idsia.ch/ ju-er-gen/rnn.html https://karpathy.github
 .io/2015/05/21/rnn-
  []
 
 
-Overfull \hbox (49.65948pt too wide) in paragraph at lines 202--209
+Overfull \hbox (49.65948pt too wide) in paragraph at lines 243--250
 \OT1/LinuxLibertineT-TLF/m/n/10.95 (-20) effectiveness/ htt-ps://www.cs.cmu.edu
 / bhiks-ha/-cour-ses/-de-e-plear-ning/Fall.2015/pdfs/Werbos.backprop.pdf
  []
 
 
-Overfull \hbox (101.02946pt too wide) in paragraph at lines 202--209
+Overfull \hbox (101.02946pt too wide) in paragraph at lines 243--250
 \OT1/LinuxLibertineT-TLF/m/n/10.95 (-20) http://www.cs.toronto.edu/ gra-ve-s/ph
 d.pdf http://www.felixgers.de/papers/phd.pdf http://arxiv.org/pdf/1503.04069.pd
 f 
  []
 
+<pictures/LSTM3-SimpleRNN.png, id=331, 810.1467pt x 303.17265pt>
+File: pictures/LSTM3-SimpleRNN.png Graphic file (type png)
+
+<use pictures/LSTM3-SimpleRNN.png>
+Package pdftex.def Info: pictures/LSTM3-SimpleRNN.png used on input line 262.
+(pdftex.def)             Requested size: 248.31752pt x 92.92319pt.
+
+<pictures/LSTM3-chain.png, id=335, 806.89455pt x 303.17265pt>
+File: pictures/LSTM3-chain.png Graphic file (type png)
+
+<use pictures/LSTM3-chain.png>
+Package pdftex.def Info: pictures/LSTM3-chain.png used on input line 272.
+(pdftex.def)             Requested size: 248.31752pt x 93.29788pt.
+
+<pictures/LSTM2-notation.png, id=339, 953.5625pt x 177.66376pt>
+File: pictures/LSTM2-notation.png Graphic file (type png)
+
+<use pictures/LSTM2-notation.png>
+Package pdftex.def Info: pictures/LSTM2-notation.png used on input line 282.
+(pdftex.def)             Requested size: 248.31752pt x 46.26468pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 214.
+(babel)             in language  on input line 288.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 214.
-)
+(babel)             in language  on input line 288.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 288.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 288.
+ [13 <./pictures/LSTM3-SimpleRNN.png>]
+<pictures/LSTM3-C-line.png, id=350, 659.8251pt x 203.8014pt>
+File: pictures/LSTM3-C-line.png Graphic file (type png)
+
+<use pictures/LSTM3-C-line.png>
+Package pdftex.def Info: pictures/LSTM3-C-line.png used on input line 297.
+(pdftex.def)             Requested size: 248.31752pt x 76.69899pt.
+
+<pictures/LSTM3-gate.png, id=354, 71.5473pt x 87.4467pt>
+File: pictures/LSTM3-gate.png Graphic file (type png)
+
+<use pictures/LSTM3-gate.png>
+Package pdftex.def Info: pictures/LSTM3-gate.png used on input line 309.
+(pdftex.def)             Requested size: 124.15875pt x 151.74902pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 316.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 162.
- [12] (chapter3.tex
+(babel)             in language  on input line 316.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 316.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 316.
+ [14 <./pictures/LSTM3-chain.png> <./pictures/LSTM2-notation.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 316.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 316.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 316.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 316.
+ [15 <./pictures/LSTM3-C-line.png> <./pictures/LSTM3-gate.png>] <pictures/LSTM3
+-focus-f.png, id=374, 659.8251pt x 203.8014pt>
+File: pictures/LSTM3-focus-f.png Graphic file (type png)
+
+<use pictures/LSTM3-focus-f.png>
+Package pdftex.def Info: pictures/LSTM3-focus-f.png used on input line 326.
+(pdftex.def)             Requested size: 248.31752pt x 76.69899pt.
+
+<pictures/LSTM3-focus-i.png, id=378, 659.8251pt x 203.8014pt>
+File: pictures/LSTM3-focus-i.png Graphic file (type png)
+
+<use pictures/LSTM3-focus-i.png>
+Package pdftex.def Info: pictures/LSTM3-focus-i.png used on input line 338.
+(pdftex.def)             Requested size: 248.31752pt x 76.69899pt.
+
+<pictures/LSTM3-focus-C.png, id=382, 659.8251pt x 203.8014pt>
+File: pictures/LSTM3-focus-C.png Graphic file (type png)
+
+<use pictures/LSTM3-focus-C.png>
+Package pdftex.def Info: pictures/LSTM3-focus-C.png used on input line 352.
+(pdftex.def)             Requested size: 248.31752pt x 76.69899pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 358.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 358.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 358.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 358.
+ [16 <./pictures/LSTM3-focus-f.png>]
+<pictures/LSTM3-focus-o.png, id=394, 659.8251pt x 203.8014pt>
+File: pictures/LSTM3-focus-o.png Graphic file (type png)
+
+<use pictures/LSTM3-focus-o.png>
+Package pdftex.def Info: pictures/LSTM3-focus-o.png used on input line 364.
+(pdftex.def)             Requested size: 248.31752pt x 76.69899pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 373.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 373.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 373.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 373.
+ [17 <./pictures/LSTM3-focus-i.png> <./pictures/LSTM3-focus-C.png> <./pictures/
+LSTM3-focus-o.png>]
+<pictures/LSTM3-var-peepholes.png, id=407, 659.8251pt x 203.8014pt>
+File: pictures/LSTM3-var-peepholes.png Graphic file (type png)
+
+<use pictures/LSTM3-var-peepholes.png>
+Package pdftex.def Info: pictures/LSTM3-var-peepholes.png used on input line 37
+8.
+(pdftex.def)             Requested size: 248.31752pt x 76.69899pt.
+
+<pictures/LSTM3-var-tied.png, id=411, 659.8251pt x 203.8014pt>
+File: pictures/LSTM3-var-tied.png Graphic file (type png)
+
+<use pictures/LSTM3-var-tied.png>
+Package pdftex.def Info: pictures/LSTM3-var-tied.png used on input line 390.
+(pdftex.def)             Requested size: 248.31752pt x 76.69899pt.
+
+<pictures/LSTM3-var-GRU.png, id=415, 659.8251pt x 203.8014pt>
+File: pictures/LSTM3-var-GRU.png Graphic file (type png)
+
+<use pictures/LSTM3-var-GRU.png>
+Package pdftex.def Info: pictures/LSTM3-var-GRU.png used on input line 400.
+(pdftex.def)             Requested size: 248.31752pt x 76.69899pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 407.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 407.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 407.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 407.
+ [18 <./pictures/LSTM3-var-peepholes.png> <./pictures/LSTM3-var-tied.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 419.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 419.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 422.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 422.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 422.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 422.
+ [19 <./pictures/LSTM3-var-GRU.png>])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 145.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 145.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 145.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 145.
+ [20]
+(chapter3.tex
 chapter 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 28.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--5
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 38.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 38.
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 19.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 41.
 
-Overfull \hbox (104.78549pt too wide) in paragraph at lines 20--24
-\OT1/LinuxLibertineT-TLF/m/n/10.95 (-20) new pro-ject and in-clu-de ne-cessa-ry
- POM de-pen-den-cies. http://nd4j.org/getstarted.html http://nd4j.org/dependenc
-ies.htm 
+Overfull \hbox (19.37938pt too wide) in paragraph at lines 47--52
+\OT1/LinuxLibertineT-TLF/m/n/10.95 (-20) ti-ons to start a new pro-ject and in-
+clu-de ne-cessa-ry POM de-pen-den-cies. http://nd4j.org/getstarted.html
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
-<pictures/new_maven_project.png, id=244, 718.685pt x 516.93124pt>
+(babel)             in language  on input line 53.
+<pictures/new_maven_project.png, id=441, 718.685pt x 516.93124pt>
 File: pictures/new_maven_project.png Graphic file (type png)
 
 <use pictures/new_maven_project.png>
-Package pdftex.def Info: pictures/new_maven_project.png used on input line 33.
+Package pdftex.def Info: pictures/new_maven_project.png used on input line 61.
 (pdftex.def)             Requested size: 248.31752pt x 178.60965pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
- [13
+(babel)             in language  on input line 69.
+ [21
 
 
 
@@ -1190,98 +1362,130 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 46.
-Package microtype Info: Character `~' is missing
-(microtype)             in font `OT1/LinuxLibertineMonoT-TLF/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 46.
-Package microtype Info: Character `~' is missing
-(microtype)             in font `OT1/LinuxLibertineMonoT-TLF/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 47.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/bx/n' in size <10> 
-not available
-(Font)              Font shape `OT1/LinuxLibertineMonoT-TLF/b/n' tried instead 
-on input line 50.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
-Package microtype Info: Character `~' is missing
-(microtype)             in font `OT1/LinuxLibertineMonoT-TLF/b/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineMonoT-TL
-F on input line 50.
+LaTeX Font Info:    Try loading font information for OML+LinuxLibertineT-TLF on
+ input line 75.
+LaTeX Font Info:    No file OMLLinuxLibertineT-TLF.fd. on input line 75.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\libertine\ts1linuxlibertinemonot-tlf.fd
-"
-File: TS1LinuxLibertineMonoT-TLF.fd 2012/12/06 (autoinst) Font definitions for 
-TS1/LinuxLibertineMonoT-TLF.
+
+LaTeX Font Warning: Font shape `OML/LinuxLibertineT-TLF/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textless' on input line 75.
+
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 78.
+LaTeX Font Info:    Try loading font information for OMS+LinuxLibertineT-TLF on
+ input line 78.
+LaTeX Font Info:    No file OMSLinuxLibertineT-TLF.fd. on input line 78.
+
+LaTeX Font Warning: Font shape `OMS/LinuxLibertineT-TLF/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 78.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 93.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 93.
+[22 <./pictures/new_maven_project.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 102.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 102.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 126.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 126.
+ [23]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 142.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 142.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 143.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 143.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 168.
+ [24]
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Font shape `TS1/LinuxLibertineMonoT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `LinuxLibertineMonoT-TLF' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Missing character: There is no } in font LinLibertineMT-tlf-ot1!
+(code_snippets/rnn_auszug1.java)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 172.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 172.
+ (code_snippets/rnn_auszug1.java
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
- [14 <./pictures/new_maven_project.png>]
-Missing character: There is no } in font LinLibertineMT-tlf-ot1!
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 78.
-Missing character: There is no _ in font LinLibertineMT-tlf-ot1!
-Missing character: There is no _ in font LinLibertineMT-tlf-ot1!
+(babel)             in language  on input line 29.
+ [25])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 182.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 182.
 
-Overfull \hbox (43.26102pt too wide) in paragraph at lines 87--88
-[][][][][][][][][][][][][][][][][][]  
- []
-
+(code_snippets/rnn_auszug1.java)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 186.
+ (code_snippets/rnn_auszug1.java)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 98.
-[15]
+(babel)             in language  on input line 192.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 194.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 194.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 194.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 194.
+ [26]
+(code_snippets/rnn_auszug1.java
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 96.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 138.
- [16])
+(babel)             in language  on input line 96.
+ [27])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 197.
+)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 146.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 163.
- [17] (chapter4.tex
+(babel)             in language  on input line 146.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 146.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 146.
+ [28] (chapter4.tex
 chapter 4.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -1289,14 +1493,14 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 164.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 164.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 164.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 164.
- [18
+(babel)             in language  on input line 147.
+ [29
 
 
 
@@ -1309,31 +1513,37 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 165.
- [19
+(babel)             in language  on input line 148.
+ [30
 
 
 
 
 ]
 ===== Section: literature
-(BA.bbl)
+(BA.bbl
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 14.
+Package microtype Info: Character `~' is missing
+(microtype)             in font `OT1/LinuxLibertineMonoT-TLF/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+)
 ===== Section: nomenclature
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
-[20
+(babel)             in language  on input line 169.
+[31
 
 
 
@@ -1343,53 +1553,56 @@ Package babel Info: Redefining ngerman shorthand "~
 No file BA.nls.
 ===== Section: index
 No file BA.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 179.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 179.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 179.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 196.
-[21
+(babel)             in language  on input line 179.
+[32
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
  (BA.aux (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux)
 (chapter5.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
 Package rerunfilecheck Info: File `BA.out' has not changed.
-(rerunfilecheck)             Checksum: E4A92BF3D0E714E30B28F58AA615589B;1576.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+(rerunfilecheck)             Checksum: D7618E9FCD237A37F470275A703F9997;2086.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 14272 strings out of 493698
- 227648 string characters out of 3144404
- 431569 words of memory out of 3000000
- 17065 multiletter control sequences out of 15000+200000
- 48928 words of font info for 161 fonts, out of 3000000 for 9000
+ 14640 strings out of 493698
+ 233459 string characters out of 3144404
+ 673696 words of memory out of 3000000
+ 17265 multiletter control sequences out of 15000+200000
+ 46966 words of font info for 156 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 67i,12n,72p,862b,1630s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,12n,72p,862b,2148s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_c6xmqr.enc}{C:/Pr
-ogram Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_7yry24.enc}{C:/Program Fi
-les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_4jqvtd.enc}{C:/Program Files/MiKT
-eX 2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Program Files/MiKTeX 2.9/f
-onts/enc/dvips/libertine/lbtn_lu7m2n.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
-/dvips/libertine/lbtn_c7kyj5.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/l
-ibertine/lbtn_xogrpz.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/libert
-ine/LinBiolinumT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/libertine/
-LinBiolinumTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/libertine/Lin
-LibertineMT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/libertine/LinLi
-bertineMTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/libertine/LinLib
-ertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/libertine/LinLibert
-ineTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertin
-eTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-
-Output written on BA.pdf (27 pages, 1113813 bytes).
+ogram Files/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_4jqvtd.enc}{C:/Program Fi
+les/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Program Files/MiKT
+eX 2.9/fonts/enc/dvips/libertine/lbtn_lu7m2n.enc}{C:/Program Files/MiKTeX 2.9/f
+onts/enc/dvips/libertine/lbtn_c7kyj5.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
+/dvips/libertine/lbtn_xogrpz.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/libertine/LinBiolinumT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/li
+bertine/LinBiolinumTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/liber
+tine/LinLibertineMT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/liberti
+ne/LinLibertineT.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/libertine/
+LinLibertineTB.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/libertine/Li
+nLibertineTI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on BA.pdf (38 pages, 2512928 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
- 29374 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 712 PDF objects out of 1000 (max. 8388607)
+ 243 named destinations out of 1000 (max. 500000)
+ 26425 words of extra memory for PDF output out of 29859 (max. 10000000)
 
