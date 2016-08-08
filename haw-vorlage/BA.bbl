@@ -1,16 +1,206 @@
-\begin{thebibliography}{1}
-% this bibliography was produced with the style dinat.bst v2.5
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
 \makeatletter
-\newcommand{\dinatlabel}[1]%
-{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
-\makeatother
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[DL4J()]{DL4J}
-\dinatlabel{DL4J } :
-\newblock \emph{Deeplearning4j: Open-source distributed deep learning for the
-  JVM}. --
-\newblock URL \url{http://deeplearning4j.org/}. -- Zugriffsdatum: 2016-06-30
 
-\end{thebibliography}
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{Boden}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dff5da3151659fdd315c88115bd851ab}{%
+           family={Boden},
+           family_i={B\bibinitperiod},
+           given={Mikael},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dff5da3151659fdd315c88115bd851ab}
+      \strng{fullhash}{dff5da3151659fdd315c88115bd851ab}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Boden 2001}
+      \field{title}{BPTT: entrolltes RNN}
+      \field{urlday}{16}
+      \field{urlmonth}{07}
+      \field{urlyear}{2016}
+      \field{year}{2001}
+      \verb{url}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.16.6652&rep=rep1&type=pdf
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{BPTT}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dff5da3151659fdd315c88115bd851ab}{%
+           family={Boden},
+           family_i={B\bibinitperiod},
+           given={Mikael},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dff5da3151659fdd315c88115bd851ab}
+      \strng{fullhash}{dff5da3151659fdd315c88115bd851ab}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{BPTT: entrolltes RNN}
+      \field{urlday}{16}
+      \field{urlmonth}{07}
+      \field{urlyear}{2016}
+      \field{year}{2001}
+      \verb{url}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.16.6652&rep=rep1&type=pdf
+      \endverb
+      \keyw{images}
+    \endentry
+    \entry{DL4J}{online}{}
+      \list{organization}{1}{%
+        {Deeplearning4j Development Team DL4J}%
+      }
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{DL4J}
+      \field{title}{Deeplearning4j: Open-source distributed deep learning for the JVM}
+      \field{urlday}{30}
+      \field{urlmonth}{06}
+      \field{urlyear}{2016}
+      \field{version}{Apache Software Foundation License 2.0}
+      \verb{url}
+      \verb http://deeplearning4j.org/
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{OlahImg}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dea937fb216bfbba25c1bfa1f36a63fe}{%
+           family={Olah},
+           family_i={O\bibinitperiod},
+           given={Christopher},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{dea937fb216bfbba25c1bfa1f36a63fe}
+      \strng{fullhash}{dea937fb216bfbba25c1bfa1f36a63fe}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{urlday}{12}
+      \field{urlmonth}{07}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+      \endverb
+      \keyw{images}
+    \endentry
+    \entry{Olah}{online}{}
+      \name{author}{1}{}{%
+        {{hash=dea937fb216bfbba25c1bfa1f36a63fe}{%
+           family={Olah},
+           family_i={O\bibinitperiod},
+           given={Christopher},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{dea937fb216bfbba25c1bfa1f36a63fe}
+      \strng{fullhash}{dea937fb216bfbba25c1bfa1f36a63fe}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Olah 2015}
+      \field{title}{Understanding LSTM Networks}
+      \field{urlday}{12}
+      \field{urlmonth}{07}
+      \field{urlyear}{2016}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{sampleBib}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2824684cc119cc4ae6fabcde4412002a}{%
+           family={One},
+           family_i={O\bibinitperiod},
+           given={Author},
+           given_i={A\bibinitperiod}}}%
+        {{hash=0aa74fc7f8818c7d323b9927d6176e5e}{%
+           family={Two},
+           family_i={T\bibinitperiod},
+           given={Author},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{49b2070946d8a06230c975888c8a6a6d}
+      \strng{fullhash}{49b2070946d8a06230c975888c8a6a6d}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Sample Publication}
+      \field{year}{2010}
+    \endentry
+    \entry{FNet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6fa7dc8eb3653fb92093d1c3a76b798c}{%
+           family={Team},
+           family_i={T\bibinitperiod},
+           given={Deeplearning4j\bibnamedelima Development},
+           given_i={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fa7dc8eb3653fb92093d1c3a76b798c}
+      \strng{fullhash}{6fa7dc8eb3653fb92093d1c3a76b798c}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Feedforward Netz}
+      \field{urlday}{30}
+      \field{urlmonth}{06}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://deeplearning4j.org/neuralnet-overview
+      \endverb
+      \keyw{images}
+    \endentry
+    \entry{FNeuron}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6fa7dc8eb3653fb92093d1c3a76b798c}{%
+           family={Team},
+           family_i={T\bibinitperiod},
+           given={Deeplearning4j\bibnamedelima Development},
+           given_i={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fa7dc8eb3653fb92093d1c3a76b798c}
+      \strng{fullhash}{6fa7dc8eb3653fb92093d1c3a76b798c}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Feedforward Neuron}
+      \field{urlday}{30}
+      \field{urlmonth}{06}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://deeplearning4j.org/neuralnet-overview
+      \endverb
+      \keyw{images}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

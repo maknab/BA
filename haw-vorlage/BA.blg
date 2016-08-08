@@ -1,12 +1,15 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: BA.aux
-A level-1 auxiliary file: chapter1.aux
-A level-1 auxiliary file: chapter2.aux
-A level-1 auxiliary file: chapter3.aux
-A level-1 auxiliary file: chapter4.aux
-A level-1 auxiliary file: chapter5.aux
-The style file: dinat.bst
-Database file #1: biblio.bib
-Warning--entry type for "DL4J" isn't style-file defined
---line 2 of file biblio.bib
-Warning--to sort, need author or key in DL4J
-(There were 2 warnings)
+[0] Config.pm:343> INFO - This is Biber 2.5
+[2] Config.pm:346> INFO - Logfile is 'BA.blg'
+[201] biber-MSWIN64:290> INFO - === 
+[484] Biber.pm:351> INFO - Reading 'BA.bcf'
+[702] Biber.pm:773> INFO - Using all citekeys in bib section 0
+[735] Biber.pm:3493> INFO - Processing section 0
+[977] Biber.pm:3657> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[983] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[986] bibtex.pm:1048> INFO - Found BibTeX data source 'biblio.bib'
+[1231] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1233] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1234] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1236] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[1256] bbl.pm:526> INFO - Writing 'BA.bbl' with encoding 'ansinew'
+[1261] bbl.pm:619> INFO - Output to BA.bbl
