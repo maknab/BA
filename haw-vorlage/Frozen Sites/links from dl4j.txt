@@ -1,0 +1,7 @@
+Further links: (could be sources for pictures)\\
+http://people.idsia.ch/~juergen/rnn.html\\
+https://karpathy.github.io/2015/05/21/rnn-effectiveness/\\
+https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2015/pdfs/Werbos.backprop.pdf\\
+http://www.cs.toronto.edu/~graves/phd.pdf\\
+http://www.felixgers.de/papers/phd.pdf\\
+http://arxiv.org/pdf/1503.04069.pdf\\

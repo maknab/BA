@@ -50,53 +50,8 @@ Follow the ND4J Getting Started instructions to start a new project and include 
 http://nd4j.org/getstarted.html
 http://nd4j.org/dependencies.htm
 
-\subsection{Ein neues Projekt in IntelliJ (unfinished)}
-http://nd4j.org/getstarted.html
-In IntelliJ
-- File -> new -> Project
-\renewcommand{\figurename}{Abb.}
-\begin{figure}[htp]
-%%\begin{floatingfigure}[r]{textwidth}
-\centering
-\includegraphics[width=0.60\textwidth]{pictures/new_maven_project.png}
-\caption[Neues Maven Projekt]{Neues Maven Projekt erstellen\protect\footnotemark}
-%%\end{floatingfigure} 
-\end{figure}
-\footnotetext{Quelle: ND4J \url{http://nd4j.org/getstarted.html}}
-- GroupId(PackageName) und ArtifactId (Projektname?) festlegen
-- Finish
+- neues Projekt in IntelliJ im Anhang A
 
-- gehe ins POM.xml file
-Update the POM file with the dependences you’ll need. These will vary depending on whether you’re running on CPUs or GPUs.
-
-The default backend for CPUs is nd4j-native. You can paste that into the $<$dependencies$>$ ... $<$/dependencies$>$ section of your POM like this:
-\lstset{language=XML}
-\begin{lstlisting}[language=XML,caption=applicationContext.xml]
- <dependency>
-   <groupId>org.nd4j</groupId>
-   <artifactId>nd4j-native</artifactId>
-   <version>${nd4j.version}</version>
- </dependency>
-\end{lstlisting}
-nd4j-cuda-7.5 (for GPUs)
-
-ND4J’s version is a variable here. It will refer to another line higher in the POM, in the $<$properties$>$ ... 
-$<$/properties$>$ section, specifying the nd4j version and appearing similar to this:
-\begin{lstlisting}[language=XML,caption=applicationContext.xml]
-  <nd4j.version>0.4-rc3.9</nd4j.version>
-  <dl4j.version>0.4-rc3.10</dl4j.version>
-\end{lstlisting}
-
-The DL4J dependencies you add to the POM will vary with the nature of your project.
-
-In addition to the core dependency, given below, you may also want to install deeplearning4j-cli for the command-line interface, deeplearning4j-scaleout for running parallel on Hadoop or Spark, and others as needed.
-\begin{lstlisting}[language=XML,caption=applicationContext.xml]
-	   <dependency>
-	     <groupId>org.deeplearning4j</groupId>
-	     <artifactId>deeplearning4j-core</artifactId>
-	     <version>${dl4j.version}</version>
-	   </dependency>
-\end{lstlisting}
 
 %%%% SECTION %%%%
 \section{Feedforward Netze (unfinished)}

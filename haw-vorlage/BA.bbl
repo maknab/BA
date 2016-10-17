@@ -19,31 +19,6 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
-    \entry{Boden}{article}{}
-      \name{author}{1}{}{%
-        {{hash=dff5da3151659fdd315c88115bd851ab}{%
-           family={Boden},
-           family_i={B\bibinitperiod},
-           given={Mikael},
-           given_i={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{dff5da3151659fdd315c88115bd851ab}
-      \strng{fullhash}{dff5da3151659fdd315c88115bd851ab}
-      \field{sortinit}{B}
-      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{shorthand}{Boden 2001}
-      \field{title}{BPTT: entrolltes RNN}
-      \field{urlday}{16}
-      \field{urlmonth}{07}
-      \field{urlyear}{2016}
-      \field{year}{2001}
-      \verb{url}
-      \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.16.6652&rep=rep1&type=pdf
-      \endverb
-      \keyw{other}
-    \endentry
     \entry{BPTT}{article}{}
       \name{author}{1}{}{%
         {{hash=dff5da3151659fdd315c88115bd851ab}{%
@@ -57,8 +32,6 @@
       \field{sortinit}{B}
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{BPTT: entrolltes RNN}
       \field{urlday}{16}
       \field{urlmonth}{07}
       \field{urlyear}{2016}
@@ -67,6 +40,31 @@
       \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.16.6652&rep=rep1&type=pdf
       \endverb
       \keyw{images}
+    \endentry
+    \entry{Breitner}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d03ea66abed33090d691c1e1bef3539b}{%
+           family={Breitner},
+           family_i={B\bibinitperiod},
+           given={Michael\bibnamedelima H.},
+           given_i={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{d03ea66abed33090d691c1e1bef3539b}
+      \strng{fullhash}{d03ea66abed33090d691c1e1bef3539b}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Breitner 2014}
+      \field{title}{Neuronales Netz}
+      \field{urlday}{09}
+      \field{urlmonth}{08}
+      \field{urlyear}{2016}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.enzyklopaedie-der-wirtschaftsinformatik.de/lexikon/technologien-methoden/KI-und-Softcomputing/Neuronales-Netz
+      \endverb
+      \keyw{other}
     \endentry
     \entry{DL4J}{online}{}
       \list{organization}{1}{%
@@ -83,6 +81,24 @@
       \field{version}{Apache Software Foundation License 2.0}
       \verb{url}
       \verb http://deeplearning4j.org/
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{ND4J}{online}{}
+      \list{organization}{1}{%
+        {ND4J Development Team}%
+      }
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{ND4J}
+      \field{title}{ND4J: N-dimensional arrays and scientific computing for the JVM}
+      \field{urlday}{02}
+      \field{urlmonth}{07}
+      \field{urlyear}{2016}
+      \field{version}{Apache Software Foundation License 2.0}
+      \verb{url}
+      \verb http://nd4j.org/getstarted.html
       \endverb
       \keyw{other}
     \endentry
@@ -132,29 +148,7 @@
       \endverb
       \keyw{other}
     \endentry
-    \entry{sampleBib}{article}{}
-      \name{author}{2}{}{%
-        {{hash=2824684cc119cc4ae6fabcde4412002a}{%
-           family={One},
-           family_i={O\bibinitperiod},
-           given={Author},
-           given_i={A\bibinitperiod}}}%
-        {{hash=0aa74fc7f8818c7d323b9927d6176e5e}{%
-           family={Two},
-           family_i={T\bibinitperiod},
-           given={Author},
-           given_i={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{49b2070946d8a06230c975888c8a6a6d}
-      \strng{fullhash}{49b2070946d8a06230c975888c8a6a6d}
-      \field{sortinit}{O}
-      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{A Sample Publication}
-      \field{year}{2010}
-    \endentry
-    \entry{FNet}{misc}{}
+    \entry{DL4Jimg1}{misc}{}
       \name{author}{1}{}{%
         {{hash=6fa7dc8eb3653fb92093d1c3a76b798c}{%
            family={Team},
@@ -167,31 +161,6 @@
       \field{sortinit}{T}
       \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Feedforward Netz}
-      \field{urlday}{30}
-      \field{urlmonth}{06}
-      \field{urlyear}{2016}
-      \verb{url}
-      \verb http://deeplearning4j.org/neuralnet-overview
-      \endverb
-      \keyw{images}
-    \endentry
-    \entry{FNeuron}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=6fa7dc8eb3653fb92093d1c3a76b798c}{%
-           family={Team},
-           family_i={T\bibinitperiod},
-           given={Deeplearning4j\bibnamedelima Development},
-           given_i={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-      }
-      \strng{namehash}{6fa7dc8eb3653fb92093d1c3a76b798c}
-      \strng{fullhash}{6fa7dc8eb3653fb92093d1c3a76b798c}
-      \field{sortinit}{T}
-      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Feedforward Neuron}
       \field{urlday}{30}
       \field{urlmonth}{06}
       \field{urlyear}{2016}

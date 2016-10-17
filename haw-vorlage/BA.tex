@@ -20,12 +20,15 @@
 \usepackage{listings}
 
 %%\usepackage{natbib}
-\usepackage[backend=biber, style=numeric]{biblatex}
+\usepackage[backend=biber]{biblatex}
+%%\usepackage[backend=biber, style=numeric]{biblatex}
 \addbibresource{biblio.bib}
 
 \usepackage[ngerman,colorlinks=true]{hyperref}
 \usepackage{soul}
 \usepackage{hawstyle}
+
+\usepackage{wrapfig}
 
 %% for code snippets
 \usepackage{listings}
@@ -98,13 +101,13 @@
 %%%%%
 %% customize (see readme.pdf for supported values)
 \HAWThesisProperties{Author={Marina Knabbe}
-                    ,Title={Titel}
+                    ,Title={Erzeugung von Musiksequenzen mit LSTM-Netzwerken}
                     ,EnglishTitle={English title}
                     ,ThesisType={Bachelorarbeit}
                     ,ExaminationType={Bachelorpr"ufung}
-                    ,DegreeProgramme={Bachelor of Science Angewandte Informatik}
-                    ,ThesisExperts={Prof. Dr. Erstprüfer \and Prof. Dr. Zweitprüfer}
-                    ,ReleaseDate={1. Januar 2345}
+                    ,DegreeProgramme={Bachelor of Science Technische Informatik}
+                    ,ThesisExperts={Prof. Dr.-Ing. Andreas Meisel \and Prof. Dr. Wolfgang Fohl}
+                    ,ReleaseDate={?. Februar 2017}
                   }
 
 %% title
@@ -133,7 +136,7 @@
 %% enable if these lists should be shown on their own page
 %%\listoftables
 \listoffigures
-\lstlistoflistings
+%%\lstlistoflistings
 
 \typeout{===== Section: nomenclature}
 %% uncomment if a TOC entry is needed
@@ -148,21 +151,18 @@
 \onehalfspacing
 %% write to the log/stdout
 \typeout{===== File: chapter 1}
-%% include chapter file (chapter1.tex)
-%%\include{chapter1}
-
-%%%%
-%% add some text to generate a sample document
 \include{chapter1} %% Einleitung
+\typeout{===== File: chapter 2}
 \include{chapter2} %% KNN
-%%\include{chapter3} %% DL4J
+\typeout{===== File: chapter 3}
+\include{chapter3} %% DL4J
 %%\include{chapter4} %% Mein Projekt
 %%\include{chapter5} %% Fazit
 
 %% appendix if used
 \appendix
 %%\typeout{===== File: appendix}
-%%\include{appendix}
+\include{appendix}
 \addtocontents{toc}{%
   \protect\addtokomafont{chapterentry}{Anhang }
   }

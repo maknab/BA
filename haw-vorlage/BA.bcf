@@ -2096,10 +2096,34 @@
     <bcf:datasource type="file" datatype="bibtex">biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">1</bcf:citekey>
-    <bcf:citekey order="2">1</bcf:citekey>
-    <bcf:citekey order="3">Olah</bcf:citekey>
-    <bcf:citekey order="0">*</bcf:citekey>
+    <bcf:citekey order="1">Breitner</bcf:citekey>
+    <bcf:citekey order="2">DL4Jimg1</bcf:citekey>
+    <bcf:citekey order="3">DL4Jimg1</bcf:citekey>
+    <bcf:citekey order="4">DL4Jimg1</bcf:citekey>
+    <bcf:citekey order="5">DL4Jimg1</bcf:citekey>
+    <bcf:citekey order="6">OlahImg</bcf:citekey>
+    <bcf:citekey order="7">OlahImg</bcf:citekey>
+    <bcf:citekey order="8">BPTT</bcf:citekey>
+    <bcf:citekey order="9">BPTT</bcf:citekey>
+    <bcf:citekey order="10">Olah</bcf:citekey>
+    <bcf:citekey order="11">OlahImg</bcf:citekey>
+    <bcf:citekey order="12">OlahImg</bcf:citekey>
+    <bcf:citekey order="13">OlahImg</bcf:citekey>
+    <bcf:citekey order="14">OlahImg</bcf:citekey>
+    <bcf:citekey order="15">OlahImg</bcf:citekey>
+    <bcf:citekey order="16">OlahImg</bcf:citekey>
+    <bcf:citekey order="17">OlahImg</bcf:citekey>
+    <bcf:citekey order="18">OlahImg</bcf:citekey>
+    <bcf:citekey order="19">OlahImg</bcf:citekey>
+    <bcf:citekey order="20">OlahImg</bcf:citekey>
+    <bcf:citekey order="21">OlahImg</bcf:citekey>
+    <bcf:citekey order="22">OlahImg</bcf:citekey>
+    <bcf:citekey order="23">OlahImg</bcf:citekey>
+    <bcf:citekey order="24">OlahImg</bcf:citekey>
+    <bcf:citekey order="25">OlahImg</bcf:citekey>
+    <bcf:citekey order="26">OlahImg</bcf:citekey>
+    <bcf:citekey order="27">DL4J</bcf:citekey>
+    <bcf:citekey order="28">ND4J</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global/" type="entry" sortscheme="nty" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

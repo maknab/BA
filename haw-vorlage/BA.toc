@@ -18,34 +18,84 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung (unfinished)}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}K"unstliche neuronale Netze (unfinished)}{2}{chapter.2}
+\contentsline {chapter}{\numberline {2}K"unstliche neuronale Netze}{2}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Feedforward Netzwerke (unfinished)}{2}{section.2.1}
+\contentsline {section}{\numberline {2.1}Feedforward Netzwerke}{2}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Recurrent Netzwerke (unfinished)}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.1.1}Training durch Backpropagation}{4}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Backpropagation Through Time (unfinished)}{4}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.2}Recurrent Netzwerke}{4}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Verschwindende und explodierende Gradienten (unfinished)}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Training durch Backpropagation Through Time}{5}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Problem der Langzeit-Abh"angigkeiten (unfinished)}{7}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.2}Problem der verschwindenden und explodierenden Gradienten}{6}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Long Short-Term Memory (LSTM) (unfinished)}{7}{section.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Problem der Langzeit-Abh"angigkeiten}{6}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Bauteile einer Speicherzelle}{9}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.3}Long Short-Term Memory Netze}{7}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Zellzustand}{9}{section*.4}
+\contentsline {subsection}{\numberline {2.3.1}Aufbau einer Speicherzelle}{8}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Forget Gate}{10}{section*.5}
+\contentsline {subsubsection}{\nonumberline Zellzustand}{8}{section*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Input gate}{10}{section*.6}
+\contentsline {subsubsection}{\nonumberline Forget Gate}{8}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Update Cell state}{11}{section*.7}
+\contentsline {subsubsection}{\nonumberline Eingang}{9}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Output}{11}{section*.8}
+\contentsline {subsubsection}{\nonumberline Zellzustands Update}{9}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}LSTM Varianten}{11}{subsection.2.3.2}
+\contentsline {subsubsection}{\nonumberline Ausgabe}{9}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Aktueller Forschungsstand und Problemstellungen (unfinished)}{13}{section.2.4}
+\contentsline {subsubsection}{\nonumberline Zusammenfassung}{10}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}LSTM Varianten}{10}{subsection.2.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Guckl"ocher}{10}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Zusammengef"uhrte Gates}{10}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Aktueller Forschungsstand (unfinished)}{11}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}noch ohne Titel}{11}{subsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Analyse von LSTM-Netz-Varianten (LSTM: A Search Space Odyssey)}{11}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Bedienung dynamischer Systeme (Control of Dynamic Systems Using LSTM supported Neural Network)}{11}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline LSTM-Netzwerk-basierte Merkmalextraktion (LSTM Networks for Mobile Human Activity Recognition)}{12}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems}{12}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Musikerzeugung}{13}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Modelling High-Dimensional Sequences with LSTM-RTRBM: Application to Polyphonic Music Generation}{13}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Polyphonic Music Modelling with LSTM-RTRBM}{13}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Deeplearning4j (unfinished)}{15}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Getting started (unfinished)}{15}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Vorraussetzungen und Empfehlungen (unfinished)}{15}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Feedforward Netze (unfinished)}{16}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Recurrent Neuronal Network (unfinished)}{17}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Builder}{17}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}ListBuilder}{18}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.3}Netz erzeugen}{18}{subsection.3.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.4}Daten erstellen}{19}{subsection.3.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.5}Netz trainieren}{19}{subsection.3.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}LSTM Netze (unfinished)}{20}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Hyperparameter Tuning}{21}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}DL4J-Projekt in IntelliJ aufsetzen}{22}{appendix.A}
 \defcounter {refsection}{0}\relax 
 \addtokomafont {chapterentry}{Anhang } 
