@@ -2,44 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf089a1-48a2-4d20-a923-a6c02cba1a53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Probe/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Probe/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Probe/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Probe/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Probe/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Probe/Probe.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Probe/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/00279190.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/05729367.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/06064898.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/06399606.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/06637694.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/06638947.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/06639349.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/06706747.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/07280757.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/07472685.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Recherche/drnn_intrspch2012_final.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-SimpleRNN.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-chain.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-focus-C.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-focus-f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-focus-i.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-focus-o.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-var-GRU.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-var-peepholes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-var-tied.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/BA.pdf" afterPath="$PROJECT_DIR$/../../haw-vorlage/BA.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/BA.synctex.gz" afterPath="$PROJECT_DIR$/../../haw-vorlage/BA.synctex.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-C-line.png" afterPath="$PROJECT_DIR$/../../haw-vorlage/pictures/LSTM3-C-line.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/BA.bbl" afterPath="$PROJECT_DIR$/../../haw-vorlage/BA.bbl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/BA.blg" afterPath="$PROJECT_DIR$/../../haw-vorlage/BA.blg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/BA.tex" afterPath="$PROJECT_DIR$/../../haw-vorlage/BA.tex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/appendix.tex" afterPath="$PROJECT_DIR$/../../haw-vorlage/appendix.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/biblio.bib" afterPath="$PROJECT_DIR$/../../haw-vorlage/biblio.bib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/chapter2.tex" afterPath="$PROJECT_DIR$/../../haw-vorlage/chapter2.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../haw-vorlage/chapter3.tex" afterPath="$PROJECT_DIR$/../../haw-vorlage/chapter3.tex" />
     </list>
     <ignored path="DL4J_test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,6 +103,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -211,8 +178,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="RunManager" selected="Application.App">
@@ -509,7 +474,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15739386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15739386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -547,6 +512,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/MK/App.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="78" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MK/App.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -573,7 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>

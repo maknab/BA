@@ -25,7 +25,7 @@
   title=\lstname                               % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 
-\chapter{Deeplearning4j (unfinished)}
+\chapter{Deeplearning4J (unfinished)}
 {See also \cite{DL4J}\\
 von http://deeplearning4j.org/quickstart\\
 DL4J targets professional Java developers who are familiar with production deployments, IDEs and automated build tools.\\
@@ -54,6 +54,73 @@ http://nd4j.org/dependencies.htm
 
 
 %%%% SECTION %%%%
+\section{Netzwerke erstellen und trainieren (unfinished)}
+Ein Neuronales Netz wird in DL4J durch drei Komponeten erstellt. Die Komponenten sind der NeuralNetConfiguration.Builder, der ListBuilder und die MultiLayerConfiguration. Nachfolgend werden zwei Beispiele gegeben wie die Implementation aussehen kann. Die 3-Schritt-Methode zeigt die Implentation jeder Komponente einzeln und die Kurzversion fasst die drei Schritte zusammen, was Codezeilen spart, aber f"ur Neulinge vermutlich etwas schwerer verst"andlich ist.\\
+An zu merken ist noch, dass es sich bei dem gezeigten Code nicht um dasselbe Netzwerk handelt, sondern zwei verschiedene Netzwerke gezeigt werden. Da es hier nicht um einen Vergleich der beiden Methoden geht, sondern nur gezeigt werden soll in welcher Form eine Implementation m"oglich ist. Beide Codeausz"uge stammen von den Netzwerk-Beispielen, welche \cite{DL4J} zum Download zur Verf"ugung stellt.
+
+\subsection{Ein Netzwerk erstellen (3-Schritt-Methode)}
+
+\subsubsection{Schritt 1: NeuralNetConfiguration.Builder}
+Mit Hilfe des NeuralNetConfiguration.Builder kann man die Netzparameter festlegen. Der Quellcode 3.1 enth"alt hierzu einen Auszug aus einem Beispielprogramm von \cite{DL4J}.
+\lstinputlisting[language=JAVA, firstline=1, lastline=9,  captionpos=b, caption={NeuralNetConfiguration.Builder Beispiel}]
+{code_snippets/rnn_auszug1.java}
+
+Zeilenweise Erkl"arung des Quellcodes:
+\begin{description}
+\item[Zeile 2: iterations(int)]\hfill \\Anzahl der Optimierungsdurchl"aufe
+\item[Zeile 3: learningRate(double)]\hfill \\Lernrate (Standardeinstellung, wenn nichts anderes angegeben wurde, ist 1e-1)
+\item[Zeile 4: optimizationAlgo(OptimizationAlgorithm)]\hfill \\benutzter Optimierungsalgorithmus (zur Verf"ugung stehen: CONJUGATE\_GRADIENT, HESSIAN\_FREE, LBFGS, LINE\_GRADIENT\_DESCENT, STOCHASTIC\_GRADIENT\_DESCENT)
+\item[Zeile 5: seed(long)]\hfill \\Ursprungszahl f"ur Zufallszahlengenerator (wird zur Reproduzierbarkeit von Durchl"aufen benutzt)
+\item[Zeile 6: biasInit(double)]\hfill \\Konstante zur Initialisierung der Netzwerk Bias (Standart: 0.0) 
+\item[Zeile 7: miniBatch(boolean)]\hfill \\Verarbeitet die Eingabe als Minibatch oder komplettes Datenset. (Standard: true)
+\item[Zeile 8: updater(Updater)]\hfill \\Methode zum aktuallisieren des Gradienten (Updater.SGD for standard stochastic gradient descent, Updater.NESTEROV for Nesterov momentum, Updater.RSMPROP for RMSProp, etc. (alle verf"ugbaren: ADADELTA, ADAGRAD, ADAM, CUSTOM, NESTEROVS, NONE, RMSPROP, SGD))
+\item[Zeile 9: weightInit(WeightInit)]\hfill \\Initiallationsschema der Gewichte
+(zur Verf"ugung stehen:
+DISTRIBUTION Distribution: Sample weights from a distribution based on shape of input
+NORMALIZED Normalized: Normalize sample weights
+RELU Delving Deep into Rectifiers
+SIZE Size: Sample weights from bound uniform distribution using shape for min and max
+UNIFORM Uniform: Sample weights from bound uniform distribution (specify min and max)
+VI VI: Sample weights from variance normalized initialization (Glorot)
+XAVIER N(0,2/nIn): He et al. (2015)
+ZERO Zeros: Generate weights as zeros)
+\end{description}
+
+Source:
+http://deeplearning4j.org/doc/ \\
+check http://deeplearning4j.org/glossary.html for explanations
+
+\subsubsection{Schritt 2: ListBuilder}
+Mit Hilfe des erstellten NeuralNetConfiguration.Builders kann ein ListBuilder erstellt werden (siehe Quellcode 3.2). Der ListBuilder ist f"ur die Netzstruktur zust"andig und verwaltet die Netzwerk-Layer. (In diesem Beispiel wurde das Input Layer alse Hidden Layer mit gez"ahlt, wodurch bei der "Ubergabe der Layeranzahl lediglich das Output Layer hinzuaddiert werden muss.)
+
+\lstinputlisting[language=JAVA, firstline=11, lastline=11,  captionpos=b, caption={Erstellen des ListBuilders}]
+{code_snippets/rnn_auszug1.java}
+Quellcode 3.3 zeigt das Erzeugen der einzelnen Layer f"ur ein RNN. RNNs nutzen in DL4J den GraveLSTM.Builder zum Erzeugen des Input und der Hidden Layer (siehe Zeile 2 bis 5). In Zeile 3 wird die Anzahl der Eingangsknoten "ubergeben, welche f"ur das Input Layer in diesem Beipiel die Anzahl aller zul"assigen Buchstaben ist und f"ur die Hidden Layer eine vorher festgelegt Konstante. Zeile 4 gibt die n"otigen Verbindungen zum folgenden Layer an, welche zwingend mit der Eingangsgr"o{\ss}e des n"achsten Layers "ubereinstimmen muss. Anschlie{\ss}end wird in Zeile 5 die Aktivierungsfunktion festgelegt, bevor in Zeile 6 des erstellte Layer dem ListBuilder "ubergeben wird.
+
+Das Output Layer wird mit Hilfe des RnnOutputLayer.Builders erstellt (siehe Zeile 9 bis 12). Die "ubergebene LossFunction in Zeile 9 gibt die Methode an, mit der der Fehler zwischen Netzwerk-Ergebnis und tats"achlichem Ergebnis berechnet wird. Die Aktivierungsfunktion \glqq softmax\grqq{} in Zeile 10 normalisiert die Output Neuronen, so dass die Summe aller Ausgaben ist 1. Zeile 12 gibt die Anzahl der Output Neuronen an, was in diesem Beispiel der Anzahl der zul"assigen Buchstaben entspricht.
+
+\lstinputlisting[language=JAVA, firstline=13, lastline=25,  captionpos=b, caption={Erstellen der Netzwerk-Layer}]
+{code_snippets/rnn_auszug1.java}
+
+Anschlie{\ss}end kann der ListBuilder abgeschlossen werden (siehe Quellcode 3.4). Hierzu kann festgelegt werden, ob ein Vortrainieren stattfinden (Zeile 1) und Backpropagation angewendet werden soll (Zeile 2).
+\lstinputlisting[language=JAVA, firstline=28, lastline=30,  captionpos=b, caption={Fertigstellen des ListBuilder}]
+{code_snippets/rnn_auszug1.java}
+
+\subsubsection{Schritt 3: MultiLayerNetwork}
+Wurde die Vorarbeit mit dem NeuralNetConfiguration.Builder und ListBuilder erledigt, kann wie im Quellcode 3.5 ein Netzwerk erstellt werden. Hierf"ur wird das MultiLayerNetwork verwendet, welches alle Informationen als MultiLayerConfigurations vom ListBuilder erh"allt. Nach der Initialisierung ist das Netzwerk bereit trainiert zu werden.
+\lstinputlisting[language=JAVA, firstline=33, lastline=35,  captionpos=b, caption={Ein Netz erzeugen}]
+{code_snippets/rnn_auszug1.java}
+
+\subsection{Ein Netzwerk erstellen (Kurzversion)}
+\lstinputlisting[language=JAVA, firstline=1, lastline=19,  captionpos=b, caption={Netzwerk erstellen Kurzversion Beispiel}]
+{code_snippets/ffnn_auszug1.java}
+
+\subsection{Welcher Builder f"ur welchen Netztyp?}
+Tabelle: welcher Builder f"ur welchen Netztyp???
+
+
+
+%%%% SECTION %%%%
 \section{Feedforward Netze (unfinished)}
 http://deeplearning4j.org/quickstart.html
 Everything starts with a MultiLayerConfiguration, which organizes those layers and their hyperparameters.
@@ -76,6 +143,9 @@ With Deeplearning4j, you add a layer by calling layer on the NeuralNetConfigurat
 \end{lstlisting}
 Once you’ve configured your net, you train the model with model.fit.
 
+
+
+
 Configuring the POM.xml File
 
 To run DL4J in your own projects, we highly recommend using Maven for Java users, or a tool such as SBT for Scala. The basic set of dependencies and their versions are shown below. This includes:
@@ -93,59 +163,25 @@ Neural net weights are initialized randomly, which means the model begins learni
    Nd4j.getRandom().setSeed(123);
 \end{lstlisting}
 
+
+
 %%%% SECTION %%%%
 \section{Recurrent Neuronal Network (unfinished)}
-\subsection{Builder}
+
+\subsection{Netz trainieren}
+Ein erstelltes Netzwerk l"asst sich durch die Methode fit() trainieren. DataSet
+\lstinputlisting[language=JAVA, firstline=61, lastline=61,  captionpos=b, caption={Ein Netz trainieren}]
+{code_snippets/rnn_auszug1.java}
+fit(org.nd4j.linalg.dataset.api.DataSet data)
+Fit the model
+
+MultiLayerNetwork is a neural network with multiple layers in a stack, and usually an output layer. For neural networks with a more complex connection architecture, use ComputationGraph which allows for an arbitrary directed acyclic graph connection structure between layers. MultiLayerNetwork is trainable via backprop, with optional pretraining, depending on the type of layers it contains.
 http://deeplearning4j.org/doc/
-Parametereinstellungen:
-- iterations(int): Number of optimization iterations.
-- learningRate(double): Learning rate. Defaults to 1e-1
-- optimizationAlgo(OptimizationAlgorithm):  
-- seed(long): Random number generator seed. Used for reproducability between runs
-- biasInit(double): ??
-- miniBatch(boolean): Process input as minibatch vs full dataset. Default set to true.
-- updater(Updater): Gradient updater. 
-- weightInit(WeightInit): Weight initialization scheme.
-
-check http://deeplearning4j.org/glossary.html for explanations
-
-- OptimizationAlgorithm: verf"ugbare Algorithmen %%CONJUGATE_GRADIENT, HESSIAN_FREE, LBFGS, LINE_GRADIENT_DESCENT, STOCHASTIC_GRADIENT_DESCENT
-- Updater: For example, Updater.SGD for standard stochastic gradient descent, Updater.NESTEROV for Nesterov momentum, Updater.RSMPROP for RMSProp, etc. (alle verf"ugbaren: ADADELTA, ADAGRAD, ADAM, CUSTOM, NESTEROVS, NONE, RMSPROP, SGD)
-- WeightInit:
-DISTRIBUTION Distribution: Sample weights from a distribution based on shape of input
-NORMALIZED Normalized: Normalize sample weights
-RELU Delving Deep into Rectifiers
-SIZE Size: Sample weights from bound uniform distribution using shape for min and max
-UNIFORM Uniform: Sample weights from bound uniform distribution (specify min and max)
-VI VI: Sample weights from variance normalized initialization (Glorot)
-XAVIER N(0,2/nIn): He et al. (2015)
-ZERO Zeros: Generate weights as zeros
-
-\lstinputlisting[language=JAVA, firstline=1, lastline=10,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Builder}]
-{code_snippets/rnn_auszug1.java}
-
-\subsection{ListBuilder}
-first difference, for rnns we need to use GravesLSTM.Builder
-we need to use RnnOutputLayer for our RNN
-
-    // softmax normalizes the output neurons, the sum of all outputs is 1
-    // this is required for our sampleFromDistribution-function
-
-\lstinputlisting[language=JAVA, firstline=12, lastline=31,  captionpos=b, caption={Beispiel zur RNN-Erstellung: ListBuilder}]
-{code_snippets/rnn_auszug1.java}
-
-\subsection{Netz erzeugen}
-\lstinputlisting[language=JAVA, firstline=33, lastline=37,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Netz erzeugen}]
-{code_snippets/rnn_auszug1.java}
 
 \subsection{Daten erstellen}
 // create input and output arrays: SAMPLE\_INDEX, INPUT\_NEURON,
     // SEQUENCE\_POSITION
-\lstinputlisting[language=JAVA, firstline=41, lastline=55,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Daten erstellen}]
-{code_snippets/rnn_auszug1.java}
-
-\subsection{Netz trainieren}
-\lstinputlisting[language=JAVA, firstline=58, lastline=96,  captionpos=b, caption={Beispiel zur RNN-Erstellung:}]
+\lstinputlisting[language=JAVA, firstline=40, lastline=54,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Daten erstellen}]
 {code_snippets/rnn_auszug1.java}
 
 %%%% SECTION %%%%

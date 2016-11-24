@@ -1,8 +1,7 @@
     NeuralNetConfiguration.Builder builder = new NeuralNetConfiguration.Builder();
     builder.iterations(10);
     builder.learningRate(0.001);
-    builder.optimizationAlgo(
-		OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT);
+    builder.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT);
     builder.seed(123);
     builder.biasInit(0);
     builder.miniBatch(false);
