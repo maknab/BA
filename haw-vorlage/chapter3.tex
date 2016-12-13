@@ -26,31 +26,14 @@
 }
 
 \chapter{Deeplearning4J (unfinished)}
-{See also \cite{DL4J}\\
-von http://deeplearning4j.org/quickstart\\
-DL4J targets professional Java developers who are familiar with production deployments, IDEs and automated build tools.\\
+{
+DeepLearning4J (DL4J) ist eine Open-Source Deep Learning Bibliothek f"ur die Java Virtual Machine. \cite{DL4J} stellt mehrere Beispielprogramme zur Verf"ugung, wie z.B. ...
 
-How to:
-http://deeplearning4j.org/documentation
-...
+Die Entwickler empfehlen eine Benutzung der Tool-Kombination IntelliJ IDEA, Apache Maven und Git f"ur ein komfortables Arbeiten und  falls ben"otigt, eine erleichterte Hilfestellung via Chat.
 
-%%%% SECTION %%%%
-\section{Getting started (unfinished)}
-von http://deeplearning4j.org/quickstart\\
+Dieses Kapitel ist unterteilt in die zwei Bereiche Netzwerke erstellen und Netzwerke trainieren. Im ersten Abschnitt werden Implementierungsm"oglichkeiten aufgezeigt und ein kurzer "Uberblick zu den zur Verf"ugung stehenden Layertypen gegeben. Der zweite Abschnitt befasst sich mit dem Trainieren von Netzwerken und dem besonderen Datenformat, in welches die Trainingsdaten gebracht werden m"ussen.
 
-\subsection{Vorraussetzungen und Empfehlungen (unfinished)}
-- Java 1.7 oder höher (nur 64-Bit Version wird unterstützt\\
-- Apache Maven (Maven is a dependency management and automated build tool for Java projects.) check https://books.sonatype.com/mvnex-book/reference/public-book.html for how to use\\
-- IntelliJ IDEA oder Eclipse (An Integrated Development Environment (IDE) allows you to work with our API and configure neural networks in a few steps. We strongly recommend using IntelliJ, which communicates with Maven to handle dependencies.)\\
-- Git
-
-Installation:
-http://deeplearning4j.org/gettingstarted
-Follow the ND4J Getting Started instructions to start a new project and include necessary POM dependencies.
-http://nd4j.org/getstarted.html
-http://nd4j.org/dependencies.htm
-
-- neues Projekt in IntelliJ im Anhang A
+Wie ein neues DL4J Projekt in IntelliJ aufgesetz werden kann, wird im Anhang A erl"autert.
 
 
 %%%% SECTION %%%%
@@ -66,34 +49,21 @@ Mit Hilfe des NeuralNetConfiguration.Builder kann man die Netzparameter festlege
 {code_snippets/rnn_auszug1.java}
 Dieser Code enth"alt lediglich eine Auswahl aller einstellbaren Paramter, welche in der folgenden Tabelle \ref{tbl:beispieltabelle} zeilenweise erkl"art werden. F"ur Informationen zu weiteren verf"ugbaren Paramtern kann die DL4J Dokumentation zu Rate gezogen werden.
 
-\begin{table}
+\begin{table} [h]
 \begin{tabular}{|p{0.8cm}|p{3.7cm}|p{8.8cm}|}\hline
    \textbf{Zeile} & \textbf{Parameter} & \textbf{Beschreibung} \\ \hline
    2 & iterations( int ) & Anzahl der Optimierungsdurchl"aufe \\ \hline
-   3 & learningRate( double ) & Lernrate (Defaulteinstellung, wenn nichts anderes angegeben wurde, ist 1e-1) \\ \hline
-   4 & optimizationAlgo( OptimizationAlgorithm ) & benutzter Optimierungsalgorithmus (zur Verf"ugung stehen: CONJUGATE\_GRADIENT, HESSIAN\_FREE, LBFGS, LINE\_GRADIENT\_DESCENT, STOCHASTIC\_GRADIENT\_DESCENT) \\ \hline
-  5 & seed( long ) & Ursprungszahl f"ur Zufallszahlengenerator (wird zur Reproduzierbarkeit von Durchl"aufen benutzt) Neural net weights are initialized randomly, which means the model begins learning from a different position in the weight space each time, which may lead it to different local optima. Users seeking reproducible results will need to use the same random weights, which they must initialize before the model is created. \\ \hline
-  6 & biasInit( double ) & Konstante zur Initialisierung der Netzwerk Bias (Default: 0.0) \\ \hline
-  7 & miniBatch( boolean ) & Verarbeitet die Eingabe als Minibatch oder komplettes Datenset. (Default: true) \\ \hline
-  8 & updater( Updater ) & Methode zum aktuallisieren des Gradienten (Updater.SGD for standard stochastic gradient descent, Updater.NESTEROV for Nesterov momentum, Updater.RSMPROP for RMSProp, etc. (alle verf"ugbaren: ADADELTA, ADAGRAD, ADAM, CUSTOM, NESTEROVS, NONE, RMSPROP, SGD)) \\ \hline
-   9 & weightInit( WeightInit ) & Initiallationsschema der Gewichte
-(zur Verf"ugung stehen:
-DISTRIBUTION Distribution: Sample weights from a distribution based on shape of input
-NORMALIZED Normalized: Normalize sample weights
-RELU Delving Deep into Rectifiers
-SIZE Size: Sample weights from bound uniform distribution using shape for min and max
-UNIFORM Uniform: Sample weights from bound uniform distribution (specify min and max)
-VI VI: Sample weights from variance normalized initialization (Glorot)
-XAVIER N(0,2/nIn): He et al. (2015)
-ZERO Zeros: Generate weights as zeros) \\ \hline
+   3 & learningRate( double ) & Lernrate (Defaulteinstellung: 1e-1) \\ \hline
+   4 & optimizationAlgo( OptimizationAlgorithm ) & benutzter Optimierungsalgorithmus (z. B.: Conjugate Gradient, Hessian free, ...) \\ \hline
+  5 & seed( long ) & Ursprungszahl f"ur Zufallszahlengenerator (wird zur Reproduzierbarkeit von Durchl"aufen benutzt) \\ \hline
+  6 & biasInit( double ) & Initialisierung der Netzwerk Bias (Default: 0.0) \\ \hline
+  7 & miniBatch( boolean ) & Eingabeverarbeitung als Minibatch oder komplettes Datenset. (Default: true) \\ \hline
+  8 & updater( Updater ) & Methode zum aktuallisieren des Gradienten (z.B.: Updater.SGD = standard stochastic gradient descent) \\ \hline
+   9 & weightInit( WeightInit ) & Initiallationsschema der Gewichte (z.B.: normalized, zero, ...) \\ \hline
  \end{tabular}
 \caption{"Ubersicht einiger Netzwerkparameter}
 \label{tbl:beispieltabelle} % Verweis im Text mittels \ref{tbl:beispieltabelle}
 \end{table}
-
-Source:
-http://deeplearning4j.org/doc/ \\
-check http://deeplearning4j.org/glossary.html for explanations
 
 \subsubsection{Schritt 2: ListBuilder}
 Mit Hilfe des erstellten NeuralNetConfiguration.Builders kann ein ListBuilder erstellt werden (siehe Quellcode 3.2). Der ListBuilder ist f"ur die Netzstruktur zust"andig und verwaltet die Netzwerk-Layer. Beim Erstellen wird ihm die Anzahl aller verwendeten Layer mitgeteilt. (In diesem Beispiel wurde das Input Layer alse Hidden Layer mit gez"ahlt, wodurch bei der "Ubergabe der Layeranzahl lediglich das Output Layer hinzuaddiert werden muss.)
@@ -111,7 +81,7 @@ Anschlie{\ss}end kann der ListBuilder abgeschlossen werden (siehe Quellcode 3.4)
 \lstinputlisting[language=JAVA, firstline=28, lastline=30,  captionpos=b, caption={Fertigstellen des ListBuilder}]
 {code_snippets/rnn_auszug1.java}
 
-\subsubsection{Schritt 3: MultiLayerNetwork}
+\subsubsection{Schritt 3: MultiLayerNetwork (unfinished}
 Wurde die Vorarbeit mit dem NeuralNetConfiguration.Builder und ListBuilder erledigt, kann wie im Quellcode 3.5 ein Netzwerk erstellt werden. Hierf"ur wird das MultiLayerNetwork verwendet, welches alle Informationen als MultiLayerConfigurations vom ListBuilder erh"allt. Nach der Initialisierung (Zeile 3) ist das Netzwerk bereit trainiert zu werden.
 \lstinputlisting[language=JAVA, firstline=33, lastline=35,  captionpos=b, caption={Ein Netz erzeugen}]
 {code_snippets/rnn_auszug1.java}
@@ -150,5 +120,8 @@ Fit the model
 \lstinputlisting[language=JAVA, firstline=40, lastline=54,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Daten erstellen}]
 {code_snippets/rnn_auszug1.java}
 
+
+http://nd4j.org/getstarted.html
+http://nd4j.org/dependencies.htm
 
 } %% Ende Chapter{Deeplearning4j}

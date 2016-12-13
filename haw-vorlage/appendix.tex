@@ -27,18 +27,6 @@
 
 \chapter{DL4J-Projekt in IntelliJ aufsetzen}
 {
-
-Configuring the POM.xml File
-
-To run DL4J in your own projects, we highly recommend using Maven for Java users, or a tool such as SBT for Scala. The basic set of dependencies and their versions are shown below. This includes:
-
-   -  deeplearning4j-core, which contains the neural network implementations
-   -  nd4j-native, the CPU version of the ND4J library that powers DL4J
-    - canova-api - Canova is our library vectorizing and loading data
-
-http://deeplearning4j.org/gettingstarted.html
-
-
 Nach erfolgreicher Installation von IntelliJ und Maven kann ein DL4J-Projekt mithilfe von Maven eingerichtet werden. Hierf"ur w"ahlt man \glqq File\grqq{} $\rightarrow$ \glqq New\grqq{} $\rightarrow$ \glqq Project ...\grqq . 
 \renewcommand{\figurename}{Abb.}
 \begin{figure}[htp]
@@ -54,7 +42,7 @@ Es "offnet sich das \glqq New Project\grqq -Fenster, wie in Abbildung A.1 abgebi
 Nachdem Maven f"ur einen die Projektstruktur erstellt hat, muss man die neu erstellte POM.xml Datei noch anpassen. Die POM.xml enth"alt die Projektabh"angigkeiten, welche je Projekt variieren k"onnen. Hier kann man festlegen ob das Projekt auf der CPU oder GPU laufen soll.
 Das Standard-Backend f"ur CPUs is \glqq nd4j-native\grqq{} und kann wie im Listing A.1  in die POM.xml eingef"ugt werden.
 \lstset{language=XML}
-\begin{lstlisting}[language=XML,caption=applicationContext.xml]
+\begin{lstlisting}[language=XML,caption=Backend Dependency CPU]
  <dependency>
    <groupId>org.nd4j</groupId>
    <artifactId>nd4j-native</artifactId>
@@ -63,7 +51,7 @@ Das Standard-Backend f"ur CPUs is \glqq nd4j-native\grqq{} und kann wie im Listi
 \end{lstlisting}
 
 Durch einf"ugen der Zeilen aus dem Listing A.2, werden dem Projekt die Kernabh"angigkeiten von DL4J hinzugef"ugt. Andere Abh"angigkeiten DL4J betreffend, die f"ur einige Projekte sinnvoll sind, wie z.B. parallele Ausf"uhrung auf Hadoop oder Spark, stehen zu Verf"ugung und Informationen hierzu findet man auf \cite{ND4J}.
-\begin{lstlisting}[language=XML,caption=applicationContext.xml]
+\begin{lstlisting}[language=XML,caption=DL4J Dependency]
 	   <dependency>
 	     <groupId>org.deeplearning4j</groupId>
 	     <artifactId>deeplearning4j-core</artifactId>
@@ -72,7 +60,7 @@ Durch einf"ugen der Zeilen aus dem Listing A.2, werden dem Projekt die Kernabh"a
 \end{lstlisting}
 
 Die Variablen \glqq nd4j.version\grqq{} (Listing A.1 Zeile 4) und \glqq dl4j.version\grqq{} (Listing A.2 Zeile 4) geben die Versionen an und m"ussen weiter oben in der POM-Datei zwischen $<$properties$>$ ... $<$/properties$>$ festgelegt werden. Dies kann wie im Listing A.3 erfolgen.
-\begin{lstlisting}[language=XML,caption=applicationContext.xml]
+\begin{lstlisting}[language=XML,caption=Versionsvariablen]
   <nd4j.version>0.4-rc3.9</nd4j.version>
   <dl4j.version>0.4-rc3.10</dl4j.version>
 \end{lstlisting}
