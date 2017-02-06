@@ -1,0 +1,20 @@
+key: 0-127 -> 8 		Notes: 12 (4bits) Octave: 11 (4bits)
+event: on/off -> 1
+velocity: 0-127 -> 8
+
+Octave: 8 0 2 1 => 11
+Notes:  8 4 0 0 => 12
+
+"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
+
+
+
+
+
+Channel On/Off	key velo
+ 00			0   000 000
+ 
+ Channel: 0 Note on, A5 key=81 velocity: 80
+ 001081080
+ Channel: 0 Note off, A5 key=81 velocity: 64
+ 000081064
