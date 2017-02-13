@@ -6,7 +6,6 @@ package MK;
  * Angepasst durch: Marina Knabbe
  */
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.sound.midi.*;
@@ -15,18 +14,15 @@ public class MidiReader {
     private static final int NOTE_ON = 0x90;
     private static final int NOTE_OFF = 0x80;
     private static final String[] NOTE_NAMES = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
-    public static ArrayList<Integer> track1 = new ArrayList<Integer>();
-    public static ArrayList<Integer> track2 = new ArrayList<Integer>();
 
-    public static void main(String[] args) throws Exception {
-        readMidi2List();
+    private Sequence sequence;
+
+    public MidiReader(Sequence sequence){
+        this.sequence = sequence;
     }
 
-    public static void readMidi2List() throws InvalidMidiDataException, IOException {
-        //  Sequence sequence = MidiSystem.getSequence(new File("C:\\Users\\Wolfgang\\Documents\\Marina\\Studium\\BA\\IntelliJ_code\\1stTest\\src\\main\\java\\MK\\furelise.mid"));
-        // Sequence sequence = MidiSystem.getSequence(new File("C:\\Users\\Wolfgang\\Documents\\Marina\\Studium\\BA\\IntelliJ_code\\1stTest\\src\\main\\java\\MK\\bumbleb.mid"));
-        Sequence sequence = MidiSystem.getSequence(new File("C:\\Users\\Wolfgang\\Documents\\Marina\\Studium\\BA\\IntelliJ_code\\1stTest\\src\\main\\java\\MK\\Yiruma_-_.mid"));
-
+    public ArrayList readMidi2List() throws InvalidMidiDataException, IOException {
+        ArrayList<Integer> track2 = new ArrayList<Integer>();
         int trackNumber = 0;
         for (Track track :  sequence.getTracks()) {
             trackNumber++;
@@ -47,7 +43,7 @@ public class MidiReader {
                         String noteName = NOTE_NAMES[note];
                         int velocity = sm.getData2();
                         System.out.println("Note on, " + noteName + octave + " key=" + key + " velocity: " + velocity);
-                        addEvent2List(trackNumber, sm, type, key, velocity);
+                        addEvent2List(trackNumber, sm, type, key, velocity, track2);
                     } else if (sm.getCommand() == NOTE_OFF) {
                         int type = 0; // Event type: off
                         int key = sm.getData1();
@@ -56,7 +52,7 @@ public class MidiReader {
                         String noteName = NOTE_NAMES[note];
                         int velocity = sm.getData2();
                         System.out.println("Note off, " + noteName + octave + " key=" + key + " velocity: " + velocity);
-                        addEvent2List(trackNumber, sm, type, key, velocity);
+                        addEvent2List(trackNumber, sm, type, key, velocity, track2);
                     } else {
                         System.out.println("Command:" + sm.getCommand());
                     }
@@ -67,15 +63,17 @@ public class MidiReader {
 
             System.out.println();
         }
-        System.out.println(track2.size());
-        System.out.print(track2);
+        //System.out.println(track2.size());
+        //System.out.print(track2);
+        return track2;
+
     }
 
-    private static void addEvent2List(int trackNumber, ShortMessage sm, int type, int key, int velocity) {
+    private static void addEvent2List(int trackNumber, ShortMessage sm, int type, int key, int velocity, ArrayList<Integer> track2) {
         // add to lists
         if(trackNumber == 1){
-            int eventAsInt = getEventAsInt(sm, type, key, velocity);
-            track1.add(eventAsInt);
+          //  int eventAsInt = getEventAsInt(sm, type, key, velocity);
+          //  track1.add(eventAsInt);
         }else if(trackNumber == 2){
             int eventAsInt = getEventAsInt(sm, type, key, velocity);
             track2.add(eventAsInt);
