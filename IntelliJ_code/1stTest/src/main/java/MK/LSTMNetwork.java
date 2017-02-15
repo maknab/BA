@@ -1,6 +1,5 @@
 package MK;
 
-import org.apache.commons.io.FileUtils;
 import org.deeplearning4j.nn.api.Layer;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.BackpropType;
@@ -17,35 +16,27 @@ import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
+ *  LSTM-Network class for music sequence generation.
  *
+ * @author: Marina Knabbe (based on DL4J examples)
  */
 public class LSTMNetwork {
-    public static void main( String[] args ) throws Exception {
-        int lstmLayerSize = 200;					//Number of units in each GravesLSTM layer
-        int miniBatchSize = 32;						//Size of mini batch to use when  training
-        int exampleLength = 1000;					//Length of each training example sequence to use. This could certainly be increased
-        int tbpttLength = 50;                       //Length for truncated backpropagation through time. i.e., do parameter updates ever 50 characters
-        int numEpochs = 1;							//Total number of training epochs
-        int generateSamplesEveryNMinibatches = 10;  //How frequently to generate samples from the network? 1000 characters / 50 tbptt length: 20 parameter updates per minibatch
-        int nSamplesToGenerate = 4;					//Number of samples to generate after each training epoch
-        int nCharactersToSample = 300;				//Length of each sample to generate
-        String generationInitialization = null;		//Optional character initialization; a random character is used if null
-        // Above is Used to 'prime' the LSTM with a character sequence to continue/complete.
-        // Initialization characters must all be in CharacterIterator.getMinimalCharacterSet() by default
-        Random rng = new Random(12345);
 
-        //Get a DataSetIterator that handles vectorization of text into something we can use to train
-        // our GravesLSTM network.
-        CharacterIterator iter = getShakespeareIterator(miniBatchSize,exampleLength);
-        int nOut = iter.totalOutcomes();
-
+    /**
+     * Creates MultiLayerNetwork with given parameters.
+     *
+     * @param lstmLayerSize Size of hidden layers.
+     * @param tbpttLength   Length for truncated backpropagation through time.
+     * @param nIn           Size of input layer.
+     * @param nOut          Size of output layer.
+     * @return              created MultiLayerNetwork
+     */
+    public static MultiLayerNetwork createNetwork(int lstmLayerSize, int tbpttLength, int nIn, int nOut) {
         //Set up network configuration:
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT).iterations(1)
@@ -57,7 +48,7 @@ public class LSTMNetwork {
                 .weightInit(WeightInit.XAVIER)
                 .updater(Updater.RMSPROP)
                 .list()
-                .layer(0, new GravesLSTM.Builder().nIn(iter.inputColumns()).nOut(lstmLayerSize)
+                .layer(0, new GravesLSTM.Builder().nIn(nIn).nOut(lstmLayerSize)
                         .activation("tanh").build())
                 .layer(1, new GravesLSTM.Builder().nIn(lstmLayerSize).nOut(lstmLayerSize)
                         .activation("tanh").build())
@@ -70,139 +61,206 @@ public class LSTMNetwork {
         MultiLayerNetwork net = new MultiLayerNetwork(conf);
         net.init();
         net.setListeners(new ScoreIterationListener(1));
+        return net;
+    }
 
-        //Print the  number of parameters in the network (and for each layer)
+    /**
+     * Trains given MultiLayerNetwork and generates sample output file(s).
+     *
+     * @param numEpochs     Number of training epochs.
+     * @param trainingsData The training data.
+     * @param net           The Network, which should be trained.
+     * @param sampleTrack   The sample track, which was used for the training data.
+     * @param sampleSize    The number of events of generated sample.
+     */
+    public static void trainNetwork(int numEpochs, DataSet trainingsData, MultiLayerNetwork net,
+                                    ArrayList<Integer> sampleTrack, int sampleSize, List<Integer> VALIED_INTEGER_LIST) {
+        for (int i = 0; i < numEpochs; i++) {
+            net.fit(trainingsData);
+
+            // net output to midi file
+            ArrayList<Integer> track = getSampleNetOutput(net, sampleTrack, sampleSize, VALIED_INTEGER_LIST);
+            MidiWriter midiWriter = new MidiWriter("midifile track");
+            midiWriter.createMidiFile(track);
+        }
+    }
+
+    public static void trainNetwork(int numEpochs, DataSet trainingsData, MultiLayerNetwork net,
+                                    ArrayList<Integer> sampleTrack, int sampleSize) {
+        for (int i = 0; i < numEpochs; i++) {
+            net.fit(trainingsData);
+
+            // net output to midi file
+            ArrayList<Integer> track = getSampleNetOutput(net, sampleTrack, sampleSize);
+            MidiWriter midiWriter = new MidiWriter("midifile track");
+            midiWriter.createMidiFile(track);
+        }
+    }
+    /**
+     * Gets sample net output based random event
+     * (Used by trainNetwork)
+     *
+     * @param net           MultiLayerNetwork to get sample from.
+     * @param track         Track to get notes according to output.
+     * @param sampleSize    Number of events the net generates for sample.
+     * @return              List of generated events (for midi file).
+     */
+    private static ArrayList<Integer> getSampleNetOutput(MultiLayerNetwork net, ArrayList<Integer> track,
+                                                         int sampleSize, List<Integer> VALIED_INTEGER_LIST) {
+        ArrayList<Integer> outputTrack = new ArrayList<>();
+        // clear current state from the last example
+        net.rnnClearPreviousState();
+
+        // put a random event into net as an initialisation
+        INDArray testInit = Nd4j.zeros(VALIED_INTEGER_LIST.size());
+        /*Random random = new Random();
+        int randomIndex = random.nextInt(track.size());
+        System.out.println(randomIndex);*/
+        testInit.putScalar(VALIED_INTEGER_LIST.indexOf(track.get(5/*randomIndex*/)), 1);
+
+        // run one step, the output shows what the net thinks what should come next
+        INDArray output = net.rnnTimeStep(testInit);
+
+        // now the net estimates following notes
+        for (int j = 0; j < sampleSize; j++) {
+
+            // find the most likeliest output
+            double[] outputProbDistribution = new double[VALIED_INTEGER_LIST.size()];
+            for (int k = 0; k < outputProbDistribution.length; k++) {
+                outputProbDistribution[k] = output.getDouble(k);
+            }
+            int sampledEventIdx = findIndexOfHighestValue(outputProbDistribution);
+
+            // add event to output track
+            outputTrack.add(VALIED_INTEGER_LIST.get(sampledEventIdx));
+
+            // use the last output as input
+            INDArray nextInput = Nd4j.zeros(VALIED_INTEGER_LIST.size());
+            nextInput.putScalar(sampledEventIdx, 1);
+            output = net.rnnTimeStep(nextInput);
+        }
+        System.out.println(outputTrack.toString());
+        return outputTrack;
+    }
+
+    private static ArrayList<Integer> getSampleNetOutput(MultiLayerNetwork net, ArrayList<Integer> track, int sampleSize) {
+        ArrayList<Integer> outputTrack = new ArrayList<>();
+        // clear current state from the last example
+        net.rnnClearPreviousState();
+
+        // put a random event into net as an initialisation
+        INDArray testInit = Nd4j.zeros(track.size());
+        Random random = new Random();
+       /* int randomIndex = random.nextInt(track.size());
+        System.out.println(randomIndex);*/
+        testInit.putScalar(track.indexOf(track.get(1/*randomIndex*/))
+                /*VALIED_INTEGER_LIST.get(randomIndex)*/, 1);
+
+        // run one step, the output shows what the net thinks what should come next
+        INDArray output = net.rnnTimeStep(testInit);
+
+        // now the net estimates following notes
+        for (int j = 0; j < sampleSize; j++) {
+
+            // find the most likeliest output
+            double[] outputProbDistribution = new double[track.size()];
+            for (int k = 0; k < outputProbDistribution.length; k++) {
+                outputProbDistribution[k] = output.getDouble(k);
+            }
+            int sampledEventIdx = findIndexOfHighestValue(outputProbDistribution);
+
+            // add event to output track
+            outputTrack.add(track.get(sampledEventIdx));
+
+            // use the last output as input
+            INDArray nextInput = Nd4j.zeros(track.size());
+            nextInput.putScalar(sampledEventIdx, 1);
+            output = net.rnnTimeStep(nextInput);
+        }
+        System.out.println(outputTrack.toString());
+        return outputTrack;
+    }
+
+    /**
+     * Finds the index of the highest value from a given distribution.
+     *
+     * @param distribution  Distribution of values.
+     * @return              Index of highest value.
+     */
+    private static int findIndexOfHighestValue(double[] distribution) {
+        int maxValueIndex = 0;
+        double maxValue = 0;
+
+        for (int i = 0; i < distribution.length; i++) {
+            if(distribution[i] > maxValue) {
+                maxValue = distribution[i];
+                maxValueIndex = i;
+            }
+        }
+        return maxValueIndex;
+    }
+
+    /**
+     *
+     * @param track
+     * @return
+     */
+    public static DataSet createTrainingsData(List<Integer> VALIED_INTEGER_LIST, ArrayList<Integer> track) {
+        // create input and output arrays: SAMPLE_INDEX, INPUT_NEURON,
+        // SEQUENCE_POSITION
+        INDArray input = Nd4j.zeros(1, VALIED_INTEGER_LIST.size(), track.size());
+        INDArray labels = Nd4j.zeros(1, VALIED_INTEGER_LIST.size(), track.size());
+        // loop through our sample-track
+        int samplePos = 0;
+
+        for(int currentInt : track){
+            int nextInt = track.get((samplePos + 1) % track.size() );
+            // System.out.println(nextInt);
+            // input neuron for current-char is 1 at "samplePos"
+            input.putScalar(new int[]{0, VALIED_INTEGER_LIST.indexOf(currentInt) /*track.get(currentInt)*/, samplePos}, 1);
+            // output neuron for next-char is 1 at "samplePos"
+            labels.putScalar(new int[]{0, VALIED_INTEGER_LIST.indexOf(nextInt)/*track.get(nextInt)*/, samplePos}, 1);
+            samplePos++;
+        }
+
+        return new DataSet(input, labels);
+    }
+
+    public static DataSet createTrainingsData(ArrayList<Integer> track) {
+        // create input and output arrays: SAMPLE_INDEX, INPUT_NEURON,
+        // SEQUENCE_POSITION
+        INDArray input = Nd4j.zeros(1, track.size(), track.size());
+        INDArray labels = Nd4j.zeros(1, track.size(), track.size());
+        // loop through our sample-track
+        int samplePos = 0;
+
+        for(int currentInt : track){
+            int nextInt = track.get((samplePos + 1) % track.size() );
+           // System.out.println(nextInt);
+            // input neuron for current-char is 1 at "samplePos"
+            input.putScalar(new int[]{0, track.indexOf(currentInt), samplePos}, 1);
+            // output neuron for next-char is 1 at "samplePos"
+            labels.putScalar(new int[]{0, track.indexOf(nextInt), samplePos}, 1);
+            samplePos++;
+        }
+
+        return new DataSet(input, labels);
+    }
+
+    /**
+     * Print the number of parameters in the network (and for each layer)
+     *
+     * @param net
+     */
+    public static void printNetworkParams(MultiLayerNetwork net) {
         Layer[] layers = net.getLayers();
         int totalNumParams = 0;
-        for( int i=0; i<layers.length; i++ ){
+        for (int i = 0; i < layers.length; i++) {
             int nParams = layers[i].numParams();
             System.out.println("Number of parameters in layer " + i + ": " + nParams);
             totalNumParams += nParams;
         }
         System.out.println("Total number of network parameters: " + totalNumParams);
-
-        //Do training, and then generate and print samples from network
-        int miniBatchNumber = 0;
-        for( int i=0; i<numEpochs; i++ ){
-            while(iter.hasNext()){
-                DataSet ds = iter.next();
-                net.fit(ds);
-                if(++miniBatchNumber % generateSamplesEveryNMinibatches == 0){
-                    System.out.println("--------------------");
-                    System.out.println("Completed " + miniBatchNumber + " minibatches of size " + miniBatchSize + "x" +
-                            exampleLength + " characters" );
-                    System.out.println("Sampling characters from network given initialization \"" +
-                            (generationInitialization == null ? "" : generationInitialization) + "\"");
-                    String[] samples = sampleCharactersFromNetwork(generationInitialization,net,iter,rng,
-                            nCharactersToSample,nSamplesToGenerate);
-                    for( int j=0; j<samples.length; j++ ){
-                        System.out.println("----- Sample " + j + " -----");
-                        System.out.println(samples[j]);
-                        System.out.println();
-                    }
-                }
-            }
-
-            iter.reset();	//Reset iterator for another epoch
-        }
-
-        System.out.println("\n\nExample complete");
     }
 
-    /** Downloads Shakespeare training data and stores it locally (temp directory). Then set up and return a simple
-     * DataSetIterator that does vectorization based on the text.
-     * @param miniBatchSize Number of text segments in each training mini-batch
-     * @param sequenceLength Number of characters in each text segment.
-     */
-    private static CharacterIterator getShakespeareIterator(int miniBatchSize, int sequenceLength) throws Exception{
-        //The Complete Works of William Shakespeare
-        //5.3MB file in UTF-8 Encoding, ~5.4 million characters
-        //https://www.gutenberg.org/ebooks/100
-        String url = "https://s3.amazonaws.com/dl4j-distribution/pg100.txt";
-        String tempDir = System.getProperty("java.io.tmpdir");
-        String fileLocation = tempDir + "/Shakespeare.txt";	//Storage location from downloaded file
-        File f = new File(fileLocation);
-        if( !f.exists() ){
-            FileUtils.copyURLToFile(new URL(url), f);
-            System.out.println("File downloaded to " + f.getAbsolutePath());
-        } else {
-            System.out.println("Using existing text file at " + f.getAbsolutePath());
-        }
-
-        if(!f.exists()) throw new IOException("File does not exist: " + fileLocation);	//Download problem?
-
-        char[] validCharacters = CharacterIterator.getMinimalCharacterSet();	//Which characters are allowed? Others will be removed
-        return new CharacterIterator(fileLocation, Charset.forName("UTF-8"),
-                miniBatchSize, sequenceLength, validCharacters, new Random(12345));
-    }
-
-    /** Generate a sample from the network, given an (optional, possibly null) initialization. Initialization
-     * can be used to 'prime' the RNN with a sequence you want to extend/continue.<br>
-     * Note that the initalization is used for all samples
-     * @param initialization String, may be null. If null, select a random character as initialization for all samples
-     * @param charactersToSample Number of characters to sample from network (excluding initialization)
-     * @param net MultiLayerNetwork with one or more GravesLSTM/RNN layers and a softmax output layer
-     * @param iter CharacterIterator. Used for going from indexes back to characters
-     */
-    private static String[] sampleCharactersFromNetwork(String initialization, MultiLayerNetwork net,
-                                                        CharacterIterator iter, Random rng, int charactersToSample, int numSamples ){
-        //Set up initialization. If no initialization: use a random character
-        if( initialization == null ){
-            initialization = String.valueOf(iter.getRandomCharacter());
-        }
-
-        //Create input for initialization
-        INDArray initializationInput = Nd4j.zeros(numSamples, iter.inputColumns(), initialization.length());
-        char[] init = initialization.toCharArray();
-        for( int i=0; i<init.length; i++ ){
-            int idx = iter.convertCharacterToIndex(init[i]);
-            for( int j=0; j<numSamples; j++ ){
-                initializationInput.putScalar(new int[]{j,idx,i}, 1.0f);
-            }
-        }
-
-        StringBuilder[] sb = new StringBuilder[numSamples];
-        for( int i=0; i<numSamples; i++ ) sb[i] = new StringBuilder(initialization);
-
-        //Sample from network (and feed samples back into input) one character at a time (for all samples)
-        //Sampling is done in parallel here
-        net.rnnClearPreviousState();
-        INDArray output = net.rnnTimeStep(initializationInput);
-        output = output.tensorAlongDimension(output.size(2)-1,1,0);	//Gets the last time step output
-
-        for( int i=0; i<charactersToSample; i++ ){
-            //Set up next input (single time step) by sampling from previous output
-            INDArray nextInput = Nd4j.zeros(numSamples,iter.inputColumns());
-            //Output is a probability distribution. Sample from this for each example we want to generate, and add it to the new input
-            for( int s=0; s<numSamples; s++ ){
-                double[] outputProbDistribution = new double[iter.totalOutcomes()];
-                for( int j=0; j<outputProbDistribution.length; j++ ) outputProbDistribution[j] = output.getDouble(s,j);
-                int sampledCharacterIdx = sampleFromDistribution(outputProbDistribution,rng);
-
-                nextInput.putScalar(new int[]{s,sampledCharacterIdx}, 1.0f);		//Prepare next time step input
-                sb[s].append(iter.convertIndexToCharacter(sampledCharacterIdx));	//Add sampled character to StringBuilder (human readable output)
-            }
-
-            output = net.rnnTimeStep(nextInput);	//Do one time step of forward pass
-        }
-
-        String[] out = new String[numSamples];
-        for( int i=0; i<numSamples; i++ ) out[i] = sb[i].toString();
-        return out;
-    }
-
-    /** Given a probability distribution over discrete classes, sample from the distribution
-     * and return the generated class index.
-     * @param distribution Probability distribution over classes. Must sum to 1.0
-     */
-    private static int sampleFromDistribution( double[] distribution, Random rng ){
-        double d = rng.nextDouble();
-        double sum = 0.0;
-        for( int i=0; i<distribution.length; i++ ){
-            sum += distribution[i];
-            if( d <= sum ) return i;
-        }
-        //Should never happen if distribution is a valid probability distribution
-        throw new IllegalArgumentException("Distribution is invalid? d="+d+", sum="+sum);
-    }
 }

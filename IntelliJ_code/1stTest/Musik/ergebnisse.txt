@@ -1,0 +1,53 @@
+1. Ansatz:
+- alle track events = Eingänge
+
+01:
+in/out 1040
+hidden 200
+tbptt 50
+epoch 3
+sample size 80
+learning rate 1e-1
+
+- tbptt kleiner (20)-> kein lernen
+- tbptt größer (70)-> kein lernen
+- hidden größer (200)-> kein lernen
+	-> 2. Ansatz: Verringerung der Neuronen in in/out
+
+
+2. Ansatz:
+- event = Eingänge (keine doppelten)
+
+02:
+in/out 36
+hidden 200
+tbptt 50
+epoch 3
+sample size 80
+learning rate 1e-1
+Ergebnis: müll
+
+- tbptt kleiner (35)-> kein lernen
+- tbptt größer (80)-> kein lernen
+
+03:
+in/out 36
+hidden 200? (120)
+tbptt 50
+epoch 3
+sample size 80
+learning rate 1e-5
+
+04:
+in/out 36
+hidden 120
+tbptt 50
+epoch 4
+sample size 50
+learning rate 0.1
+init 5
+
+- Probleme: - overfitting
+			- größere Datensätze mit mehr verschiedenen events -> speicherplatz probleme, da hidden layer entsprechend größer ausgelegt sein müssen
+			- trainings Daten zu "eintönig", netz spielt selben Ton oft hintereinander
+			

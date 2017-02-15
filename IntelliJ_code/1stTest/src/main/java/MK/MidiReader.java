@@ -63,8 +63,8 @@ public class MidiReader {
 
             System.out.println();
         }
-        //System.out.println(track2.size());
-        //System.out.print(track2);
+        System.out.println(track2.size());
+        System.out.print(track2);
         return track2;
 
     }
@@ -72,13 +72,14 @@ public class MidiReader {
     private static void addEvent2List(int trackNumber, ShortMessage sm, int type, int key, int velocity, ArrayList<Integer> track2) {
         // add to lists
         if(trackNumber == 1){
-          //  int eventAsInt = getEventAsInt(sm, type, key, velocity);
-          //  track1.add(eventAsInt);
+            int eventAsInt = getEventAsInt(sm, type, key, velocity);
+           // track1.add(eventAsInt);
+            //track2.add(eventAsInt);
         }else if(trackNumber == 2){
             int eventAsInt = getEventAsInt(sm, type, key, velocity);
             track2.add(eventAsInt);
         }else{
-            System.out.println("Mehr als zwei Tracks.");
+          //  System.out.println("Mehr als zwei Tracks.");
         }
     }
 

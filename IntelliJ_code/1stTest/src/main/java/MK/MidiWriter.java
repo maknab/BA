@@ -8,6 +8,8 @@ package MK;
  */
 
 import java.io.*;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import javax.sound.midi.*; // package for all midi classes
 
@@ -20,10 +22,10 @@ public class MidiWriter{
     private String TrackName;
     private ShortMessage mm;
 
-    public static void main(String argv[]) {
+   /* public static void main(String argv[]) {
       //  createMidiFile();
         new MidiWriter("midifile track");
-    }
+    }*/
 
     public MidiWriter(String s){
         TrackName = s;
@@ -118,7 +120,10 @@ public class MidiWriter{
             t.add(me);
 
             //****  write the MIDI sequence to a MIDI file  ****
-            File f = new File("midifile.mid");
+            Format formatter = new SimpleDateFormat("YYYY-MM-dd_hh-mm-ss");
+            Date date = new Date();
+            String fileName = "midiSample_" + formatter.format(date) + ".mid";
+            File f = new File(fileName);
             MidiSystem.write(s, 1, f);
         } //try
         catch(Exception e) {
@@ -127,7 +132,7 @@ public class MidiWriter{
         System.out.println("midifile end ");
     }
 
-    public byte getType(Integer i) {
+    private byte getType(Integer i) {
         byte typeB = 0x00;
         // get type
         int type = i % 10_000_000 / 1_000_000;
