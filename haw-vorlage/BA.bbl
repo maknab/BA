@@ -19,6 +19,57 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{GRUV}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2f7056f308e095b053fe506bab1a90a6}{%
+           prefix={und},
+           prefix_i={u\bibinitperiod},
+           family={Aran\bibnamedelima Nayebi},
+           family_i={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Matthew\bibnamedelima Vitelli},
+           given_i={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f7056f308e095b053fe506bab1a90a6}
+      \strng{fullhash}{2f7056f308e095b053fe506bab1a90a6}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{shorthand}{GRUV}
+      \field{urlday}{02}
+      \field{urlmonth}{02}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://github.com/MattVitelli/GRUV
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{GruvPaper}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2f7056f308e095b053fe506bab1a90a6}{%
+           prefix={und},
+           prefix_i={u\bibinitperiod},
+           family={Aran\bibnamedelima Nayebi},
+           family_i={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Matthew\bibnamedelima Vitelli},
+           given_i={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f7056f308e095b053fe506bab1a90a6}
+      \strng{fullhash}{2f7056f308e095b053fe506bab1a90a6}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Vitelli u. Nayebi 2015}
+      \field{title}{GRUV: Algorithmic Music Generation using Recurrent Neural Networks}
+      \field{urlday}{02}
+      \field{urlmonth}{02}
+      \field{urlyear}{2017}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://cs224d.stanford.edu/reports/NayebiAran.pdf
+      \endverb
+      \keyw{other}
+    \endentry
     \entry{BPTT}{article}{}
       \name{author}{1}{}{%
         {{hash=dff5da3151659fdd315c88115bd851ab}{%
@@ -66,6 +117,31 @@
       \endverb
       \keyw{other}
     \endentry
+    \entry{Asimov}{online}{}
+      \name{author}{1}{}{%
+        {{hash=db1defbe0ceaa47268ad12a8394c512a}{%
+           family={Brinkkemper},
+           family_i={B\bibinitperiod},
+           given={Frank},
+           given_i={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{db1defbe0ceaa47268ad12a8394c512a}
+      \strng{fullhash}{db1defbe0ceaa47268ad12a8394c512a}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Brinkkemper 2016}
+      \field{title}{Analyzing six deep learning tools for music generation}
+      \field{urlday}{02}
+      \field{urlmonth}{02}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.asimovinstitute.org/analyzing-deep-learning-tools-music/
+      \endverb
+      \keyw{other}
+    \endentry
     \entry{DL4J}{online}{}
       \list{organization}{1}{%
         {Deeplearning4j Development Team DL4J}%
@@ -108,6 +184,49 @@
       \field{year}{2016}
       \verb{url}
       \verb http://www.atlantis-press.com/php/paper-details.php?from=author+index&id=25849464&querystr=authorstr%3DC
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{Magenta}{online}{}
+      \list{organization}{1}{%
+        {Google Brain Team}%
+      }
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Magenta}
+      \field{title}{Magenta: Music and Art Generation with Machine Intelligence}
+      \field{urlday}{02}
+      \field{urlmonth}{02}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://github.com/tensorflow/magenta
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{bachbot}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9736bfa9ed264b2781f2d1d8caab857d}{%
+           prefix={und},
+           prefix_i={u\bibinitperiod},
+           family={Mark\bibnamedelimb Gotham\bibnamedelimb und\bibnamedelimb Marcin\bibnamedelimb Tomczak\bibnamedelimb und\bibnamedelimb Matthew\bibnamedelimb Johnson\bibnamedelimb und\bibnamedelimb Jamie\bibnamedelima Shotton},
+           family_i={M\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Feynman\bibnamedelima Liang},
+           given_i={F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{9736bfa9ed264b2781f2d1d8caab857d}
+      \strng{fullhash}{9736bfa9ed264b2781f2d1d8caab857d}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{BachBot}
+      \field{title}{The BachBot Challenge: Can you tell the difference between Bach and a computer?}
+      \field{urlday}{02}
+      \field{urlmonth}{02}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb http://bachbot.com/#/?_k=y9plwb
       \endverb
       \keyw{other}
     \endentry

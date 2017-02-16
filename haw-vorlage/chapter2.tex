@@ -181,7 +181,7 @@ In dieser Variante werden den Gates eine Guckloch-Verbindung hinzugef"ugt. Dies 
 Eine andere Variante ist in Abbildung 2.12 dargestellt und schlie{\ss}t das Forget Gate und das Eingangsgate zu einem Gate zusammen. Diese Ver"anderung hat die Auswirkung, dass die Entscheidung was gel"oscht und was neu gespeichert wird nur noch gemeinsam getroffen werden kann. Somit kann nur etwas vergessen werden, wenn es durch neue Informationen ersetzt wird und im Umkehrschluss k"onnen neue Informationen nur gespeichert werden, wenn andere Informationen aus dem Zellzustand gel"oscht werden.
 
 
-\section{Aktueller Forschungsstand (unfinished)}
+\section{Aktueller Forschungsstand}
 Long Short-Term Memory Netzwerke wurden von Sepp Hochreiter und J"urgen Schmidhuber Mitte der 90er Jahre vorgestellt und haben seitdem immer mehr an Bedeutung im Bereich des maschinellen Lernens gewonnen. In diesem Abschnitt sollen kurz ein paar Beispiele aus dem aktuellen Forschungsstand gegeben werden, bez"uglich allgemeiner Verwendungen und speziell der Musikerzeugung mit LSTM-Netzwerken.
 
 \subsection{Allgemeine Forschung}
@@ -196,31 +196,18 @@ Die menschliche Aktivit"atserkennung findet in mobilen Anwendungen ihren Nutzen.
 Die Sprachgenerierung f"ur gesprochene Dialogsysteme erfolgt zur Zeit haupts"achlich "uber regelbasierte Ans"atze und obwohl diese Systeme robust und zuverl"assig arbeiten, ist ein Gespr"ach auf Grund von h"aufigen Wiederholungen identischer Ausgaben oft eint"onig. \cite{Wen} benutzen f"ur ihren Generator ein LSTM-Netzwerk, mit dem Ziel eine gr"o{\ss}ere Varianz in der Satzbildung zu bekommen. Menschliche Richter stuften dieses System h"oher in Informativit"at und Nat"urlichkeit ein und bevorzugten es gegen"uber anderen Systemen.
 
 
-\subsection{Musikerzeugung (unfinished)}
+\subsection{Musikerzeugung}
 
 \subsubsection{Musiksequenzmodellierung mit LSTM-RBM-Netzwerk}
-Das Modell von \cite{Lyu} verbindet die F"ahigkeiten von LSTM-Netzwerken und Restricted Boltzmann Maschinen. W"ahrend das Kurzzeitged"achtnis f"ur das erstellen einer Melodie zust"andig ist, sorgt das Langzeitged"achtnis des LSTM-Netzwerkes f"ur ein stimmiges Gesamtergebnis. Die Restricted Boltzmann Maschine ist f"ur die hochdimensionalen Datenmodellierung verantwortlich. Dieser Ansatz verbessert die Leistungsfähigkeit von polyphoner Musiksequenzmodellierung erheblich.
+Das Modell von \cite{Lyu} verbindet die F"ahigkeiten von LSTM-Netzwerken und Restricted Boltzmann Maschinen. W"ahrend das Kurzzeitged"achtnis f"ur das erstellen einer Melodie zust"andig ist, sorgt das Langzeitged"achtnis des LSTM-Netzwerkes f"ur ein stimmiges Gesamtergebnis. Die Restricted Boltzmann Maschine ist f"ur die hochdimensionalen Datenmodellierung verantwortlich. Dieser Ansatz verbessert die Leistungsf"ahigkeit von polyphoner Musiksequenzmodellierung erheblich.
 
 \subsubsection{Googles Magenta}
-Magenta ist ein Open Source Deep Learning Musikprojekt von Google mit dem Ziel unwiderstehliche Musik zu generieren.
-https://magenta.tensorflow.org/
- is Google’s open source deep learning music project. They aim to use machine learning to generate compelling music. The project went open source in June 2016 and currently implements a regular RNN and two LSTM’s.
-Challenges: At this point, Magenta can only generate a single stream of notes. Efforts have been made to combine the generated melodies with drums and guitars – but based on human input, as of yet. Once a model that can process polyphonic music has been trained, it could start to create harmonies (or at least multiple streams of notes). This would indeed be a mighty step on their quest for the generation of some compelling music.
-Source: http://www.asimovinstitute.org/analyzing-deep-learning-tools-music/
-Programmiersprache: Python in Tensorflow, MIDI File based
+\cite{Magenta} ist ein Deep Learning Musikprojekt von Google mit dem Ziel unwiderstehliche Musik zu generieren. Es ist in Python geschrieben, benutzt die Open Source Software Tensorflow und arbeitet mit MIDI-Dateien. Seit Juni 2016 steht es als Open Source Projekt zur Verf"ugung und enth"allt zur Zeit die Implementation eines RNN und zweier LSTM-Netzwerke. Magenta kann zu diesem Zeitpunkt einen einzelnen String von Noten generieren. (\cite{Asimov})
 
 \subsubsection{BachBot}
-A research project by Feynman Liang at Cambridge University,  also using an LSTM. This time it is used to train itself on Bach chorales. It’s goal is to generate and harmonize chorales indistinguishable from Bach’s own work. The website offers a test where one can listen to two streams and guess which one is an actual composition by Bach.
-Great, because: Research found that people have a hard time distinguishing generated Bach from the real stuff. Also, this is one of the best efforts in handling polyphonic music as the algorithm can handle up to four voices.
-Challenges: BachBot works best if one or more of the voices are fixed. Otherwise the algorithm just generates wandering chorales.The algorithm could be used to add chorales to a generated melody.
-Source: http://www.asimovinstitute.org/analyzing-deep-learning-tools-music/
-Programmiersprache: Python, wav-file based
+\cite{bachbot} ist ein Open Source Forschungsprojekt der Universit"at von Cambridge, dessen Ziel es ist Musikst"ucke zu erzeugen, die von Bachs Werken nicht zu unterscheiden sind. Die Webseite bietet einen Test an, bei dem man sich zwei Musiksequenzen anh"oren und dann raten kann, bei welchen es sich um ein Original von Bach handelt. Dieses Projekt ist in Python geschrieben, benutzt LSTM-Netzwerke und arbeitet mit wav-Dateien.
 
 \subsubsection{GRUV}
-A Stanford research project that, similar to Wavenet, also tries to use audio waveforms as input, but with an LSTM’s and GRU’s rather than CNN’s. They have showed their proof of concept to the world in June 2015.
-Great, because: The Stanford researchers were one of the first to show how to generate sounds with an LSTM using raw waveforms as input.
-Challenges: The demonstration they provide seems over-fitted on a particular song, due to the small training corpus and the sheer amount of layers of the NN. The researchers themselves did not have the time nor computational power to experiment further with this. Fortunately, this void is starting to get filled by researchers from WaveNet and other enthusiasts. Jakub Fiala has used this code to generate an interesting amen drum break, see this blog post.
-Source: http://www.asimovinstitute.org/analyzing-deep-learning-tools-music/
-Programmiersprache: Python, mp3-file based
+\cite{GRUV} ist eine Forschungsarbeit der Universit"at Stanford von \cite{GruvPaper}, welche LSTM-Netzwerke und Gated Recurrent Unit (GRU) Netzwerke zur algorithmischen Musikgenerierung vergleicht. Das Fazit der Autoren lautet, dass die Ausgabe des LSTM-Netzwerkes signifikant musikalisch plausibler ist als die Ausgabe des GRU-Netzes. Dieses Projekt ist ebenfalls in Python verfasst und arbeitet mit waveform-Dateien.
 
 } %% Ende Chapter{RNN und LSTM}

@@ -16,7 +16,7 @@
 \defcounter {refsection}{0}\relax 
 \select@language {ngerman}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Glossar(unfinished)}{ix}{chapter*.5}
+\contentsline {chapter}{\nonumberline Glossar(unfinished)}{viii}{chapter*.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung (unfinished)}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -56,7 +56,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Zusammengef"uhrte Gates}{10}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Aktueller Forschungsstand (unfinished)}{11}{section.2.4}
+\contentsline {section}{\numberline {2.4}Aktueller Forschungsstand}{11}{section.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.1}Allgemeine Forschung}{11}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
@@ -66,7 +66,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Sprachgenerierung f"ur gesprochene Dialogsysteme}{11}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Musikerzeugung (unfinished)}{12}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}Musikerzeugung}{12}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Musiksequenzmodellierung mit LSTM-RBM-Netzwerk}{12}{section*.17}
 \defcounter {refsection}{0}\relax 
@@ -74,64 +74,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline BachBot}{12}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline GRUV}{13}{section*.20}
+\contentsline {subsubsection}{\nonumberline GRUV}{12}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Deeplearning4J}{14}{chapter.3}
+\contentsline {chapter}{\numberline {3}Deeplearning4J}{13}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Netzwerke erstellen}{14}{section.3.1}
+\contentsline {section}{\numberline {3.1}Netzwerke erstellen}{13}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Ein Netzwerk erstellen (3-Schritt-Methode)}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.1}Ein Netzwerk erstellen (3-Schritt-Methode)}{14}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Schritt 1: NeuralNetConfiguration.Builder}{15}{section*.21}
+\contentsline {subsubsection}{\nonumberline Schritt 1: NeuralNetConfiguration.Builder}{14}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Schritt 2: ListBuilder}{16}{section*.22}
+\contentsline {subsubsection}{\nonumberline Schritt 2: ListBuilder}{15}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Schritt 3: MultiLayerNetwork}{17}{section*.23}
+\contentsline {subsubsection}{\nonumberline Schritt 3: MultiLayerNetwork}{16}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}Ein Netzwerk erstellen (Kurzversion)}{17}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.2}Ein Netzwerk erstellen (Kurzversion)}{16}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.3}Layertypen}{18}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.3}Layertypen}{17}{subsection.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Netzwerke trainieren}{19}{section.3.2}
+\contentsline {section}{\numberline {3.2}Netzwerke trainieren}{18}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Ein Netzwerk trainieren}{19}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}Ein Netzwerk trainieren}{18}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Daten erstellen}{19}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Daten erstellen}{18}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Musiksequenzen mit Hilfe von DL4J erzeugen (unfinished)}{21}{chapter.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}"Idee" (unfinished)}{21}{section.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Die Eingabe (unfinished)}{21}{section.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Was sind MIDI Files? (unfinished)}{21}{subsection.4.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}MIDI Files lesen (unfinished)}{21}{subsection.4.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}DataSets erstellen (unfinished)}{21}{subsection.4.2.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Variante 1 (unfinished)}{21}{section*.24}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Variante 2 (unfinished)}{21}{section*.25}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Vergleich der Varianten (unfinished)}{22}{section*.26}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Das Netz (unfinished)}{22}{section.4.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Die Ausgabe (unfinished)}{22}{section.4.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}MIDI Files schreiben (unfinished)}{22}{subsection.4.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Ergebnisse (unfinished)}{22}{subsection.4.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Variante 1 (unfinished)}{22}{section*.27}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Variante 2 (unfinished)}{22}{section*.28}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}M"ogliche Erweiterungen und Verbesserungen (unfinished)}{22}{section.4.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fazit (unfinished)}{23}{chapter.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}DL4J-Projekt in IntelliJ aufsetzen}{24}{appendix.A}
+\contentsline {chapter}{\numberline {A}DL4J-Projekt in IntelliJ aufsetzen}{20}{appendix.A}
 \defcounter {refsection}{0}\relax 
 \addtokomafont {chapterentry}{Anhang } 
