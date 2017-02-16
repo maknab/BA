@@ -84,6 +84,62 @@
       \endverb
       \keyw{other}
     \endentry
+    \entry{Chen}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4fa263b9b560182f0e51eae40140db62}{%
+           prefix={und},
+           prefix_i={u\bibinitperiod},
+           family={Kunhua\bibnamedelimb Zhong\bibnamedelimb und\bibnamedelimb Ju\bibnamedelimb Zhang\bibnamedelimb und\bibnamedelimb Qilong\bibnamedelimb Sun\bibnamedelimb und\bibnamedelimb Xueliang\bibnamedelima Zhao},
+           family_i={K\bibinitperiod\bibinitdelim Z\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim Z\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim Q\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim X\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           given={Yuwen\bibnamedelima Chen},
+           given_i={Y\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4fa263b9b560182f0e51eae40140db62}
+      \strng{fullhash}{4fa263b9b560182f0e51eae40140db62}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Chen u. a. 2016}
+      \field{title}{LSTM Networks for Mobile Human Activity Recognition}
+      \field{urlday}{08}
+      \field{urlmonth}{09}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.atlantis-press.com/php/paper-details.php?from=author+index&id=25849464&querystr=authorstr%3DC
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{Wen}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b6d8d697a1d3b0c0380b9d6652610793}{%
+           prefix={und},
+           prefix_i={u\bibinitperiod},
+           family={Milica\bibnamedelimb Gasic\bibnamedelimb und\bibnamedelimb Nikola\bibnamedelimb Mrksic\bibnamedelimb und\bibnamedelimb Pei-hao\bibnamedelimb Su\bibnamedelimb und\bibnamedelimb David\bibnamedelimb Vandyke\bibnamedelimb und\bibnamedelimb Steve\bibnamedelimb J.\bibnamedelimi Young},
+           family_i={M\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim P\bibinithyphendelim h\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           given={Tsung-Hsien\bibnamedelima Wen},
+           given_i={T\bibinithyphendelim H\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6d8d697a1d3b0c0380b9d6652610793}
+      \strng{fullhash}{b6d8d697a1d3b0c0380b9d6652610793}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CoRR}
+      \field{shorthand}{Wen u. a. 2015}
+      \field{title}{Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems}
+      \field{urlday}{08}
+      \field{urlmonth}{09}
+      \field{urlyear}{2016}
+      \field{volume}{abs/1508.01745}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://arxiv.org/abs/1508.01745
+      \endverb
+      \keyw{other}
+    \endentry
     \entry{ND4J}{online}{}
       \list{organization}{1}{%
         {ND4J Development Team}%
@@ -148,6 +204,35 @@
       \endverb
       \keyw{other}
     \endentry
+    \entry{SpaceOdyssey}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4404772e5979407bde1c57d56480a31b}{%
+           prefix={und},
+           prefix_i={u\bibinitperiod},
+           family={Rupesh\bibnamedelimb Kumar\bibnamedelimb Srivastva\bibnamedelimb und\bibnamedelimb Jan\bibnamedelimb Koutnik\bibnamedelimb und\bibnamedelimb Bas\bibnamedelimb R.\bibnamedelimi Steunebrink\bibnamedelimb und\bibnamedelimb J"urgen\bibnamedelima Schmidhuber},
+           family_i={R\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Klaus\bibnamedelima Greff},
+           given_i={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4404772e5979407bde1c57d56480a31b}
+      \strng{fullhash}{4404772e5979407bde1c57d56480a31b}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CoRR}
+      \field{shorthand}{Greff u. a. 2015}
+      \field{title}{{LSTM:} {A} Search Space Odyssey}
+      \field{urlday}{08}
+      \field{urlmonth}{09}
+      \field{urlyear}{2016}
+      \field{volume}{abs/1503.04069}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://arxiv.org/abs/1503.04069
+      \endverb
+      \keyw{other}
+    \endentry
     \entry{DL4Jimg1}{misc}{}
       \name{author}{1}{}{%
         {{hash=6fa7dc8eb3653fb92093d1c3a76b798c}{%
@@ -168,6 +253,33 @@
       \verb http://deeplearning4j.org/neuralnet-overview
       \endverb
       \keyw{images}
+    \endentry
+    \entry{Lyu}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1e7ef125a0ade1210e5b58e4c4b57312}{%
+           prefix={und},
+           prefix_i={u\bibinitperiod},
+           family={Zhiyong\bibnamedelimb Wu\bibnamedelimb und\bibnamedelimb Jun\bibnamedelima Zhu},
+           family_i={Z\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           given={Qi\bibnamedelima Lyu},
+           given_i={Q\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e7ef125a0ade1210e5b58e4c4b57312}
+      \strng{fullhash}{1e7ef125a0ade1210e5b58e4c4b57312}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Lyu u. a. 2015}
+      \field{title}{Polyphonic Music Modelling with LSTM-RTRBM}
+      \field{urlday}{08}
+      \field{urlmonth}{09}
+      \field{urlyear}{2016}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=2806383
+      \endverb
+      \keyw{other}
     \endentry
   \endsortlist
 \endrefsection

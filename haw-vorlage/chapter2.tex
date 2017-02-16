@@ -182,61 +182,45 @@ Eine andere Variante ist in Abbildung 2.12 dargestellt und schlie{\ss}t das Forg
 
 
 \section{Aktueller Forschungsstand (unfinished)}
+Long Short-Term Memory Netzwerke wurden von Sepp Hochreiter und J"urgen Schmidhuber Mitte der 90er Jahre vorgestellt und haben seitdem immer mehr an Bedeutung im Bereich des maschinellen Lernens gewonnen. In diesem Abschnitt sollen kurz ein paar Beispiele aus dem aktuellen Forschungsstand gegeben werden, bez"uglich allgemeiner Verwendungen und speziell der Musikerzeugung mit LSTM-Netzwerken.
 
-\subsection{noch ohne Titel}
+\subsection{Allgemeine Forschung}
 
-\subsubsection{Analyse von LSTM-Netz-Varianten (LSTM: A Search Space Odyssey)}
-- In recent years, these networks have become the state-of-the-art models for a variety of machine learning problems.
-- In this paper, we present the first large-scale analysis of eight LSTM variants on three representative tasks: speech recognition, handwriting recognition, and polyphonic music modeling.
-- In total, we summarize the results of 5400 experimental runs (~15 years of CPU time), which makes our study the largest of its kind on LSTM networks.
-- Our results show that none of the variants can improve upon the standard LSTM architecture significantly, and demonstrate the forget gate and the output activation function to be its most critical components.
-- The focus of our study is to compare different LSTM variants, and not to achieve state-of-the-art results. Therefore, our experiments are designed to keep the setup simple and the comparisons fair. The vanilla LSTM is used as a baseline and evaluated together with eight of its variants. Each variant adds, removes or modifies the baseline in exactly one aspect, which allows to isolate their effect. Three different datasets from different domains are used to account for cross-domain variations.
-Quelle: 1503.04069v1.pdf
+\subsubsection{Analyse von LSTM-Netz-Varianten}
+\cite{SpaceOdyssey} f"uhrten eine Studie durch, in der sie acht LSTM-Varianten miteinander verglichen. Die Varianten wichen je um nur einen Aspekt vom Standart-LSTM-Netzwerk ab, um ihre Auswirkung sichtbar zu machen. Getestet wurden die Netze in drei representativen Aufgaben: Spracherkennung, Handschrifterkennung und Musikmodelierung. Ihre Ergebnisse zeigten, dass keine der Varianten das Standart-LSTM-Netz signifikant verbesserte und dass das Forget Gate und die Ausgangsaktivierungsfunktion die kritischten Komponenten eines Netzes sind.
 
-\subsubsection{Bedienung dynamischer Systeme (Control of Dynamic Systems Using LSTM supported Neural Network)}
-- operation of dynamic system is challenged by non-linearity, disturbances and multivariate interactions
-	- well-suited for to handle this is MPC
-- combination of LSTM and NN(Neural Network) to learn complex policies of MPC(Model Predictive Control)
-- MPC is a multivariate control algorithm that uses an internal dynamic model of the process, history of past control moves to yield optimal control actions.
-	- In MPC, the control actions are computed by solving an optimization objective that minimizes a cost function ( function of difference in target output and system output) while accounting for system dynamics ( using a prediction model) and satisfying output and control action constraints.
-	- However, solving the optimization objective in real time is computationally demanding and often takes lot of time for complex systems. Moreover, MPC requires the estimation of hidden system states (hidden states characterize system dynamics) which can be challenging in complex non-linear dynamic system.
-- We propose LSTM supported NN model (LSTMSNN). The output of LSTMSNN is a weighted combination of outputs from LSTM and NN. We use this combination because the current control action depends on past control actions, current system output and target output. The LSTM part of LSTMSNN takes past control actions as input. Because there is temporal dependency between control actions, and we want to use LSTM to capture it. The NN part of LSTMSNN takes current system output and target output as input. Because we want to train NN to make a decision on control action by using current system and target output.
-	- Our trained LSTMSNN Model is computationally less expensive than MPC.
-	- Moreover, our approach does not involve the burden of estimating the hidden states that characterizes system dynamics.
-Quelle: 2\_lstmsnn.pdf
+\subsubsection{LSTM-Netzwerk-basierte Merkmalextraktion}
+Die menschliche Aktivit"atserkennung findet in mobilen Anwendungen ihren Nutzen. Fitness und Gesundheitsprogramme auf Smartphones basieren meistens auf dem Ansatz der gleitenden Fensterprozedur und erstellen Aktivit"atshypothesen anhand von aufwendig handgemachten Merkmalen. \cite{Chen} stellen in ihrer Arbeit eine LSTM-Netzwerk-basierte Merkmalextraktion vor, welche getestet an Datens"atzen eine sehr hohe Genauigkeit aufweist und somit als praktikabler Ansatz gilt.
 
-\subsubsection{LSTM-Netzwerk-basierte Merkmalextraktion (LSTM Networks for Mobile Human Activity Recognition)}
-- In this paper, we propose a LSTM-based feature extraction approach to recognize human activities using tri-axial accelerometers data.
-- The predominant approach to HAR is based on a sliding window procedure, where a fixed length analysis window is shifted along the signal sequence for frame extraction. Preprocessing then transforms raw signal data into feature vectors, which are subjected to statistical classifiers that eventually provide activity hypotheses.
-- Activity recognition has a wide range of applications in mobile applications — from fitness and health tracking to context-based advertising and employee monitoring.
-- The features used in most of researches on HAR are selected by hand. Designing hand-crafted features in a specific application requires domain knowledge [18], and maybe result in loss of information after extracting features.
-Quelle: 014.pdf
-
-\subsubsection{Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems}
-- This paper presents a statistical language generator based on a semantically controlled Long Short-term Memory (LSTM) structure. The LSTM generator can learn from unaligned data by jointly optimising sentence planning and surface realisation using a simple cross entropy training criterion, and language variation can be easily achieved by sampling from output candidates. With fewer heuristics, an objective evaluation in two differing test domains showed the proposed method improved performance compared to previous methods. Human judges scored the LSTM system higher on informativeness and naturalness and overall preferred it to the other systems.
-- The most common and widely adopted today is the rule-based (or template-based) approach (Cheyer and Guzzoni, 2007; Mirkovic and Cavedon, 2011). Despite its robustness and adequacy, the frequent repetition of identical, rather stilted, output forms make talking to a rule-based generator rather tedious.
-Quelle: 1508.01745v2.pdf
-
-\subsection{Musikerzeugung}
-
-\subsubsection{Modelling High-Dimensional Sequences with LSTM-RTRBM: Application to Polyphonic Music Generation}
-- We propose an automatic music generation demo based on artificial neural networks, which integrates the ability of Long Short-Term Memory (LSTM) in memorizing and retrieving useful history information, together with the advantage of Restricted Boltzmann Machine (RBM) in high dimensional data modelling. Our model can generalize to different musical styles and generate polyphonic music better than previous models.
-- In this context, we wish to combine the ability of RBM to represent a complicated distribution for each time step, together with a temporal model in sequence. We consider both long-term memory and short-term memory in our design of guide and learning modules, by increasing a bypassing channel from data source filtered by a recurrent LSTM layer and we show that our model increases performance generally.
-Quelle: 582.pdf
-
-\subsubsection{Polyphonic Music Modelling with LSTM-RTRBM}
-- Our model integrates the ability of Long Short-Term Memory (LSTM) in memorizing and retrieving useful history information, together with the advantage of Restricted Boltzmann Machine (RBM) in high dimensional data modelling. Our approach greatly improves the performance of polyphonic music sequence modelling, achieving the state-of-the-art results on multiple datasets.
-- For example, in order to complete a melody line, the beginning of the music sequence needs to be held in mind while the rest is played, a task which is carried out by the short-term memory. And the long-term memory will serve as the theme and emotion that will help maintain the global coherence of music. The existence of both the short-term and the longterm memory is vital for generating melodic and coherent music sequences.
-Quelle: p991-lyu.pdf
+\subsubsection{Sprachgenerierung f"ur gesprochene Dialogsysteme}
+Die Sprachgenerierung f"ur gesprochene Dialogsysteme erfolgt zur Zeit haupts"achlich "uber regelbasierte Ans"atze und obwohl diese Systeme robust und zuverl"assig arbeiten, ist ein Gespr"ach auf Grund von h"aufigen Wiederholungen identischer Ausgaben oft eint"onig. \cite{Wen} benutzen f"ur ihren Generator ein LSTM-Netzwerk, mit dem Ziel eine gr"o{\ss}ere Varianz in der Satzbildung zu bekommen. Menschliche Richter stuften dieses System h"oher in Informativit"at und Nat"urlichkeit ein und bevorzugten es gegen"uber anderen Systemen.
 
 
+\subsection{Musikerzeugung (unfinished)}
 
+\subsubsection{Musiksequenzmodellierung mit LSTM-RBM-Netzwerk}
+Das Modell von \cite{Lyu} verbindet die F"ahigkeiten von LSTM-Netzwerken und Restricted Boltzmann Maschinen. W"ahrend das Kurzzeitged"achtnis f"ur das erstellen einer Melodie zust"andig ist, sorgt das Langzeitged"achtnis des LSTM-Netzwerkes f"ur ein stimmiges Gesamtergebnis. Die Restricted Boltzmann Maschine ist f"ur die hochdimensionalen Datenmodellierung verantwortlich. Dieser Ansatz verbessert die Leistungsfähigkeit von polyphoner Musiksequenzmodellierung erheblich.
 
+\subsubsection{Googles Magenta}
+Magenta ist ein Open Source Deep Learning Musikprojekt von Google mit dem Ziel unwiderstehliche Musik zu generieren.
+https://magenta.tensorflow.org/
+ is Google’s open source deep learning music project. They aim to use machine learning to generate compelling music. The project went open source in June 2016 and currently implements a regular RNN and two LSTM’s.
+Challenges: At this point, Magenta can only generate a single stream of notes. Efforts have been made to combine the generated melodies with drums and guitars – but based on human input, as of yet. Once a model that can process polyphonic music has been trained, it could start to create harmonies (or at least multiple streams of notes). This would indeed be a mighty step on their quest for the generation of some compelling music.
+Source: http://www.asimovinstitute.org/analyzing-deep-learning-tools-music/
+Programmiersprache: Python in Tensorflow, MIDI File based
 
-https://colah.github.io/posts/2015-08-Understanding-LSTMs/
-LSTMs were a big step in what we can accomplish with RNNs. It’s natural to wonder: is there another big step? A common opinion among researchers is: "Yes! There is a next step and it’s attention!" The idea is to let every step of an RNN pick information to look at from some larger collection of information. For example, if you are using an RNN to create a caption describing an image, it might pick a part of the image to look at for every word it outputs. In fact, Xu, et al. (2015) do exactly this – it might be a fun starting point if you want to explore attention! There’s been a number of really exciting results using attention, and it seems like a lot more are around the corner…
-Attention isn’t the only exciting thread in RNN research. For example, Grid LSTMs by Kalchbrenner, et al. (2015) seem extremely promising. Work using RNNs in generative models – such as Gregor, et al. (2015), Chung, et al. (2015), or Bayer \& Osendorfer (2015) – also seems very interesting. The last few years have been an exciting time for recurrent neural networks, and the coming ones promise to only be more so!
+\subsubsection{BachBot}
+A research project by Feynman Liang at Cambridge University,  also using an LSTM. This time it is used to train itself on Bach chorales. It’s goal is to generate and harmonize chorales indistinguishable from Bach’s own work. The website offers a test where one can listen to two streams and guess which one is an actual composition by Bach.
+Great, because: Research found that people have a hard time distinguishing generated Bach from the real stuff. Also, this is one of the best efforts in handling polyphonic music as the algorithm can handle up to four voices.
+Challenges: BachBot works best if one or more of the voices are fixed. Otherwise the algorithm just generates wandering chorales.The algorithm could be used to add chorales to a generated melody.
+Source: http://www.asimovinstitute.org/analyzing-deep-learning-tools-music/
+Programmiersprache: Python, wav-file based
 
-http://deeplearning4j.org/lstm.html
-In the mid-90s, a variation of recurrent net with so-called Long Short-Term Memory units, or LSTMs, was proposed by the German researchers Sepp Hochreiter and Juergen Schmidhuber as a solution to the vanishing gradient problem.
+\subsubsection{GRUV}
+A Stanford research project that, similar to Wavenet, also tries to use audio waveforms as input, but with an LSTM’s and GRU’s rather than CNN’s. They have showed their proof of concept to the world in June 2015.
+Great, because: The Stanford researchers were one of the first to show how to generate sounds with an LSTM using raw waveforms as input.
+Challenges: The demonstration they provide seems over-fitted on a particular song, due to the small training corpus and the sheer amount of layers of the NN. The researchers themselves did not have the time nor computational power to experiment further with this. Fortunately, this void is starting to get filled by researchers from WaveNet and other enthusiasts. Jakub Fiala has used this code to generate an interesting amen drum break, see this blog post.
+Source: http://www.asimovinstitute.org/analyzing-deep-learning-tools-music/
+Programmiersprache: Python, mp3-file based
+
 } %% Ende Chapter{RNN und LSTM}

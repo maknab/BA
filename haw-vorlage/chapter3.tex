@@ -25,9 +25,9 @@
   title=\lstname                               % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 
-\chapter{Deeplearning4J (unfinished)}
+\chapter{Deeplearning4J}
 {
-DeepLearning4J (DL4J) ist eine Open-Source Deep Learning Bibliothek f"ur die Java Virtual Machine. \cite{DL4J} stellt mehrere Beispielprogramme zur Verf"ugung, wie z.B. ...
+DeepLearning4J (DL4J) ist eine Open-Source Deep Learning Bibliothek f"ur die Java Virtual Machine. \cite{DL4J} stellt mehrere Beispielprogramme zur Verf"ugung, wie z.B. Datenklassifizierung mit Feedforward Netzwerk, XOR-Netzwerk mit manueller Erstellung von einem simplen DataSet oder zuf"allige Texterzeugung im Shakespeare Schreibstil.
 
 Die Entwickler empfehlen eine Benutzung der Tool-Kombination IntelliJ IDEA, Apache Maven und Git f"ur ein komfortables Arbeiten und  falls ben"otigt, eine erleichterte Hilfestellung via Chat.
 
@@ -37,15 +37,15 @@ Wie ein neues DL4J Projekt in IntelliJ aufgesetz werden kann, wird im Anhang A e
 
 
 %%%% SECTION %%%%
-\section{Netzwerke erstellen (unfinished)}
+\section{Netzwerke erstellen}
 Ein Neuronales Netz wird in DL4J durch drei Komponeten erstellt. Die Komponenten sind der NeuralNetConfiguration.Builder, der ListBuilder und die MultiLayerConfiguration. Nachfolgend werden zwei Beispiele gegeben wie die Implementation aussehen kann. Die 3-Schritt-Methode zeigt die Implementation jeder Komponente einzeln und die Kurzversion fasst die drei Schritte zusammen, was Codezeilen spart, aber f"ur Neulinge vermutlich etwas schwerer verst"andlich ist.\\
 An zu merken ist noch, dass es sich bei dem gezeigten Code nicht um dasselbe Netzwerk handelt, sondern zwei verschiedene Netzwerke gezeigt werden. Da es hier nicht um einen Vergleich der beiden Methoden geht, sondern nur gezeigt werden soll in welcher Form eine Implementation m"oglich ist. Beide Codeausz"uge stammen von den Netzwerk-Beispielen, welche \cite{DL4J} zum Download zur Verf"ugung stellt.
 
 \subsection{Ein Netzwerk erstellen (3-Schritt-Methode)}
 
 \subsubsection{Schritt 1: NeuralNetConfiguration.Builder}
-Mit Hilfe des NeuralNetConfiguration.Builder kann man die Netzparameter festlegen. Der Quellcode 3.1 enth"alt hierzu einen Auszug aus einem Beispielprogramm von \cite{DL4J}.
-\lstinputlisting[language=JAVA, firstline=1, lastline=9,  captionpos=b, caption={NeuralNetConfiguration.Builder Beispiel}]
+Mit Hilfe des NeuralNetConfiguration.Builder kann man die Netzparameter festlegen. Der Quellcode \ref{lst:builder} enth"alt hierzu einen Auszug aus einem Beispielprogramm von \cite{DL4J}.
+\lstinputlisting[language=JAVA, firstline=1, lastline=9,  captionpos=b, caption={NeuralNetConfiguration.Builder Beispiel}, label=lst:builder]
 {code_snippets/rnn_auszug1.java}
 Dieser Code enth"alt lediglich eine Auswahl aller einstellbaren Paramter, welche in der folgenden Tabelle \ref{tbl:beispieltabelle} zeilenweise erkl"art werden. F"ur Informationen zu weiteren verf"ugbaren Paramtern kann die DL4J Dokumentation zu Rate gezogen werden.
 
@@ -66,32 +66,31 @@ Dieser Code enth"alt lediglich eine Auswahl aller einstellbaren Paramter, welche
 \end{table}
 
 \subsubsection{Schritt 2: ListBuilder}
-Mit Hilfe des erstellten NeuralNetConfiguration.Builders kann ein ListBuilder erstellt werden (siehe Quellcode 3.2). Der ListBuilder ist f"ur die Netzstruktur zust"andig und verwaltet die Netzwerk-Layer. Beim Erstellen wird ihm die Anzahl aller verwendeten Layer mitgeteilt. (In diesem Beispiel wurde das Input Layer alse Hidden Layer mit gez"ahlt, wodurch bei der "Ubergabe der Layeranzahl lediglich das Output Layer hinzuaddiert werden muss.)
+Mit Hilfe des erstellten NeuralNetConfiguration.Builders kann ein ListBuilder erstellt werden (siehe Quellcode \ref{lst:listbuilder}). Der ListBuilder ist f"ur die Netzstruktur zust"andig und verwaltet die Netzwerk-Layer. Beim Erstellen wird ihm die Anzahl aller verwendeten Layer mitgeteilt. (In diesem Beispiel wurde das Input Layer alse Hidden Layer mit gez"ahlt, wodurch bei der "Ubergabe der Layeranzahl lediglich das Output Layer hinzuaddiert werden muss.)
 
-\lstinputlisting[language=JAVA, firstline=11, lastline=11,  captionpos=b, caption={Erstellen des ListBuilders}]
+\lstinputlisting[language=JAVA, firstline=11, lastline=11,  captionpos=b, caption={Erstellen des ListBuilders}, label=lst:listbuilder]
 {code_snippets/rnn_auszug1.java}
-Quellcode 3.3 zeigt das Erzeugen der einzelnen Layer f"ur ein RNN. RNNs nutzen in DL4J den GraveLSTM.Builder zum Erzeugen des Input und der Hidden Layer (siehe Zeile 2 bis 5). In Zeile 3 wird die Anzahl der Eingangsknoten "ubergeben, welche f"ur das Input Layer in diesem Beipiel die Anzahl aller zul"assigen Buchstaben ist und f"ur die Hidden Layer eine vorher festgelegt Konstante. Zeile 4 gibt die n"otigen Verbindungen zum folgenden Layer an, welche zwingend mit der Eingangsgr"o{\ss}e des n"achsten Layers "ubereinstimmen muss. Anschlie{\ss}end wird in Zeile 5 die Aktivierungsfunktion festgelegt, bevor in Zeile 6 des erstellte Layer dem ListBuilder "ubergeben wird.
+Quellcode \ref{lst:layer} zeigt das Erzeugen der einzelnen Layer f"ur ein RNN. RNNs nutzen in DL4J den GraveLSTM.Builder zum Erzeugen des Input und der Hidden Layer (siehe Zeile 2 bis 5). In Zeile 3 wird die Anzahl der Eingangsknoten "ubergeben, welche f"ur das Input Layer in diesem Beipiel die Anzahl aller zul"assigen Buchstaben ist und f"ur die Hidden Layer eine vorher festgelegt Konstante. Zeile 4 gibt die n"otigen Verbindungen zum folgenden Layer an, welche zwingend mit der Eingangsgr"o{\ss}e des n"achsten Layers "ubereinstimmen muss. Anschlie{\ss}end wird in Zeile 5 die Aktivierungsfunktion festgelegt, bevor in Zeile 6 des erstellte Layer dem ListBuilder "ubergeben wird.
 
 Das Output Layer wird mit Hilfe des RnnOutputLayer.Builders erstellt (siehe Zeile 9 bis 12). Die "ubergebene LossFunction in Zeile 9 gibt die Methode an, mit der der Fehler zwischen Netzwerk-Ergebnis und tats"achlichem Ergebnis berechnet wird. Die Aktivierungsfunktion \glqq softmax\grqq{} in Zeile 10 normalisiert die Output Neuronen, so dass die Summe aller Ausgaben 1 ist. Zeile 12 gibt die Anzahl der Output Neuronen an, was in diesem Beispiel der Anzahl der zul"assigen Buchstaben entspricht.
 
-\lstinputlisting[language=JAVA, firstline=13, lastline=25,  captionpos=b, caption={Erstellen der Netzwerk-Layer}]
+\lstinputlisting[language=JAVA, firstline=13, lastline=25,  captionpos=b, caption={Erstellen der Netzwerk-Layer}, label=lst:layer]
 {code_snippets/rnn_auszug1.java}
 
-Anschlie{\ss}end kann der ListBuilder abgeschlossen werden (siehe Quellcode 3.4). Hierzu kann festgelegt werden, ob ein Vortrainieren stattfinden (Zeile 1) und/oder Backpropagation angewendet werden soll (Zeile 2).
-\lstinputlisting[language=JAVA, firstline=28, lastline=30,  captionpos=b, caption={Fertigstellen des ListBuilder}]
+Anschlie{\ss}end kann der ListBuilder abgeschlossen werden (siehe Quellcode \ref{lst:listbuilder2}). Hierzu kann festgelegt werden, ob ein Vortrainieren stattfinden (Zeile 1) und/oder Backpropagation angewendet werden soll (Zeile 2).
+\lstinputlisting[language=JAVA, firstline=28, lastline=30,  captionpos=b, caption={Fertigstellen des ListBuilder}, label=lst:listbuilder2]
 {code_snippets/rnn_auszug1.java}
 
-\subsubsection{Schritt 3: MultiLayerNetwork (unfinished}
-Wurde die Vorarbeit mit dem NeuralNetConfiguration.Builder und ListBuilder erledigt, kann wie im Quellcode 3.5 ein Netzwerk erstellt werden. Hierf"ur wird das MultiLayerNetwork verwendet, welches alle Informationen als MultiLayerConfigurations vom ListBuilder erh"allt. Nach der Initialisierung (Zeile 3) ist das Netzwerk bereit trainiert zu werden.
-\lstinputlisting[language=JAVA, firstline=33, lastline=35,  captionpos=b, caption={Ein Netz erzeugen}]
+\subsubsection{Schritt 3: MultiLayerNetwork}
+Wurde die Vorarbeit mit dem NeuralNetConfiguration.Builder und ListBuilder erledigt, kann wie im Quellcode \ref{lst:net} ein Netzwerk erstellt werden. Hierf"ur wird das MultiLayerNetwork verwendet, welches alle Informationen als MultiLayerConfigurations vom ListBuilder erh"allt. Nach der Initialisierung (Zeile 3) ist das Netzwerk bereit trainiert zu werden.
+\lstinputlisting[language=JAVA, firstline=33, lastline=35,  captionpos=b, caption={Ein Netz erzeugen}, label=lst:net]
 {code_snippets/rnn_auszug1.java}
 
-MultiLayerNetwork is a neural network with multiple layers in a stack, and usually an output layer. For neural networks with a more complex connection architecture, use ComputationGraph which allows for an arbitrary directed acyclic graph connection structure between layers. MultiLayerNetwork is trainable via backprop, with optional pretraining, depending on the type of layers it contains.
-http://deeplearning4j.org/doc/
+MultiLayerNetwork wird in DL4J f"ur Netzwerke benutzt, die im Groben eine einzige Bearbeitungsrichtung haben (ausgenommen netztypische R"uckf"uhrungen) und Daten vom Eingang ohne Umwege zum Ausgang weiterreichen. F"ur komplexere Netzwerkarchitekturen stellt DL4J die Klasse ComputationGraph zur Verf"ugung, welche eine willk"urlich gerichtete azyklische Graphenverbingsstruktur zwischen den Layern erlaubt. Da dies in dieser Arbeit aber nicht zur Anwendung kommt, soll hier nicht weiter auf die Implementierung eingegangen werden.
 
 \subsection{Ein Netzwerk erstellen (Kurzversion)}
-In diesem Beispiel wird ein Feedforward Netzwerk mit zwei Layern erstellt. Bei der Implementation des Quellcodes 3.6 wird auf die Unterteilung der Komponenten verzichtet und alle ben"otigten Netzwerkparameter sowie die Netzstruktur werden direkt in die MultiLayerConfiguration geschrieben ohne Variablen f"ur den NeuralNetConfiguration.Builder und ListBuilder anzulegen.
-\lstinputlisting[language=JAVA, firstline=1, lastline=19,  captionpos=b, caption={Netzwerk erstellen Kurzversion Beispiel}]
+In diesem Beispiel wird ein Feedforward Netzwerk mit zwei Layern erstellt. Bei der Implementation des Quellcodes \ref{lst:netShort} wird auf die Unterteilung der Komponenten verzichtet und alle ben"otigten Netzwerkparameter sowie die Netzstruktur werden direkt in die MultiLayerConfiguration geschrieben ohne Variablen f"ur den NeuralNetConfiguration.Builder und ListBuilder anzulegen.
+\lstinputlisting[language=JAVA, firstline=1, lastline=19,  captionpos=b, caption={Netzwerk erstellen Kurzversion Beispiel}, label=lst:netShort]
 {code_snippets/ffnn_auszug1.java}
 
 \subsection{Layertypen}
@@ -99,29 +98,26 @@ DL4J stellt verschiedene Layerarten zum problemspezifischen Aufbau von Netzwerke
 
 F"ur ein simples Feedforward Netzwerk kann der DenseLayer.Builder() f"ur das Input und die Hidden Layer verwendet werden. Das Output Layer kann mittels OutputLayer.Builder() implementiert werden.
 
-Zur Zeit stellt \cite{DL4J} kein spezielles Layer zur Implementierung von Recurrent Netzen zur Verf"gung und arbeiten in ihren Beispielen mit dem GraveLSTM.Builder() f"ur das Input und die Hidden Layer. F"ur das Output Layer steht der RnnOutputLayer.Builder() zur Verf"ugung.
+Zur Zeit stellt \cite{DL4J} kein spezielles Layer zur Implementierung von Recurrent Netzen zur Verf"ugung und arbeiten in ihren Beispielen mit dem GraveLSTM.Builder() f"ur das Input und die Hidden Layer. F"ur das Output Layer steht der RnnOutputLayer.Builder() zur Verf"ugung.
 
 LSTM Netzwerke werden ebenfalls mit dem GraveLSTM.Builder() und dem RnnOutputLayer.Builder() implementiert.
 
 
 %%%% SECTION %%%%
-\section{Netzwerke trainieren (unfinished)}
+\section{Netzwerke trainieren}
 \subsection{Ein Netzwerk trainieren}
-Once you’ve configured your net, you train the model with model.fit.
-Ein erstelltes Netzwerk l"asst sich durch die Methode fit() trainieren. DataSet
-\lstinputlisting[language=JAVA, firstline=61, lastline=61,  captionpos=b, caption={Ein Netz trainieren}]
-{code_snippets/rnn_auszug1.java}
-fit(org.nd4j.linalg.dataset.api.DataSet data)
-Fit the model
-
-\subsection{Daten erstellen (unfinished)}
-// create input and output arrays: SAMPLE\_INDEX, INPUT\_NEURON,
-    // SEQUENCE\_POSITION
-\lstinputlisting[language=JAVA, firstline=40, lastline=54,  captionpos=b, caption={Beispiel zur RNN-Erstellung: Daten erstellen}]
+Ein erstelltes Netzwerk l"asst sich durch die Methode fit() trainieren. Quellcode \ref{lst:train} zeigt die Implementierung f"ur das Netzwerkmodel net mit Trainingsdaten im Format DataSet. Ein trainieren eines Netzes ist in DL4J nur mit diesem Datenformat m"oglich und eine Umwandlung der Ursprungsdaten somit unumg"anglich.
+\lstinputlisting[language=JAVA, firstline=61, lastline=61,  captionpos=b, caption={Ein Netz trainieren}, label=lst:train]
 {code_snippets/rnn_auszug1.java}
 
+\subsection{Daten erstellen}
+Neuronale Netze in DL4J arbeiten mit dem Datenformat DataSet. Ein DataSet besteht aus Eingabedaten und Ausgabedaten vom Typ INDArray. Quellcode \ref{lst:data} zeigt eine Erstellung eines DataSets f"ur ein KNN, welches die XOR-Funktion erlernen soll.
+\lstinputlisting[language=JAVA, firstline=1, lastline=19,  captionpos=b, caption={Daten erstellen}, label=lst:data]
+{code_snippets/xor_auszug.java}
+Zeile 1 erstellt ein INDArray f"ur die Eingabedaten mit den Gr"o{\ss}en 4 (Anzahl der Trainingsbeispiele) und 2 (Anzahl der Eingangsneuronen) und initialisiert dieses mit Nullen. Das gleiche geschieht in Zeile 2 f"ur die Ausgangsdaten, welche von \cite{DL4J} meist als labels benannt sind. Obwohl ein XOR eigentlich nur einen Ausgang braucht, werden in diesem Beispiel zwei verwendet, wobei Neuron 0 f"ur false steht und Neuron 1 f"ur true.\\
+Zeile 5 und 6 bilden die Eingangsdaten der zwei Neuronen f"ur das erste Trainingsbeispiel. Beide Neuronen werden mit dem Wert Null belegt und somit ergibt sich durch XOR-Logik, dass das Ergebnis false sein muss. Dies ist in den Zeilen 8 und 9 umgesetz.\\
+Zeilen 11 bis 14 zeigen die Implementation des zweiten Trainingsbeispiels. Hier erh"allt das Eingangsneuron 0 den Wert 1 und das Eingangsneuron 1 den Wert 0. Dadurch wird das XOR-Ergebnis true und Ausgangsneuron 1 (welches f"ur true steht) wird mit dem Wert 1 belegt.\\
+Die Implementierung der Trainingsbeispiele 2 und 3 erfolgt der XOR-Logik folgend und anschlie{\ss}end wird mit den nun vollst"andigen Eingangsdaten (input) und Ausgangsdaten (labels) in Zeile 19 ein neues DataSet erzeugt.
 
-http://nd4j.org/getstarted.html
-http://nd4j.org/dependencies.htm
 
 } %% Ende Chapter{Deeplearning4j}

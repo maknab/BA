@@ -1,15 +1,15 @@
-[1] Config.pm:343> INFO - This is Biber 2.5
-[2] Config.pm:346> INFO - Logfile is 'BA.blg'
-[83] biber-MSWIN64:290> INFO - === 
-[131] Biber.pm:351> INFO - Reading 'BA.bcf'
-[351] Biber.pm:776> INFO - Found 7 citekeys in bib section 0
-[385] Biber.pm:3493> INFO - Processing section 0
-[581] Biber.pm:3657> INFO - Looking for bibtex format file 'biblio.bib' for section 0
-[588] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[591] bibtex.pm:1048> INFO - Found BibTeX data source 'biblio.bib'
-[759] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[760] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[761] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[762] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[780] bbl.pm:526> INFO - Writing 'BA.bbl' with encoding 'ansinew'
-[784] bbl.pm:619> INFO - Output to BA.bbl
+[0] Config.pm:343> INFO - This is Biber 2.5
+[1] Config.pm:346> INFO - Logfile is 'BA.blg'
+[79] biber-MSWIN64:290> INFO - === 
+[125] Biber.pm:351> INFO - Reading 'BA.bcf'
+[335] Biber.pm:776> INFO - Found 11 citekeys in bib section 0
+[367] Biber.pm:3493> INFO - Processing section 0
+[414] Biber.pm:3657> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[422] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[425] bibtex.pm:1048> INFO - Found BibTeX data source 'biblio.bib'
+[510] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[511] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[512] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[513] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[546] bbl.pm:526> INFO - Writing 'BA.bbl' with encoding 'ansinew'
+[552] bbl.pm:619> INFO - Output to BA.bbl

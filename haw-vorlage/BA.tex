@@ -24,7 +24,7 @@
 %%\usepackage[backend=biber, style=numeric]{biblatex}
 \addbibresource{biblio.bib}
 
-\usepackage[ngerman,colorlinks=true]{hyperref}
+\usepackage[ngerman,colorlinks=false]{hyperref}
 \usepackage{soul}
 \usepackage{hawstyle}
 
@@ -122,7 +122,7 @@
 %% note: this is one command on multiple lines
 \HAWAbstractPage
 %% German abstract
-{Schlüsselwort 1, Schlüsselwort 2}%
+{Musiksequenzen, LSTM, Neuronale Netze, Maschinenlernen, DeepLearning4J}%
 {Dieses Dokument \ldots}
 %% English abstract
 {keyword 1, keyword 2}%
@@ -149,6 +149,10 @@
 %%\markboth{\nomname}{\nomname} %% see nomencl doc, page 9, section 4.1
 %%\printnomenclature
 
+\addchap{Glossar(unfinished)}
+{...
+}
+
 %% main
 \mainmatter
 \onehalfspacing
@@ -159,8 +163,8 @@
 \include{chapter2} %% KNN
 \typeout{===== File: chapter 3}
 \include{chapter3} %% DL4J
-%%\include{chapter4} %% Mein Projekt
-%%\include{chapter5} %% Fazit
+\include{chapter4} %% Mein Projekt
+\include{chapter5} %% Fazit
 
 %% appendix if used
 \appendix
