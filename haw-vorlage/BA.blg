@@ -1,15 +1,15 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
-[2] Config.pm:346> INFO - Logfile is 'BA.blg'
-[79] biber-MSWIN64:290> INFO - === 
-[123] Biber.pm:351> INFO - Reading 'BA.bcf'
-[335] Biber.pm:776> INFO - Found 16 citekeys in bib section 0
-[369] Biber.pm:3493> INFO - Processing section 0
-[412] Biber.pm:3657> INFO - Looking for bibtex format file 'biblio.bib' for section 0
-[421] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[424] bibtex.pm:1048> INFO - Found BibTeX data source 'biblio.bib'
-[529] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[532] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[533] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[535] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[581] bbl.pm:526> INFO - Writing 'BA.bbl' with encoding 'ansinew'
-[589] bbl.pm:619> INFO - Output to BA.bbl
+[1] Config.pm:346> INFO - Logfile is 'BA.blg'
+[93] biber-MSWIN64:290> INFO - === 
+[141] Biber.pm:351> INFO - Reading 'BA.bcf'
+[349] Biber.pm:776> INFO - Found 19 citekeys in bib section 0
+[380] Biber.pm:3493> INFO - Processing section 0
+[425] Biber.pm:3657> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[432] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[434] bibtex.pm:1048> INFO - Found BibTeX data source 'biblio.bib'
+[624] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[625] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[625] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[626] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[678] bbl.pm:526> INFO - Writing 'BA.bbl' with encoding 'ansinew'
+[686] bbl.pm:619> INFO - Output to BA.bbl

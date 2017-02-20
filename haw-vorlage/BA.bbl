@@ -19,6 +19,18 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{ITwissen}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{shorthand}{ITWissen}
+      \field{urlday}{19}
+      \field{urlmonth}{02}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb http://www.itwissen.info/definition/lexikon/standard-MIDI-format-SMF-SMF-Format.html
+      \endverb
+      \keyw{other}
+    \endentry
     \entry{GRUV}{online}{}
       \name{author}{1}{}{%
         {{hash=2f7056f308e095b053fe506bab1a90a6}{%
@@ -67,6 +79,51 @@
       \field{year}{2015}
       \verb{url}
       \verb https://cs224d.stanford.edu/reports/NayebiAran.pdf
+      \endverb
+      \keyw{other}
+    \endentry
+    \entry{MIDIImg}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=60465856182cfda8ba5ed1e7480409c5}{%
+           family={Bello},
+           family_i={B\bibinitperiod},
+           given={Juan\bibnamedelima Pablo},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{60465856182cfda8ba5ed1e7480409c5}
+      \strng{fullhash}{60465856182cfda8ba5ed1e7480409c5}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{urlday}{13}
+      \field{urlmonth}{02}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://www.nyu.edu/classes/bello/FMT_files/9_MIDI_code.pdf
+      \endverb
+      \keyw{images}
+    \endentry
+    \entry{MIDI}{article}{}
+      \name{author}{1}{}{%
+        {{hash=60465856182cfda8ba5ed1e7480409c5}{%
+           family={Bello},
+           family_i={B\bibinitperiod},
+           given={Juan\bibnamedelima Pablo},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{60465856182cfda8ba5ed1e7480409c5}
+      \strng{fullhash}{60465856182cfda8ba5ed1e7480409c5}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{shorthand}{Bello}
+      \field{title}{MIDI code}
+      \field{urlday}{13}
+      \field{urlmonth}{02}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://www.nyu.edu/classes/bello/FMT_files/9_MIDI_code.pdf
       \endverb
       \keyw{other}
     \endentry

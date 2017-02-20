@@ -21,4 +21,15 @@
 \BOOKMARK [1][-]{section.3.2}{3.2 Netzwerke trainieren}{chapter.3}% 21
 \BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Ein Netzwerk trainieren}{section.3.2}% 22
 \BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Daten erstellen}{section.3.2}% 23
-\BOOKMARK [0][-]{appendix.A}{A DL4J-Projekt in IntelliJ aufsetzen}{}% 24
+\BOOKMARK [0][-]{chapter.4}{4 Musiksequenzen mit Hilfe von DL4J erzeugen \(unfinished\)}{}% 24
+\BOOKMARK [1][-]{section.4.1}{4.1 Die Eingabe \(unfinished\)}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Was sind MIDI-Dateien?}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 MIDI-Dateien lesen \(unfinished\)}{section.4.1}% 27
+\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 DataSets erstellen \(unfinished\)}{section.4.1}% 28
+\BOOKMARK [1][-]{section.4.2}{4.2 Das Netz \(unfinished\)}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{4.3 Die Ausgabe \(unfinished\)}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 MIDI Files schreiben \(unfinished\)}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Ergebnisse \(unfinished\)}{section.4.3}% 32
+\BOOKMARK [1][-]{section.4.4}{4.4 M\366gliche Erweiterungen und Verbesserungen \(unfinished\)}{chapter.4}% 33
+\BOOKMARK [0][-]{chapter.5}{5 Fazit \(unfinished\)}{}% 34
+\BOOKMARK [0][-]{appendix.A}{A DL4J-Projekt in IntelliJ aufsetzen}{}% 35
