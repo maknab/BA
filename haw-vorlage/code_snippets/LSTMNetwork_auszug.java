@@ -4,7 +4,6 @@ public DataSet createTrainingsData(MidiEvents midiTrack, List<Integer> validKeyL
     INDArray input = Nd4j.zeros(1, validKeyList.size()*validVeloList.size()*2, midiTrack.keys.size());
     INDArray labels = Nd4j.zeros(1, validKeyList.size()*validVeloList.size()*2, midiTrack.keys.size());
 
-    // loop through our sample-track
     int samplePos = 0;
     for(int currentKey : midiTrack.keys){
         int currentVelo = midiTrack.velocities.get(samplePos);
@@ -12,9 +11,7 @@ public DataSet createTrainingsData(MidiEvents midiTrack, List<Integer> validKeyL
         int nextVelo = midiTrack.velocities.get((samplePos + 1) % midiTrack.velocities.size() );
         int nextKey = midiTrack.keys.get((samplePos + 1) % midiTrack.keys.size() );
         int nextType = midiTrack.eventTypes.get((samplePos + 1) % midiTrack.eventTypes.size() );
-        // input neuron for current event is 1 at "samplePos"
         input.putScalar(new int[]{0, validKeyList.indexOf(currentKey)*validVeloList.indexOf(currentVelo)*currentType, samplePos}, 1);
-        // output neuron for next event is 1 at "samplePos"
         labels.putScalar(new int[]{0, validKeyList.indexOf(nextKey)*validVeloList.indexOf(nextVelo)*nextType, samplePos}, 1);
         samplePos++;
     }
@@ -22,25 +19,28 @@ public DataSet createTrainingsData(MidiEvents midiTrack, List<Integer> validKeyL
     return new DataSet(input, labels);
 }
 	
+	
+	
+	
 	// Version 2
 public static DataSet createTrainingsData(List<Integer> VALID_INTEGER_LIST, ArrayList<Integer> track) {
     // create input and output arrays: miniBatchSize, nIn, timeSeriesLength
     INDArray input = Nd4j.zeros(1, VALID_INTEGER_LIST.size(), track.size());
     INDArray labels = Nd4j.zeros(1, VALID_INTEGER_LIST.size(), track.size());
 
-    // loop through our sample-track
     int samplePos = 0;
     for(int currentInt : track){
         int nextInt = track.get((samplePos + 1) % track.size() );
-        // input neuron for currentInt is 1 at "samplePos"
         input.putScalar(new int[]{0, VALID_INTEGER_LIST.indexOf(currentInt), samplePos}, 1);
-        // output neuron for nextInt is 1 at "samplePos"
         labels.putScalar(new int[]{0, VALID_INTEGER_LIST.indexOf(nextInt), samplePos}, 1);
         samplePos++;
     }
 
     return new DataSet(input, labels);
 }
+
+
+
 
 
 
