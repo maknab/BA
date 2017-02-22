@@ -25,7 +25,7 @@
   title=\lstname                               % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 
-\chapter{Musiksequenzen mit Hilfe von DL4J erzeugen (unfinished)}
+\chapter{Musiksequenzen mit Hilfe von DL4J erzeugen}
 {
 Dieses Kapitel befasst sich mit der Umsetzung eines LSTM-Netzwerkes, welches anhand einer gegebenen Beispielmusik Musiksequenzen generiert und dessen Implementierung in DeepLearning4J (DL4J). Als Musikformat wurden MIDI-Dateien gew"ahlt und es wurden zwei Ans"atze zur Verwaltung und Benutzung der Daten verfolgt.
 
@@ -132,55 +132,55 @@ Das Bef"ullen erfolgt mit Hilfe einer For-Schleife, die einmal "uber die Ereigni
 
 
 
-\section{Das Netzwerk (unfinished)}
-Das benutzte LSTM-Netzwerk besteht aus einem Eingangs-, einem Ausgangs- und einem HiddenLayer. Die Varianten des Ereignisobjektes und der Ereignisschl"ussel unterscheiden sich in der Gr"o{\ss}e der Layer, wie nachfolgend erl"autert.
+\section{Das Netzwerk}
+Das benutzte LSTM-Netzwerk besteht aus einem Eingangs-, einem Ausgangs- und einem Hidden Layer. Es wurden verschiedene Parametrierungen getestet, um ein bestm"ogliches Ergebnis zu erzielen. Die Varianten des Ereignisobjektes und der Ereignisschl"ussel unterscheiden sich in der Gr"o{\ss}e der  Eingangs- und Ausgangs-Layer, wie nachfolgend erl"autert.
 
-\subsubsection{Variante 1: Ereignisobjekt (unfinished) }
-Layergr"o{\ss}en
-Quellcode \ref{lst:matrixLayer}
+\subsubsection{Variante 1: Ereignisobjekt}
+F"ur das Eingangs- und Ausgangs Layer dieser Variante wurde die Gr"o{\ss}e, wie im Quellcode \ref{lst:matrixLayer} gezeigt, als 
+\begin{center}{\glqq}Anzahl der verschiedenen Noten{\grqq} * {\glqq}Anzahl der verschiedenen Geschwindigkeiten{\grqq} * 2 \end{center}
+festgelegt, was oftmals mehr als ben"otigt ist, da nicht alle m"oglichen Kombinationen in einer Musikdatei vorkommen m"ussen.
 \lstinputlisting[language=JAVA, firstline=32, lastline=33,  captionpos=b, caption={Ereignisobjekt: Gr"o{\ss}e der Ein- und Ausgangslayer}, label=lst:matrixLayer]
 {code_snippets/app_auszug.java}
-...
+Diese Festlegung bedeutete f"ur ein Musikst"uck (welches als Trainingsdaten benutzt wurde), die Layergr"o{\ss}e von 16 Noten * 4 Geschwindigkeiten * 2 = 128 Eing"ange/Ausg"ange.
 
-\subsubsection{Variante 2: Ereignisschl"ussel (unfinished) }
-Layergr"o{\ss}en
-Quellcode \ref{lst:schlusselLayer}
+\subsubsection{Variante 2: Ereignisschl"ussel}
+In der zweiten Variante wurde die Gr"o{\ss}e, wie im Quellcode \ref{lst:schlusselLayer} gezeigt, als Anzahl aller m"oglichen Ereignisschl"ussel bestimmt.
 \lstinputlisting[language=JAVA, firstline=15, lastline=16,  captionpos=b, caption={Ereignisschl"ussel: Gr"o{\ss}e der Ein- und Ausgangslayer}, label=lst:schlusselLayer]
 {code_snippets/app_auszug.java}
-...
-Version 1: Yiruma track2 = 1040 events, 36 in/output M"oglichkeiten, hidden = in*2 -> zu wenig varianz, lernt eine Note zu spielen
-Version 1: F"ur Elise track2 = 1254 events, 417 in/output M"oglichkeiten, hidden = in*2 (hidden = in) -> netz lernt nicht
-Version 1: Bumblebee track1 = 2620 events, 1053 in/output M"oglichkeiten, hidden = in*2 (hidden = in) -> out of memory, can not allocate
+F"ur dasselbe Musikst"uck aus Variante 1, werden hier 36 Eing"ange bzw. Ausg"ange ben"otigt.\\
+\\Dies zeigt, dass die Wahl der Verwaltung der Daten eine Rolle in der Netzwerkgr"o{\ss}e spielt und gut durchdacht werden sollte.
 
 
+\section{Die Ausgabe}
+\subsection{Auswerten der Netzwerkausgabe}
+Zum Erzeugen einer Ausgabe wird dem Netzwerk ein einzelnes Ereignis als Starteingabe gegeben, woraufhin das Netz ein Folgeereignis ausgibt. Diese Ausgabe wird dem Netzwerk wieder als Eingabe zugef"uhrt und dieser Vorgang wird wiederholt bis die gew"unscht Gr"o{\ss}e der zu erzeugenden Musiksequenz erreicht ist.
 
+Die Auswertung der Netzwerkausgabe erfolgt in beiden Varianten durch die Ermittlung des Ausganges mit dem h"ochsten Wert.
 
-\section{Die Ausgabe (unfinished)}
-\subsection{Auswerten der Netzwerkausgabe (unfinished)}
-Zum Erzeugen einer Ausgabe wird dem Netzwerk ein Ereignis als Starteingabe gegeben, woraufhin das Netz ein Folgeereignis ausgibt. Diese Ausgabe wird dem Netzwerk wieder als Eingabe zugef"uhrt und dieser Vorgang wird wiederholt bis die gew"unscht Gr"o{\ss}e der zu erzeugenden Musiksequenz erreicht ist.
-
-Die Auswertung der Netzwerkausgabe erfolgt durch die Ermittlung des Ausganges mit dem h"ochsten Wert.
-
-\subsubsection{Variante 1: Ereignisobjekt (unfinished)}
-...Problem erkannt
-...Quellcode \ref{lst:matrixOutput}
+\subsubsection{Variante 1: Ereignisobjekt}
+ Der Quellcode \ref{lst:matrixOutput} zeigt die For-Schleife zum Auslesen der Netzwerkausgabe und dem Erstellen einer Musiksequenz. In Zeile 3 wird ein Array angelegt, dass durch Zeile 4 bis 6 mit den Ausgabewerten des Ausgangslayers gef"ullt wird. Anschlie{\ss}end wird in Zeile 7 eine Methode aufgerufen, welche den h"ochsten Wert ermittelt und den zugeh"origen Index des Ausganges zur"uckgibt. Somit wurde vom Netzwerk f"ur das Eingangsereignis ein Nachfolger bestimmt. Danach muss von dem konkreten Ausgang auf ein Ereignis zur"uckgeschlossen werden und hier wurde der Fehler dieser Implementierung erkannt. Da es bei der DataSet Erstellung zu keiner eindeutigen Zuordnung von Ereignissen zu Ausg"angen kam, war eine Aufschl"usselung (Zeile 10 bis 12) , welches Ereignis als Nachfolger gew"ahlt wurde, an dieser Stelle unm"oglich.
 \lstinputlisting[language=JAVA, firstline=48, lastline=63,  captionpos=b, caption={Ereignisobjekt: Netzausgabe}, label=lst:matrixOutput]
 {code_snippets/LSTMNetwork_auszug.java}
+Erst an diesem Punkt wurde die richtige Verwendung von DataSets verstanden und der Umstieg in der Implementierung auf die zweite Variante mit dem Ereignisschl"ussel folgte.
 
-\subsubsection{Variante 2: Ereignisschl"ussel (unfinished)}
-...
-...Quellcode \ref{lst:schlusselOutput}
+\subsubsection{Variante 2: Ereignisschl"ussel}
+F"ur die zweite Variante sieht die For-Schleife zum Auslesen der Netzwerkausgabe und dem Erstellen einer Musiksequenz wie in Quellcode \ref{lst:schlusselOutput} aus. Zeile 3 bis 7 "ubernimmt die gleiche Arbeit wie in Variante 1 und ermittelt den Ausgang mit dem Folgeereignis mit der h"ochsten Wahrscheinlichkeit. In Zeile 10 wird anhand des Ausgangsindex das zugeh"orige Ereignis aus der Liste alle m"oglichen Ereignisse ausgelesen und in eine Ausgabeliste eingetragen. An dieser Stelle entsteht durch das Durchlaufen der Schleife eine List von Ereignisschl"usseln, die sp"ater zur Erstellung einer MIDI-Datei benutzt werden kann.
 \lstinputlisting[language=JAVA, firstline=66, lastline=81,  captionpos=b, caption={Ereignisschl"ussel: Netzausgabe}, label=lst:schlusselOutput]
 {code_snippets/LSTMNetwork_auszug.java}
+Anschlie{\ss}end wird in Zeile 13 ein INDArray  f"ur die n"achste Netzwerkeingabe erstellt. Dieses wird in Zeile 14 mit der letzten Ausgabe bef"ullt und in Zeile 15 dem Netzwerk "ubergeben, so dass das Folgeereignis dieses Ereignisses bestimmt werden kann. Dieser Vorgang wiederholt sich solange bis die Anzahl der gew"unschten Ereignisse f"ur die zu generierende Musiksequenz erreicht wurde.
+
+\subsection{MIDI Files schreiben}
+Nachdem des Netzwerk eine Liste von Ereignissen erzeugt hat, m"ussen diese noch in eine MIDI-Datei "ubersetzt werden. Da das Netzwerk darauf ausgelegt ist nur die Ereignisse zu lernen, m"ussen alle anderen Parameter, wie z.B. Tempo und Art des Instruments manuell festgelegt werden. Auch die Feslegung des Zeitpunktes zu welchen MIDI Tick (das hei{\ss}t in welchem Abstand zum vorherigen Ereignis) das Ereignis stattfindet wird nicht vom Netzwerk abgedeckt.
+
+Sobald die Rahmenbedingungen festgelegt sind, wird die erzeugte Ereignisschl"usselliste durchlaufen und jedes Element in eine MIDI Nachricht umgewandelt, welche einem MIDI Track zugewiesen wird.
 
 
-\subsection{MIDI Files schreiben (unfinished)}
-...
+\subsection{Ergebnisse}
+\subsubsection{Variante 1: Ereignisobjekt}
+Der erste Ansatz der Datenverwaltung mit einem Ereignisobjekt lieferte aufgrund der speziellen DataSet-Anforderungen kein Ergebnis, da keine vollst"andige Implementierung m"oglich war.
 
-\subsection{Ergebnisse (unfinished)}
-- did not have the time nor computational power to experiment further with this
-- nur Variante 2, da Variante 1 fehlerhaft ist
-
+\subsubsection{Variante 2: Ereignisschl"ussel}
+Die zweite Variante, welche mit Ereignisschl"usseln arbeitet, erbrachte nur einen Teilerfolg. Das Netzwerk war in der Lage zu erlernen, dass auf ein {\glqq}Note an{\grqq}-Ereignis irgendwann ein {\glqq}Note aus{\grqq}-Ereignis folgen muss, um eine Note nicht endlos lange zu spielen. Auch das Erzeugen desselben Ereignisses direkt aufeinanderfolgend konnte vom Netzwerk oftmals als nicht sinnvoll erkannt werden.
 \renewcommand{\figurename}{Abb.}
 \begin{figure}[htp]
 %%\begin{floatingfigure}[r]{textwidth}
@@ -189,6 +189,8 @@ Die Auswertung der Netzwerkausgabe erfolgt durch die Ermittlung des Ausganges mi
 \caption[Beispielausgabe 1]{Beispielausgabe 1}
 %%\end{floatingfigure} 
 \end{figure}
+
+Als Trainingsdaten wurden drei unterschiedliche MIDI-Dateien verwendet. Die erste bestand aus 1040 Ereignisse und benutzte 36 verschiedenen Ereignisschl"usseln. Mit diesen Vorgaben wurden die Musiksequenzen in Abbildung 4.2 und 4.3 erzeugt. Auff"allig ist, dass das Netzwerk sich auf einzelne Noten fixiert und diese sehr oft mehrfach hintereinander spielt. Durch die Implementierung der ersten Variante war bekannt, dass in der Trainingsdatei 16 verschiedene Noten und 4 Geschwindigkeiten vorkamen. Diese Tatsache l"asst auf eine geringe Varianz in der Tonfolge schlie{\ss}en und wird als Grund vermutet, warum das Netz nicht in der Lage ist eine Melodie zu erzeugen.
 
 \renewcommand{\figurename}{Abb.}
 \begin{figure}[htp]
@@ -199,6 +201,13 @@ Die Auswertung der Netzwerkausgabe erfolgt durch die Ermittlung des Ausganges mi
 %%\end{floatingfigure} 
 \end{figure}
 
-\section{M"ogliche Erweiterungen und Verbesserungen (unfinished)}
-- DataSetIterator()
+Die zweite Datei bestand aus 1254 Ereignissen und benutzte 417 verschiedene Ereignisschl"ussel. Es zeigte sich, dass je mehr Eing"ange benutzt wurden, um so kleiner musste die Anzahl der Backpropagation-Schritte sein, da es sonst zu Speicherengp"assen kam. Die Ausgabe des Netzes unterschied sich kaum von der Benutzung der ersten MIDI-Datei.
+
+Die dritte Datei bestand aus 2620 Ereignissen und benutzte 1053 verschiedene Ereignisschl"ussel. Hierbei traten Speicherplatzprobleme auf und das System brach den Vorgang mit einer Fehlermeldung ({\glqq}Speicher konnte nicht allokiert werden{\grqq}) ab.
+
+Mehrere Experimente mit verschiedenen Netzwerkparametern f"uhrten leider zu keinem zufriedenstellenden Ergebnis. Es ist unklar, ob DL4J f"ur diese Problemstellung komplett ungeeignet ist, der Implementierungsansatz schlecht gew"ahlt oder einfach nicht die richtige Parametrierung gefunden wurde. Auszuschlie{\ss}en ist auch nicht, dass der benutzte Rechner f"ur diese Aufgabe einfach "uber zu wenig Speicherplatz und Rechenleistung verf"ugt.
+
+
+%%\section{M"ogliche Erweiterungen und Verbesserungen (unfinished)}
+%%- DataSetIterator()
 } %% Ende Chapter{Musiksequenzen mit Hilfe von DL4J erzeugen}
